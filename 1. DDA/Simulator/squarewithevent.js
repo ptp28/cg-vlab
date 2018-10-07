@@ -19,5 +19,9 @@ mysquare.prototype.draw = function ()
     context.strokeStyle = "black";
     context.lineWidth = 1
     context.stroke();
+    context.font = "8px Comic Sans MS";
+    context.fillStyle = "orange";
+    context.textAlign = "center";
+    context.fillText(this.x1/25+","+this.y1/25,this.x1+12.5, this.y1+12.5);
 
 }
