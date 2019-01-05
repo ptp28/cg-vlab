@@ -1,111 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title></title>
 </head>
 <body>
-	
-	<script src="squarewithevent.js"></script>
-	<center><h1>Line Drawing Experiment using D.D.A. Algorithm</h1></center>
-	<hr/>
-	<p><h3>Q. >   Draw a line from (2,3) to (12,8) using DDA Line Drawing Algorithm</h3></p>
-	<input type="button" value="Check Co-ordinates" onclick="check();" />
-	<input type="button" value="Clear Canvas" onclick="clearCanvas();" />
-	<input type="button" value="Explaination" id="Ex" onclick="window.location.href='./Explaination.html'"/>
-	<br/>
-	<hr/>
-	<br/>
-  <canvas id="mycanvas" width="800" height="600" style="border:solid;border-color:black"></canvas><p id="key"></p>
-    <script>
-        var canvas = document.getElementById("mycanvas");
-        var context=canvas.getContext("2d");
-	document.getElementById("Ex").style.visibility = "hidden";
-	var i=0;
-	var j=0;
-	var r=-1;
-	var c=-1;
-	var squarecontainer = [];
-	var dda = [];
-	dda.push({x:2 , y:3});
-	dda.push({x:3 , y:4});
-	dda.push({x:4 , y:4});
-	dda.push({x:5 , y:5});
-	dda.push({x:6 , y:5});
-	dda.push({x:7 , y:6});
-	dda.push({x:8 , y:6});
-	dda.push({x:9 , y:7});
-	dda.push({x:10 , y:7});
-	dda.push({x:11 , y:8});
-	dda.push({x:12 , y:8});
 
-	for(j=0;j<600;j=j+25)
-	{
-		r++;
-		c=-1;
-		for(i=0;i<800;i=i+25)
-		{
-			c++;
-			var a = new mysquare(canvas,i,j,25,25);
-       	        	a.draw();
-			squarecontainer.push({ square:a, x1: i, y1: j,rows:r,cols:c,flag:0});
-		}
-	}
-	
-     function mouseevt(x,y)
-        {
-			for (i = 0; i < squarecontainer.length; i++)
-                	{
-                       		if (x >= squarecontainer[i].x1 && x <= (squarecontainer[i].x1+25) && y >= squarecontainer[i].y1 && y <= (squarecontainer[i].y1+25))
-                    		{
-                        		squarecontainer[i].square.mycolor = "yellow";
-                        		squarecontainer[i].square.draw();
-					squarecontainer[i].flag=1;
-                        		break;
-                    		}
-                	}
-                	context.clearRect(0, 0, canvas.width, canvas.height);
-                	for (i = 0; i < squarecontainer.length; i++)
-                	{
-                    		squarecontainer[i].square.draw();
-                	}
-	}
+<script src="squareevent.js"></script>
+<h1>Line Drawing Experiment using D.D.A. Algorithm</h1>
+<hr/>
+<p id="question"></p>
+<input type="button" value="Q1" id="1" onclick="changequestion(0)"/>
+<input type="button" value="Q2" id="2" onclick="changequestion(1)"/>
+<input type="button" value="Q3" id="3" onclick="changequestion(2)"/>
+<input type="button" value="Q4" id="4" onclick="changequestion(3)"/>
+<input type="button" value="Q5" id="5" onclick="changequestion(4)"/>
+<hr>
+<input type="button" value="Check Co-ordinates" onclick="check();"/>
+<input type="button" value="Clear Canvas" onclick="clearCanvas();"/>
+<br/>
+<hr/>
+<br/>
 
-	function check()
-	{
-		for(j=0;j<dda.length;j++)
-		{
-			for(i=0;i<squarecontainer.length;i++)
-			{
-				if(squarecontainer[i].flag==1)
-				{
-					if(dda[j].x==squarecontainer[i].cols && dda[j].y==squarecontainer[i].rows)
-					{
-						squarecontainer[i].square.mycolor = "green";
-					}
-					else
-					{
-						//squarecontainer[i].square.mycolor = "red";
-					}
-				}
-				else if(dda[j].x==squarecontainer[i].cols && dda[j].y==squarecontainer[i].rows)
-				{
-					squarecontainer[i].square.mycolor = "black";
-				}
-				squarecontainer[i].square.draw();
-			}
-		}
-		var P = document.getElementById("key");
-            P.innerHTML="Green - Correctly Plotted Co-ordinates <br>"+"Red - Wrong Co-ordinates plotted <br>"+"Black - Co-ordinates which are correct but not plotted <br>"
+<canvas id="mycanvas" width="800" height="600" style="border:solid;border-color:black"></canvas>
+<p id="key"></p>
+<script>
+    var qnumber;
+    var questions = [];
+    questions.push("Draw a line from (2,3) to (12,8) using DDA Line Drawing Algorithm");
+    questions.push("Draw a line from (9,3) to (9,11) using DDA Line Drawing Algorithm");
+    questions.push("Sample 2");
+    questions.push("Sample 3");
+    questions.push("Sample 4");
+    var canvas = document.getElementById("mycanvas");
+    var context = canvas.getContext("2d");
+    var i = 0;
+    var j = 0;
+    var r = -1;
+    var c = -1;
+    var squarecontainer = [];
+    var dda = [];
+    dda.push({x: 2, y: 3, q: 0});
+    dda.push({x: 3, y: 4, q: 0});
+    dda.push({x: 4, y: 4, q: 0});
+    dda.push({x: 5, y: 5, q: 0});
+    dda.push({x: 6, y: 5, q: 0});
+    dda.push({x: 7, y: 6, q: 0});
+    dda.push({x: 8, y: 6, q: 0});
+    dda.push({x: 9, y: 7, q: 0});
+    dda.push({x: 10, y: 7, q: 0});
+    dda.push({x: 11, y: 8, q: 0});
+    dda.push({x: 12, y: 8, q: 0});
+    dda.push({x: 9, y: 3, q: 1});
+    dda.push({x: 9, y: 4, q: 1});
+    dda.push({x: 9, y: 5, q: 1});
+    dda.push({x: 9, y: 6, q: 1});
+    dda.push({x: 9, y: 7, q: 1});
+    dda.push({x: 9, y: 8, q: 1});
+    dda.push({x: 9, y: 9, q: 1});
+    dda.push({x: 9, y: 10, q: 1});
+    dda.push({x: 9, y: 11, q: 1});
 
-	}
-	
-	function clearCanvas()
-	{
-		location.reload();
-	}
+    for (j = 0; j < 600; j = j + 50) {
+        r++;
+        c = -1;
+        for (i = 0; i < 800; i = i + 50) {
+            c++;
+            var a = new mysquare(canvas, i, j, 50, 50);
+            a.draw();
+            squarecontainer.push({square: a, x1: i, y1: j, rows: r, cols: c, flag: 0});
+        }
+    }
 
- </script>
- <script src="mouseevent.ob.js"></script>
+    function mouseevt(x, y) {
+        for (i = 0; i < squarecontainer.length; i++) {
+            if (x >= squarecontainer[i].x1 && x <= (squarecontainer[i].x1 + 50) && y >= squarecontainer[i].y1 && y <= (squarecontainer[i].y1 + 50)) {
+                squarecontainer[i].square.mycolor = "yellow";
+                squarecontainer[i].square.draw();
+                squarecontainer[i].flag = 1;
+                break;
+            }
+        }
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        for (i = 0; i < squarecontainer.length; i++) {
+            squarecontainer[i].square.draw();
+        }
+    }
+
+    function check() {
+        for (j = 0; j < dda.length; j++) {
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (squarecontainer[i].flag == 1) {
+                    if (dda[j].x == squarecontainer[i].cols && dda[j].y == squarecontainer[i].rows && dda[j].q == qnumber) {
+                        squarecontainer[i].square.mycolor = "green";
+                    }
+                    else if(squarecontainer[i].square.mycolor != "green")
+                    {
+                        squarecontainer[i].square.mycolor = "red";
+                    }
+                }
+                else if (dda[j].x == squarecontainer[i].cols && dda[j].y == squarecontainer[i].rows && dda[j].q == qnumber) {
+                    squarecontainer[i].square.mycolor = "black";
+                }
+                else
+                {
+                    squarecontainer[i].square.textColor = "#95a5a6";
+                }
+                squarecontainer[i].square.draw();
+            }
+        }
+        var P = document.getElementById("key");
+        P.innerHTML = "Green - Correctly Plotted Co-ordinates <br>" + "Red - Wrong Co-ordinates plotted <br>" + "Black - Co-ordinates which are correct but not plotted <br>"
+
+    }
+
+    function clearCanvas() {
+        location.reload();
+    }
+
+    function reset() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        for (i = 0; i < squarecontainer.length; i++) {
+            squarecontainer[i].square.mycolor = 'grey';
+            squarecontainer[i].flag = 0;
+            squarecontainer[i].square.draw();
+
+        }
+    }
+
+    changequestion(0);
+
+    function changequestion(j) {
+        var we;
+        qnumber = j;
+        we = "" + questions[j];
+        reset();
+        document.getElementById("question").innerHTML = null;
+        document.getElementById("question").innerHTML = we;
+        console.log(squarecontainer[23].square.mycolor);
+    }
+</script>
+<script src="mouseevent.ob.js"></script>
 </body>
 </html>

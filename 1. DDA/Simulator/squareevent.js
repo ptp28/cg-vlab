@@ -7,6 +7,7 @@ var mysquare=function(canvas,x1,y1,x2,y2)
     this.x2 = x2;
     this.y2 = y2;
     this.mycolor = 'grey';
+    this.textColor = "white";
     
 }
 
@@ -16,12 +17,12 @@ mysquare.prototype.draw = function ()
     context.rect(this.x1,this.y1,this.x2,this.y2);
     context.fillStyle = this.mycolor
     context.fill();
+    context.font = "18px Comic Sans MS";
+    context.fillStyle = this.textColor;
+    context.textAlign = "center";
+    context.fillText(this.x1/50+","+this.y1/50,this.x1+25, this.y1+25);
     context.strokeStyle = "black";
     context.lineWidth = 1
     context.stroke();
-    context.font = "8px Comic Sans MS";
-    context.fillStyle = "orange";
-    context.textAlign = "center";
-    context.fillText(this.x1/25+","+this.y1/25,this.x1+12.5, this.y1+12.5);
 
 }
