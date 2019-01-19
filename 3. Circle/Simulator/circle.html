@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Bresenham Algorithm</title>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+        input[type="text"] {
+            width: 50px;
+        }
+        table {
+            table-layout: auto;
+            width: 100%;
+            border: solid;
+            border-color: blue ;
+            border-width: medium;
+        }
+    </style>
+</head>
+<body>
+
+<script src="squareevent.js"></script>
+<h1>Circle Drawing Experiment using Breshenham Circle Drawing Algorithm</h1>
+<hr/>
+<p id="question">Draw a Circle having center at (7,6) and a radius of 4px using Bresenham Circle Drawing Algorithm</p>
+<hr>
+<input type="button" value="Start Simulator" onclick="simulatorWorking();"/>
+<input type="button" value="Clear Canvas" onclick="clearCanvas();"/>
+<hr/>
+<div class="row">
+    <div class="column">
+        <span style="size: 100px"><marquee behavior="alternate" id="instructionStepsLeft"></marquee></span>
+<canvas id="mycanvas" width="800" height="600" style="border:solid;border-color:black"></canvas>
+        <p id="key"></p>
+    </div>
+    <div class="column" id="div2">
+        <span style="size: 100px"><marquee behavior="alternate" id="instructionStepsRightTop"></marquee></span>
+        <table id="tableTop">
+            <tr>
+                <th id="iterationHeading"></th>
+            </tr>
+            <tr>
+                <td>Set P : </td>
+                <td><input type="text" id="valueP"></td>
+            </tr>
+            <tr>
+                <td>Set Q : </td>
+                <td><input type="text" id="valueQ"></td>
+            </tr>
+            <tr>
+                <td>Enter Decision parameter</td>
+                <td>
+                   <select id="valueDP">
+                       <option selected="selected">-- decision parameter --</option>
+                       <option value="D = 3 - 2r">D = 3 - 2r</option>
+                       <option value="D = D + 4P + 6">D = D + 4P + 6</option>
+                       <option value="D = D + 4(P-Q) + 10">D = D + 4(P-Q) + 10</option>
+                   </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Is P <= Q ? </td>
+                <td>
+                    <select id="loopCheck">
+                        <option selected="selected">-- select --</option>
+                        <option value="YES">YES</option>
+                        <option value="NO">NO</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Check" id="buttonTable1" onclick="checkTable1();"></td>
+            </tr>
+        </table>
+        <br>
+        <span style="size: 100px"><marquee behavior="alternate" id="instructionStepsRightMiddle"></marquee></span>
+        <table id="tableMiddle">
+            <tr>
+                <th>Pixels</th>
+            </tr>
+            <tr>
+                <td>(X + P) : </td>
+                <td><input type="text" id="pixel1"></td>
+                <td>(Y + Q) :</td>
+                <td><input type="text" id="pixel2"></td>
+            </tr>
+            <tr>
+                <td>(X - P) : </td>
+                <td><input type="text" id="pixel3"></td>
+                <td>(Y + Q) :</td>
+                <td><input type="text" id="pixel4"></td>
+            </tr>
+            <tr>
+                <td>(X + P) : </td>
+                <td><input type="text" id="pixel5"></td>
+                <td>(Y - Q) :</td>
+                <td><input type="text" id="pixel6"></td>
+            </tr>
+            <tr>
+                <td>(X - P) : </td>
+                <td><input type="text" id="pixel7"></td>
+                <td>(Y - Q) :</td>
+                <td><input type="text" id="pixel8"></td>
+            </tr>
+            <tr>
+                <td>(X + Q) : </td>
+                <td><input type="text" id="pixel9"></td>
+                <td>(Y + P) :</td>
+                <td><input type="text" id="pixel10"></td>
+            </tr>
+            <tr>
+                <td>(X - Q) : </td>
+                <td><input type="text" id="pixel11"></td>
+                <td>(Y + P) :</td>
+                <td><input type="text" id="pixel12"></td>
+            </tr>
+            <tr>
+                <td>(X + Q) : </td>
+                <td><input type="text" id="pixel13"></td>
+                <td>(Y - P) :</td>
+                <td><input type="text" id="pixel14"></td>
+            </tr>
+            <tr>
+                <td>(X - Q) : </td>
+                <td><input type="text" id="pixel15"></td>
+                <td>(Y - P) :</td>
+                <td><input type="text" id="pixel16"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Check Pixels" onclick="checkTable2();"></td>
+            </tr>
+        </table>
+        <br>
+        <span style="size: 100px"><marquee behavior="alternate" id="instructionStepsRightBottom"></marquee></span>
+        <table id="tableBottom">
+            <tr>
+                <td>Is value of P incremented : </td>
+                <td>YES <input type="radio" id="radio1" name="incP"></td>
+                <td>NO <input type="radio" id="radio2" name="incP"></td>
+            </tr>
+            <tr>
+                <td>Is value of Q decremented : </td>
+                <td>YES <input type="radio" id="radio3" name="decQ"></td>
+                <td>NO <input type="radio" id="radio4" name="decQ"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Check" onclick="checkTable3();"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    var canvas = document.getElementById("mycanvas");
+    var context = canvas.getContext("2d");
+    var i = 0;
+    var j = 0;
+    var r = -1;
+    var c = -1;
+    var clickFlag = false;
+    var progressFlag = 0;
+    var iterationFlag = 0;
+    var countPixelFlag = 0;
+
+    var pixelCount = [];
+    var instructions = [];
+    var squarecontainer = [];
+    var circle = [];
+    var valuesP = [];
+    var valuesQ = [];
+    var valuesDP = [];
+    var incP = [];
+    var decQ = [];
+    var valuesLoopCheck = [];
+
+    valuesP.push({v: 0, i:0});
+    valuesP.push({v: 0, i:1});
+    valuesP.push({v: 1, i:2});
+    valuesP.push({v: 2, i:3});
+    valuesP.push({v: 3, i:4});
+
+    valuesQ.push({v: 0, i:0});
+    valuesQ.push({v: 4, i:1});
+    valuesQ.push({v: 3, i:2});
+    valuesQ.push({v: 2, i:3});
+    valuesQ.push({v: 1, i:4});
+
+    valuesDP.push({v: 0, i:0});
+    valuesDP.push({v:"D = 3 - 2r", i:1});
+    valuesDP.push({v:"D = D + 4P + 6", i:2});
+    valuesDP.push({v:"D = D + 4(P-Q) + 10", i:3});
+    valuesDP.push({v:"D = D + 4P + 6", i:4});
+
+    instructions.push("1. Click on the center of the circle");
+    instructions.push("2. Fill in the initial parameters of the algorithm");
+    instructions.push("3. Fill in the appropriate co-ordinates of the given pixels");
+    instructions.push("4. Mark the calculated co-ordinates on the canvas below");
+    instructions.push("5. Parameter calculation");
+    instructions.push("6. Select second point");
+
+    circle.push({x: 7, y: 6, i:0});
+    // circle.push({x: 1, y: 2, i:1});
+    // circle.push({x: 3, y: 4, i:1});
+    // circle.push({x: 5, y: 6, i:1});
+    // circle.push({x: 7, y: 8, i:1});
+    // circle.push({x: 9, y: 10, i:1});
+    // circle.push({x: 11, y: 12, i:1});
+    // circle.push({x: 13, y: 14, i:1});
+    // circle.push({x: 15, y: 16, i:1});
+    circle.push({x: 7, y: 10, i:1});
+    circle.push({x: 7, y: 10, i:1});
+    circle.push({x: 7, y: 2, i:1});
+    circle.push({x: 7, y: 2, i:1});
+    circle.push({x: 11, y: 6, i:1});
+    circle.push({x: 11, y: 6, i:1});
+    circle.push({x: 3, y: 6, i:1});
+    circle.push({x: 3, y: 6, i:1});
+    circle.push({x: 8, y: 10, i:2});
+    circle.push({x: 6, y: 10, i:2});
+    circle.push({x: 8, y: 2, i:2});
+    circle.push({x: 6, y: 2, i:2});
+    circle.push({x: 11, y: 7, i:2});
+    circle.push({x: 11, y: 5, i:2});
+    circle.push({x: 3, y: 7, i:2});
+    circle.push({x: 3, y: 5, i:2});
+    circle.push({x: 9, y: 9, i:3});
+    circle.push({x: 5, y: 9, i:3});
+    circle.push({x: 9, y: 3, i:3});
+    circle.push({x: 5, y: 3, i:3});
+    circle.push({x: 10, y: 8, i:3});
+    circle.push({x: 10, y: 4, i:3});
+    circle.push({x: 4, y: 8, i:3});
+    circle.push({x: 4, y: 4, i:3});
+
+    pixelCount.push({i: 0, v: 1});
+    pixelCount.push({i: 1, v: 4});
+    pixelCount.push({i: 2, v: 8});
+    pixelCount.push({i: 3, v: 8});
+
+    incP.push(false);
+    incP.push(true);
+    incP.push(true);
+    incP.push(true);
+
+    decQ.push(false);
+    decQ.push(true);
+    decQ.push(true);
+    decQ.push(true);
+
+    valuesLoopCheck.push(false);
+    valuesLoopCheck.push("YES");
+    valuesLoopCheck.push("YES");
+    valuesLoopCheck.push("YES");
+    valuesLoopCheck.push("NO");
+
+    //circle.push({x: ,y: , q: });
+    document.getElementById("mycanvas").style.opacity=0.4;
+    document.getElementById("tableTop").style.opacity=0.2;
+    document.getElementById("tableMiddle").style.opacity=0.2;
+    document.getElementById("tableBottom").style.opacity=0.2;
+
+    for (j = 0; j < 600; j = j + 50) {
+        r++;
+        c = -1;
+        for (i = 0; i < 800; i = i + 50) {
+            c++;
+            var a = new mysquare(canvas, i, j, 50, 50);
+            a.draw();
+            squarecontainer.push({square: a, x1: i, y1: j, rows: r, cols: c, flag: 0});
+        }
+    }
+
+    function mouseevt(x, y) {
+        if (!clickFlag) {
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (squarecontainer[i].square.mycolor == 'red') {
+                    squarecontainer[i].square.mycolor = 'grey';
+                    squarecontainer[i].flag = 0;
+                    squarecontainer[i].square.draw();
+                }
+            }
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (x >= squarecontainer[i].x1 && x <= (squarecontainer[i].x1 + 50) && y >= squarecontainer[i].y1 && y <= (squarecontainer[i].y1 + 50)) {
+                    if(squarecontainer[i].square.mycolor == 'green')
+                    {
+                        return;
+                    }
+                    else {
+                        squarecontainer[i].square.mycolor = "yellow";
+                        squarecontainer[i].square.draw();
+                        squarecontainer[i].flag = 1;
+                        break;
+                    }
+                }
+            }
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            for (i = 0; i < squarecontainer.length; i++) {
+                squarecontainer[i].square.draw();
+            }
+            checkPixels();
+        }
+        else
+        {
+            alert("Please follow the instructions to complete the simulation");
+        }
+    }
+
+    function checkPixels() {
+        for (j = 0; j < circle.length; j++) {
+            console.log("x:"+circle[j].x+"i:"+circle[j].i+"\n");
+            if(circle[j].i == iterationFlag) {
+                console.log("Inside if\n");
+                for (i = 0; i < squarecontainer.length; i++) {
+                    if (squarecontainer[i].square.mycolor === "yellow" || squarecontainer[i].square.mycolor === "red") {
+                        if (squarecontainer[i].cols == circle[j].x && squarecontainer[i].rows == circle[j].y) {
+                            squarecontainer[i].square.mycolor = "green";
+                            countPixelFlag++;
+                            squarecontainer[i].square.draw();
+                            if(countPixelFlag == pixelCount[iterationFlag].v && iterationFlag == pixelCount[iterationFlag].i)
+                            {
+                                progressFlag++;
+                                countPixelFlag = 0;
+                                simulatorWorking();
+                            }
+                            break;
+                        }
+                        else {
+                            console.log("RED SC c:"+squarecontainer[i].cols+" r:"+squarecontainer[i].rows+"\n");
+                            console.log("RED C c:"+circle[j].x+" r:"+circle[j].y+"\n");
+                            squarecontainer[i].square.mycolor = "red";
+                            squarecontainer[i].square.draw();
+                            break;
+                        }
+                    }
+                    squarecontainer[i].square.draw();
+                }
+            }
+            else
+            {
+                console.log("Not inside\n");
+            }
+            console.log("BEYOND FOR");
+        }
+    }
+
+    function clearCanvas() {
+        location.reload();
+    }
+
+    function simulatorWorking()
+    {
+        var tab;
+        switch(progressFlag)
+        {
+            case 0:
+                document.getElementById("mycanvas").style.opacity=1;
+                var P = document.getElementById("key");
+                P.innerHTML = "Green - Correctly Plotted Co-ordinates <br>" + "Red - Wrong Co-ordinates plotted <br>" + "Yellow - Partially correct <br>";
+                document.getElementById("instructionStepsLeft").innerHTML = instructions[progressFlag];
+                break;
+            case 1:
+                iterationFlag++;
+                document.getElementById("tableTop").style.opacity=1;
+                document.getElementById("iterationHeading").innerHTML = "Iteration "+iterationFlag;
+                clickFlag = true;
+                document.getElementById("instructionStepsLeft").innerHTML = null;
+                document.getElementById("instructionStepsRightTop").innerHTML = instructions[progressFlag];
+                break;
+            case 2:
+                tab = document.getElementById("tableTop");
+                tab.style.backgroundColor = '#78e08f';
+                document.getElementById("instructionStepsRightTop").innerHTML = null;
+                document.getElementById("instructionStepsRightMiddle").innerHTML = instructions[progressFlag];
+                break;
+            case 3:
+                tab = document.getElementById("tableMiddle");
+                tab.style.backgroundColor = '#f6e58d';
+                document.getElementById("instructionStepsRightMiddle").innerHTML = null;
+                document.getElementById("instructionStepsLeft").innerHTML = instructions[progressFlag];
+                break;
+            case 4:
+                tab = document.getElementById("tableMiddle");
+                tab.style.backgroundColor = '#78e08f';
+                document.getElementById("instructionStepsLeft").innerHTML = null;
+                document.getElementById("instructionStepsRightBottom").innerHTML = instructions[progressFlag];
+                break;
+            case 5:
+                tab = document.getElementById("tableBottom");
+                tab.style.backgroundColor = '#78e08f';
+                document.getElementById("instructionStepsRightBottom").innerHTML = null;
+                reset();
+                progressFlag=1;
+                simulatorWorking();
+
+                break;
+        }
+
+        
+    }
+
+    function checkTable1()
+    {
+        var getP = parseInt(document.getElementById("valueP").value);
+        var getQ = parseInt(document.getElementById("valueQ").value);
+        var getDP = document.getElementById("valueDP").value;
+        var getLoopCheck = document.getElementById("loopCheck").value;
+        if(getLoopCheck == valuesLoopCheck[iterationFlag] && getLoopCheck == "YES" )
+        {
+            document.getElementById("tableMiddle").style.opacity=1;
+            document.getElementById("tableBottom").style.opacity=1;
+        }
+        else if(getLoopCheck == "NO" && valuesLoopCheck[iterationFlag] == "NO")
+        {
+            alert("CONGRATULATIONS, YOU HAVE COMPLETED YOUR SIMULATION");
+            reset();
+        }
+        else
+        {
+            alert("Invalid input");
+        }
+
+        if(getP === valuesP[iterationFlag].v && getQ === valuesQ[iterationFlag].v && getDP === valuesDP[iterationFlag].v)
+        {
+            progressFlag = 2;
+            simulatorWorking();
+            return;
+        }
+        else
+        {
+            var tab = document.getElementById("tableTop");
+            tab.style.backgroundColor = '#eb4d4b';
+        }
+    }
+
+    function checkTable2()
+    {
+        var getPixels = [];
+        getPixels.push({x: parseInt(document.getElementById("pixel1").value), y: parseInt(document.getElementById("pixel2").value)});
+        getPixels.push({x: parseInt(document.getElementById("pixel3").value), y: parseInt(document.getElementById("pixel4").value)});
+        getPixels.push({x: parseInt(document.getElementById("pixel5").value), y: parseInt(document.getElementById("pixel6").value)});
+        getPixels.push({x: parseInt(document.getElementById("pixel7").value), y: parseInt(document.getElementById("pixel8").value)});
+        getPixels.push({x: parseInt(document.getElementById("pixel9").value), y: parseInt(document.getElementById("pixel10").value)});
+        getPixels.push({x: parseInt(document.getElementById("pixel11").value), y: parseInt(document.getElementById("pixel12").value)});
+        getPixels.push({x: parseInt(document.getElementById("pixel13").value), y: parseInt(document.getElementById("pixel14").value)});
+        getPixels.push({x: parseInt(document.getElementById("pixel15").value), y: parseInt(document.getElementById("pixel16").value)});
+
+
+        var count=0;
+        for(j=0;j<circle.length;j++)
+        {
+            if(circle[j].i == (iterationFlag))
+            {
+                break;
+            }
+        }
+        for(i=0; i<getPixels.length; i++,j++)
+        {
+            if(getPixels[i].x == circle[j].x && getPixels[i].y == circle[j].y && circle[j].i == (iterationFlag))
+            {
+                count++;
+            }
+        }
+        if(count==8)
+        {
+            clickFlag=false;
+            progressFlag = 3;
+            simulatorWorking();
+        }
+        else
+        {
+            var tab = document.getElementById("tableMiddle");
+            tab.style.backgroundColor = '#eb4d4b';
+        }
+    }
+
+    function checkTable3()
+    {
+        var checkValues = 0;
+        if(document.getElementById('radio1').checked && (incP[iterationFlag] == true))
+        {
+            checkValues++;
+        }
+        else if(document.getElementById('radio2').checked && (incP[iterationFlag] == false))
+        {
+            checkValues++;
+        }
+
+        if(document.getElementById('radio3').checked && (decQ[iterationFlag] == true))
+        {
+            checkValues++;
+        }
+        else if(document.getElementById('radio4').checked && (decQ[iterationFlag] == false))
+        {
+            checkValues++;
+        }
+
+        if(checkValues == 2)
+        {
+            alert("ITERATION COMPLETE, PROCEED TO NEXT ITERATION");
+            progressFlag++;
+            simulatorWorking();
+        }
+        else
+        {
+            var tab = document.getElementById("tableBottom");
+            tab.style.backgroundColor = '#eb4d4b';
+        }
+    }
+
+    function reset()
+    {
+        document.getElementById("valueP").value = "";
+        document.getElementById("valueQ").value = "";
+        document.getElementById("valueDP").options[0].selected = true;
+        document.getElementById("loopCheck").options[0].selected = true;
+        document.getElementById("pixel1").value = "";
+        document.getElementById("pixel2").value = "";
+        document.getElementById("pixel3").value = "";
+        document.getElementById("pixel4").value = "";
+        document.getElementById("pixel5").value = "";
+        document.getElementById("pixel6").value = "";
+        document.getElementById("pixel7").value = "";
+        document.getElementById("pixel8").value = "";
+        document.getElementById("pixel9").value = "";
+        document.getElementById("pixel10").value = "";
+        document.getElementById("pixel11").value = "";
+        document.getElementById("pixel12").value = "";
+        document.getElementById("pixel13").value = "";
+        document.getElementById("pixel14").value = "";
+        document.getElementById("pixel15").value = "";
+        document.getElementById("pixel16").value = "";
+        var radioReset = document.getElementsByName("incP");
+        radioReset[0].checked = false;
+        radioReset[1].checked = false;
+        radioReset = document.getElementsByName("decQ");
+        radioReset[0].checked = false;
+        radioReset[1].checked = false;
+        var tab = document.getElementById("tableTop");
+        tab.style.backgroundColor = 'white';
+        tab = document.getElementById("tableMiddle");
+        tab.style.backgroundColor = 'white';
+        tab = document.getElementById("tableBottom");
+        tab.style.backgroundColor = 'white';
+        document.getElementById("tableMiddle").style.opacity=0.2;
+        document.getElementById("tableBottom").style.opacity=0.2;
+
+
+    }
+
+</script>
+<script src="mouseevent.ob.js"></script>
+</body>
+</html>
