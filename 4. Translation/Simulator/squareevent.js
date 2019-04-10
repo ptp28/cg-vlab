@@ -17,10 +17,10 @@ mysquare.prototype.draw = function ()
     context.rect(this.x1,this.y1,this.x2,this.y2);
     context.fillStyle = this.mycolor
     context.fill();
-    context.font = "18px Comic Sans MS";
+    context.font = "9px Comic Sans MS";
     context.fillStyle = this.textColor;
     context.textAlign = "center";
-    context.fillText(this.x1/50+","+this.y1/50,this.x1+25, this.y1+25);
+    context.fillText(this.x1/25+","+this.y1/25,this.x1+12.5, this.y1+12.5);
     context.strokeStyle = "black";
     context.lineWidth = 1
     context.stroke();
