@@ -1,0 +1,27 @@
+<HTML>
+  <BODY>
+    <H2> THEORY : </H2>
+    <P>
+      <UL>
+        <LI>
+          DDA is an incremental scan conversion method to determine points on screen to draw a line where the Start and End coordinates of the Line segment are provided.
+        </LI>
+        <LI>
+          DDA calculates the length of the line segment with respect to the difference between either X coordinates or Y coordinates, whichever is greater.
+        </LI>
+        <LI>
+          In DDA, we either step across X-Direction and solve for Y (In case of gentle slope lines ) or we step Y-Direction and solve for X (incase of sharp slope lines) with the help of increment in either X and/or Y directions.
+        </LI>
+        <LI>
+          As the increments are calculated with respect to X  or Y direction ,so one of the increment will be either (1,/0/-1) and the other increment may be in float.
+        </LI>
+        <LI>
+          Floating point arithmetic in DDA algorithm is time-consuming.  which results in poor  end point accuracy.
+        </LI>
+        <LI>
+          It is the simplest algorithm and does not require special skills for implementation.
+        </LI>
+      </UL>
+    </P>
+  </BODY>
+</HTML>
