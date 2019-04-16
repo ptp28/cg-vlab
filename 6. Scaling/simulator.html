@@ -2,8 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Translation</title>
+    <title>Scaling</title>
     <style>
+    /* table,td {
+      border: solid;
+    } */
         .row {
             display: flex;
         }
@@ -13,12 +16,31 @@
             flex: 33.33%;
             padding: 5px;
         }
+        .matrix {
+        position: relative;
+    }
+    .matrix:before, .matrix:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        border: 1px solid #000;
+        width: 6px;
+        height: 100%;
+    }
+    .matrix:before {
+        left: -6px;
+        border-right: 0;
+    }
+    .matrix:after {
+        right: -6px;
+        border-left: 0;
+    }
     </style>
 </head>
 <body>
 
 <script src="squareevent.js"></script>
-<h1>TRANSFORMATIONS - Translation</h1>
+<h1>TRANSFORMATIONS - Scaling</h1>
 <hr/>
 <p id="question"></p>
 <input type="button" value="Q1" id="1" onclick="changequestion(0)"/>
@@ -35,6 +57,64 @@
 <canvas id="mycanvas" width="800" height="600" style="border:solid;border-color:black"></canvas>
     </div>
     <div class="column">
+        <table cellspacing="10">
+          <tr>
+            <td>
+              Enter Scaling matrix :
+            </td>
+            <td>
+              <table class="matrix">
+                <tr>
+                  <td><input type="text" id="0" maxlength="3" size="3"></td>
+                  <td><input type="text" id="01" maxlength="3" size="3"></td>
+                </tr>
+                <tr>
+                  <td><input type="text" id="10" maxlength="3" size="3"></td>
+                  <td><input type="text" id="11" maxlength="3" size="3"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="button" onclick="checkScaleMatrix();" value="CHECK MATRIX" style="width:100%; height:30px;">
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              Enter the scaled co-ordinates for the given points :
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+        <table id="tablePoints" cellspacing="10" cellpadding="3">
+          <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+        </table>
+      </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="button" onclick="checkScaledCoord();" value="CHECK SCALED CO-ORDINATES" style="width:100%; height:30px;">
+        </td>
+      </tr>
+        </table>
 <p id="key"></p>
     </div>
 </div>
@@ -54,6 +134,17 @@
     var translateQ = [];
     var translateA = [];
     var translateFactor = [];
+    var points = [];
+    var pointsHint = [];
+
+    points.push({x:2 , y:3 ,q:0});
+    points.push({x:12 , y:8 ,q:0});
+
+    points.push({x:7 , y:6 ,q:1});
+
+    points.push({x:3 , y:2 ,q:2});
+    points.push({x:0 , y:10 ,q:2});
+    points.push({x:9 , y:10 ,q:2});
 
     translateQ.push({x: 2, y: 3, q: 0});
     translateQ.push({x: 3, y: 4, q: 0});
@@ -125,10 +216,6 @@
     translateFactor.push({tx:11,ty:11,q:1});
     translateFactor.push({tx:12,ty:3,q:2});
 
-    for(i=0;i<translateQ.length;i++)
-    {
-        translateA.push({x:translateQ[i].x + translateFactor[translateQ[i].q].tx, y:translateQ[i].y + translateFactor[translateQ[i].q].ty , q : translateQ[i].q});
-    }
 
 
     var clickFlag = false;
@@ -202,6 +289,7 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
         for (i = 0; i < squarecontainer.length; i++) {
             squarecontainer[i].square.mycolor = 'grey';
+            squarecontainer[i].square.textColor = "white";
             squarecontainer[i].flag = 0;
             squarecontainer[i].square.draw();
 
@@ -226,6 +314,82 @@
                 squarecontainer[i].square.draw();
             }
         }
+    }
+
+      var table = document.getElementById("tablePoints");
+      while(table.rows.length > 1) {
+          table.deleteRow(1);
+      }
+      for(i=0;i<points.length;i++)
+      {
+        if(points[i].q == qnumber)
+        {
+          var row = table.insertRow();
+          var cellLeft = row.insertCell();
+          var cellRight = row.insertCell();
+          var cellEqual = row.insertCell();
+          var cellQuestion = row.insertCell();
+
+          var tb1 = document.createElement("table");
+          tb1.setAttribute("class", "matrix");
+          tb1.align="right";
+          var tr1 = document.createElement("tr");
+          var td1 = document.createElement("td");
+          td1.innerHTML = points[i].x;
+          tb1.appendChild(tr1);
+          tr1.appendChild(td1);
+          var tr2 = document.createElement("tr");
+          var td2 = document.createElement("td");
+          td2.innerHTML = points[i].y;
+          tb1.appendChild(tr2);
+          tr2.appendChild(td2);
+          cellLeft.appendChild(tb1);
+
+          var tb2 = document.createElement("table");
+          tb2.setAttribute("class", "matrix");
+          tr1 = document.createElement("tr");
+          td1 = document.createElement("td");
+          td1.innerHTML = 1;
+          td2 = document.createElement("td");
+          td2.innerHTML = 0;
+          tr1.appendChild(td1);
+          tr1.appendChild(td2);
+          tb2.appendChild(tr1);
+          tr2 = document.createElement("tr");
+          td1 = document.createElement("td");
+          td1.innerHTML = 0;
+          td2 = document.createElement("td");
+          td2.innerHTML = 1;
+          tr2.appendChild(td1);
+          tr2.appendChild(td2);
+          tb2.appendChild(tr2);
+          cellRight.appendChild(tb2);
+
+          cellEqual.innerHTML = " = ";
+
+          tb1 = document.createElement("table");
+          tb1.setAttribute("class", "matrix");
+          tb1.align="left";
+          var tr1 = document.createElement("tr");
+          var td1 = document.createElement("td");
+          var xScaled = document.createElement("input");
+          xScaled.type = "text";
+          xScaled.maxlength = "3";
+          xScaled.size = "3";
+          td1.appendChild(xScaled);
+          tb1.appendChild(tr1);
+          tr1.appendChild(td1);
+          var tr2 = document.createElement("tr");
+          var td2 = document.createElement("td");
+          var yScaled = document.createElement("input");
+          yScaled.type = "text";
+          yScaled.maxlength = "3";
+          yScaled.size = "3";
+          td2.appendChild(yScaled);
+          tb1.appendChild(tr2);
+          tr2.appendChild(td2);
+          cellQuestion.appendChild(tb1);
+      }
     }
 }
 </script>

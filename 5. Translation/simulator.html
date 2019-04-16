@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Scaling</title>
+    <title>Translation</title>
     <style>
         .row {
             display: flex;
@@ -18,7 +18,7 @@
 <body>
 
 <script src="squareevent.js"></script>
-<h1>TRANSFORMATIONS - Scaling</h1>
+<h1>TRANSFORMATIONS - Translation</h1>
 <hr/>
 <p id="question"></p>
 <input type="button" value="Q1" id="1" onclick="changequestion(0)"/>
@@ -202,6 +202,7 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
         for (i = 0; i < squarecontainer.length; i++) {
             squarecontainer[i].square.mycolor = 'grey';
+            squarecontainer[i].square.textColor = "white";
             squarecontainer[i].flag = 0;
             squarecontainer[i].square.draw();
 
