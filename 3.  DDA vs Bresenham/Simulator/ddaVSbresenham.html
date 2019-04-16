@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>DDA Algorithm</title>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<script src="squareevent.js"></script>
+<h1>Comparison of DDA and Bresenham Line Drawing Algorithms</h1>
+<hr/>
+<p id="question"></p>
+<input type="button" value="Q1" id="1" onclick="changequestion(0)"/>
+<input type="button" value="Q2" id="2" onclick="changequestion(1)"/>
+<input type="button" value="Q3" id="3" onclick="changequestion(2)"/>
+<input type="button" value="Q4" id="4" onclick="changequestion(3)"/>
+<input type="button" value="Q5" id="5" onclick="changequestion(4)"/>
+<hr>
+<input type="button" value="Check Co-ordinates" onclick="check();"/>
+<input type="button" value="Clear Canvas" onclick="clearCanvas();"/>
+<br/>
+<hr/>
+<br/>
+<div class="row">
+    <div class="column">
+      <span style="font-size: 20px"> DDA Line Drawing Algorithm </span>
+<canvas id="mycanvasDDA" width="800" height="600" style="border:solid;border-color:black"></canvas>
+    </div>
+    <div class="column">
+      <span style="font-size: 20px"> Bresenham Line Drawing Algorithm </span>
+<canvas id="mycanvasBRESENHAM" width="800" height="600" style="border:solid;border-color:black"></canvas>
+    </div>
+</div>
+<script>
+
+    //window.onload = function(){
+      var canvasDDA = document.getElementById("mycanvasDDA");
+      var contextDDA = canvasDDA.getContext("2d");
+      var canvasBRESENHAM = document.getElementById("mycanvasBRESENHAM");
+      var contextBRESENHAM = canvasBRESENHAM.getContext("2d");
+      canvasDDA.addEventListener('mousedown',mouseevtDDA,false);
+      canvasBRESENHAM.addEventListener('mousedown',mouseevtBRESENHAM,false);
+    //}
+
+    var qnumber;
+    var questions = [];
+    questions.push("Draw a line from (2,3) to (12,8) using DDA Line Drawing Algorithm AND Bresenham Line Drawing Algorithm");
+    questions.push("Draw a line from (3,6) to (11,9) using DDA Line Drawing Algorithm AND Bresenham Line Drawing Algorithm");
+    questions.push("Draw a line from (1,1) to (13,10) using DDA Line Drawing Algorithm AND Bresenham Line Drawing Algorithm");
+    var i = 0;
+    var j = 0;
+    var r = -1;
+    var c = -1;
+    var squarecontainerDDA = [];
+    var squarecontainerBRESENHAM = [];
+    var dda = [];
+    var bresenham = [];
+    dda.push({x: 2, y: 3, q: 0});
+    dda.push({x: 3, y: 4, q: 0});
+    dda.push({x: 4, y: 4, q: 0});
+    dda.push({x: 5, y: 5, q: 0});
+    dda.push({x: 6, y: 5, q: 0});
+    dda.push({x: 7, y: 6, q: 0});
+    dda.push({x: 8, y: 6, q: 0});
+    dda.push({x: 9, y: 7, q: 0});
+    dda.push({x: 10, y: 7, q: 0});
+    dda.push({x: 11, y: 8, q: 0});
+    dda.push({x: 12, y: 8, q: 0});
+
+    dda.push({x: 3,y: 6,q: 1});
+    dda.push({x: 4, y: 6, q: 1});
+    dda.push({x: 5, y: 6, q: 1});
+    dda.push({x: 6, y: 6, q: 1});
+    dda.push({x: 7, y: 6, q: 1});
+    dda.push({x: 8, y: 7, q: 1});
+    dda.push({x: 9, y: 7, q: 1});
+    dda.push({x: 10, y: 8, q: 1});
+    dda.push({x: 11, y: 9, q: 1});
+
+    dda.push({x: 1,y: 1,q: 2});
+    dda.push({x: 2,y: 2,q: 2});
+    dda.push({x: 3,y: 3,q: 2});
+    dda.push({x: 4,y: 4,q: 2});
+    dda.push({x: 5,y: 5,q: 2});
+    dda.push({x: 6,y: 6,q: 2});
+    dda.push({x: 7,y: 7,q: 2});
+    dda.push({x: 8,y: 8,q: 2});
+    dda.push({x: 9,y: 8,q: 2});
+    dda.push({x: 10,y: 9,q: 2});
+    dda.push({x: 11,y: 9,q: 2});
+    dda.push({x: 12,y: 10,q: 2});
+    dda.push({x: 13,y: 10,q: 2});
+
+    bresenham.push({x: 2, y: 3, q: 0});
+    bresenham.push({x: 3, y: 3, q: 0});
+    bresenham.push({x: 4, y: 4, q: 0});
+    bresenham.push({x: 5, y: 4, q: 0});
+    bresenham.push({x: 5, y: 5, q: 0});
+    bresenham.push({x: 6, y: 5, q: 0});
+    bresenham.push({x: 7, y: 5, q: 0});
+    bresenham.push({x: 8, y: 6, q: 0});
+    bresenham.push({x: 9, y: 6, q: 0});
+    bresenham.push({x: 10, y: 7, q: 0});
+    bresenham.push({x: 11, y: 7, q: 0});
+    bresenham.push({x: 12, y: 8, q: 0});
+
+    bresenham.push({x: 3,y: 6, q: 1});
+    bresenham.push({x: 4,y: 6, q: 1});
+    bresenham.push({x: 5,y: 6, q: 1});
+    bresenham.push({x: 6,y: 7, q: 1});
+    bresenham.push({x: 7,y: 7, q: 1});
+    bresenham.push({x: 8,y: 7, q: 1});
+    bresenham.push({x: 9,y: 8, q: 1});
+    bresenham.push({x: 10,y: 8, q: 1});
+    bresenham.push({x: 11,y: 9, q: 1});
+
+    bresenham.push({x: 1,y: 1, q: 2});
+    bresenham.push({x: 2,y: 1, q: 2});
+    bresenham.push({x: 3,y: 2, q: 2});
+    bresenham.push({x: 4,y: 3, q: 2});
+    bresenham.push({x: 5,y: 4, q: 2});
+    bresenham.push({x: 6,y: 4, q: 2});
+    bresenham.push({x: 7,y: 5, q: 2});
+    bresenham.push({x: 8,y: 6, q: 2});
+    bresenham.push({x: 9,y: 7, q: 2});
+    bresenham.push({x: 10,y: 7, q: 2});
+    bresenham.push({x: 11,y: 8, q: 2});
+    bresenham.push({x: 12,y: 9, q: 2});
+    bresenham.push({x: 13,y: 10, q: 2});
+
+    var clickFlag = false;
+
+
+    for (j = 0; j < 600; j = j + 50) {
+        r++;
+        c = -1;
+        for (i = 0; i < 800; i = i + 50) {
+            c++;
+            var a = new mysquare(canvasDDA, i, j, 50, 50);
+            a.draw();
+            var b = new mysquare(canvasBRESENHAM, i, j, 50, 50);
+            b.draw();
+            squarecontainerDDA.push({square: a, x1: i, y1: j, rows: r, cols: c, flag: 0});
+            squarecontainerBRESENHAM.push({square: b, x1: i, y1: j, rows: r, cols: c, flag: 0});
+        }
+    }
+
+    function mouseevtDDA(event) {
+
+      x = event.pageX-canvasDDA.offsetLeft;
+      y = event.pageY-canvasDDA.offsetTop;
+        if (!clickFlag) {
+            for (i = 0; i < squarecontainerDDA.length; i++) {
+                if (x >= squarecontainerDDA[i].x1 && x <= (squarecontainerDDA[i].x1 + 50) && y >= squarecontainerDDA[i].y1 && y <= (squarecontainerDDA[i].y1 + 50)) {
+                    squarecontainerDDA[i].square.mycolor = "yellow";
+                    squarecontainerDDA[i].square.draw();
+                    squarecontainerDDA[i].flag = 1;
+                    break;
+                }
+            }
+            contextDDA.clearRect(0, 0, canvasDDA.width, canvasDDA.height);
+            for (i = 0; i < squarecontainerDDA.length; i++) {
+                squarecontainerDDA[i].square.draw();
+            }
+        }
+        else
+        {
+            alert("Clear the canvas to try again !");
+        }
+    }
+
+    function mouseevtBRESENHAM(event) {
+
+      x = event.pageX-canvasBRESENHAM.offsetLeft;
+      y = event.pageY-canvasBRESENHAM.offsetTop;
+        if (!clickFlag) {
+            for (i = 0; i < squarecontainerBRESENHAM.length; i++) {
+                if (x >= squarecontainerBRESENHAM[i].x1 && x <= (squarecontainerBRESENHAM[i].x1 + 50) && y >= squarecontainerBRESENHAM[i].y1 && y <= (squarecontainerBRESENHAM[i].y1 + 50)) {
+                    squarecontainerBRESENHAM[i].square.mycolor = "yellow";
+                    squarecontainerBRESENHAM[i].square.draw();
+                    squarecontainerBRESENHAM[i].flag = 1;
+                    break;
+                }
+            }
+            contextBRESENHAM.clearRect(0, 0, canvasBRESENHAM.width, canvasBRESENHAM.height);
+            for (i = 0; i < squarecontainerBRESENHAM.length; i++) {
+                squarecontainerBRESENHAM[i].square.draw();
+            }
+        }
+        else
+        {
+            alert("Clear the canvas to try again !");
+        }
+    }
+
+    function check() {
+        clickFlag = true;
+        for (j = 0; j < dda.length; j++) {
+            for (i = 0; i < squarecontainerDDA.length; i++) {
+                if (squarecontainerDDA[i].flag == 1) {
+                    if (dda[j].x == squarecontainerDDA[i].cols && dda[j].y == squarecontainerDDA[i].rows && dda[j].q == qnumber) {
+                        squarecontainerDDA[i].square.mycolor = "green";
+                    }
+                    else if(squarecontainerDDA[i].square.mycolor != "green")
+                    {
+                        squarecontainerDDA[i].square.mycolor = "red";
+                    }
+                }
+                else if (dda[j].x == squarecontainerDDA[i].cols && dda[j].y == squarecontainerDDA[i].rows && dda[j].q == qnumber) {
+                    squarecontainerDDA[i].square.mycolor = "black";
+                }
+                else
+                {
+                    squarecontainerDDA[i].square.textColor = "#95a5a6";
+                }
+                squarecontainerDDA[i].square.draw();
+            }
+        }
+
+        for (j = 0; j < bresenham.length; j++) {
+            for (i = 0; i < squarecontainerBRESENHAM.length; i++) {
+                if (squarecontainerBRESENHAM[i].flag == 1) {
+                    if (bresenham[j].x == squarecontainerBRESENHAM[i].cols && bresenham[j].y == squarecontainerBRESENHAM[i].rows && bresenham[j].q == qnumber) {
+                        squarecontainerBRESENHAM[i].square.mycolor = "green";
+                    }
+                    else if(squarecontainerBRESENHAM[i].square.mycolor != "green")
+                    {
+                        squarecontainerBRESENHAM[i].square.mycolor = "red";
+                    }
+                }
+                else if (bresenham[j].x == squarecontainerBRESENHAM[i].cols && bresenham[j].y == squarecontainerBRESENHAM[i].rows && bresenham[j].q == qnumber) {
+                    squarecontainerBRESENHAM[i].square.mycolor = "black";
+                }
+                else
+                {
+                    squarecontainerBRESENHAM[i].square.textColor = "#95a5a6";
+                }
+                squarecontainerBRESENHAM[i].square.draw();
+            }
+        }
+    }
+
+    function clearCanvas() {
+        location.reload();
+    }
+
+    function reset() {
+        contextDDA.clearRect(0, 0, canvasDDA.width, canvasDDA.height);
+        for (i = 0; i < squarecontainerDDA.length; i++) {
+            squarecontainerDDA[i].square.mycolor = 'grey';
+            squarecontainerDDA[i].square.textColor = "white";
+            squarecontainerDDA[i].flag = 0;
+            squarecontainerDDA[i].square.draw();
+
+            squarecontainerBRESENHAM[i].square.mycolor = 'grey';
+            squarecontainerBRESENHAM[i].square.textColor = "white";
+            squarecontainerBRESENHAM[i].flag = 0;
+            squarecontainerBRESENHAM[i].square.draw();
+
+        }
+    }
+
+    changequestion(0);
+
+    function changequestion(j) {
+        var we;
+        qnumber = j;
+        we = "" + questions[j];
+        reset();
+        document.getElementById("question").innerHTML = null;
+        document.getElementById("question").innerHTML = we;
+    }
+</script>
+</body>
+</html>
