@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b8bbb1d-4b83-46e5-85c8-a5e144090f3e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/6. Scaling/simulator.html" beforeDir="false" afterPath="$PROJECT_DIR$/6. Scaling/simulator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/7. Rotation/simulator.html" beforeDir="false" afterPath="$PROJECT_DIR$/7. Rotation/simulator.html" afterDir="false" />
     </list>
@@ -24,25 +25,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="4" />
+          <entry key="html" value="5" />
           <entry key="php" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="4" />
+          <entry key="HTML" value="5" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1124" />
+          <entry key="html" value="1204" />
           <entry key="php" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1124" />
+          <entry key="HTML" value="1204" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -50,11 +51,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/6. Scaling/simulator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="479" column="61" selection-start-line="479" selection-start-column="61" selection-end-line="479" selection-end-column="61" />
+            <state relative-caret-position="527">
+              <caret line="576" column="9" lean-forward="true" selection-start-line="563" selection-start-column="7" selection-end-line="576" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -84,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/7. Rotation/simulator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="529" column="37" lean-forward="true" selection-start-line="529" selection-start-column="37" selection-end-line="529" selection-end-column="37" />
+            <state relative-caret-position="394">
+              <caret line="564" column="13" lean-forward="true" selection-start-line="564" selection-start-column="13" selection-end-line="564" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -96,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/4. Circle/simulator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+            <state relative-caret-position="213">
+              <caret line="518" column="8" selection-start-line="518" selection-start-column="8" selection-end-line="518" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -118,10 +119,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/4. Circle/simulator.html" />
         <option value="$USER_HOME$/Downloads/template/labs/exp1/simulation.php" />
-        <option value="$PROJECT_DIR$/7. Rotation/simulator.html" />
+        <option value="$PROJECT_DIR$/4. Circle/simulator.html" />
         <option value="$PROJECT_DIR$/6. Scaling/simulator.html" />
+        <option value="$PROJECT_DIR$/7. Rotation/simulator.html" />
       </list>
     </option>
   </component>
@@ -193,12 +194,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555516274604</updated>
-      <workItem from="1555516284628" duration="6012000" />
+      <workItem from="1555516284628" duration="7605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6012000" />
+    <option name="totallyTimeSpent" value="7605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="725" extended-state="0" />
@@ -230,13 +231,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/4. Circle/simulator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../indexnew3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="511">
@@ -251,17 +245,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/7. Rotation/simulator.html">
+    <entry file="file://$PROJECT_DIR$/4. Circle/simulator.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="529" column="37" lean-forward="true" selection-start-line="529" selection-start-column="37" selection-end-line="529" selection-end-column="37" />
+        <state relative-caret-position="213">
+          <caret line="518" column="8" selection-start-line="518" selection-start-column="8" selection-end-line="518" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/6. Scaling/simulator.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="479" column="61" selection-start-line="479" selection-start-column="61" selection-end-line="479" selection-end-column="61" />
+        <state relative-caret-position="527">
+          <caret line="576" column="9" lean-forward="true" selection-start-line="563" selection-start-column="7" selection-end-line="576" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -287,6 +281,13 @@
             <element signature="n#style#0;n#tr#10;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7. Rotation/simulator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="564" column="13" lean-forward="true" selection-start-line="564" selection-start-column="13" selection-end-line="564" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -499,6 +499,17 @@
             squarecontainer[i].flag = 0;
             squarecontainer[i].square.draw();
         }
+
+        document.getElementById("m0").value = "";
+        document.getElementById("m1").value = "";
+        document.getElementById("m2").value = "";
+        document.getElementById("m3").value = "";
+
+        var table = document.getElementById("tablePoints");
+        while (table.rows.length > 1) {
+            table.deleteRow(1);
+        }
+
         startSim = false;
         for (i = 0; i < step1.length; i++) {
             step1[i].style.opacity = "0";
@@ -530,7 +541,7 @@
             }
         }
         else {
-            alert("Scaling matrix is in-correct");
+            alert("Scaling matrix is incorrect");
         }
     }
 
@@ -548,17 +559,21 @@
                         count++;
                     }
                 }
-                if (count == 2) {
-                    alert("Matrices correct");
-                    for (i = 0; i < step2.length; i++) {
-                        step2[i].style.opacity = "0.2";
-                    }
-                    for (i = 0; i < step3.length; i++) {
-                        step3[i].style.opacity = "1";
-                    }
-                    clickFlag = false;
-                }
             }
+        }
+        if (count == scaledPointsX.length) {
+            alert("Matrices correct");
+            for (i = 0; i < step2.length; i++) {
+                step2[i].style.opacity = "0.2";
+            }
+            for (i = 0; i < step3.length; i++) {
+                step3[i].style.opacity = "1";
+            }
+            clickFlag = false;
+        }
+        else
+        {
+            alert("Matrices are incorrect");
         }
     }
 
