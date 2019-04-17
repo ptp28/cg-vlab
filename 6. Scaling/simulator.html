@@ -401,10 +401,6 @@
     scaleA.push({x: 11, y: 6, q: 2});
     scaleA.push({x: 10, y: 5, q: 2});
 
-    translateFactor.push({tx: 5, ty: 12, q: 0});
-    translateFactor.push({tx: 11, ty: 11, q: 1});
-    translateFactor.push({tx: 12, ty: 3, q: 2});
-
 
     var clickFlag = true;
     var startSim = false;
@@ -481,6 +477,7 @@
                         }
                         else {
                             squarecontainer[i].square.mycolor = "red";
+                            squarecontainer[i].square.draw();
                             break;
                         }
                     }
