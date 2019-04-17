@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b8bbb1d-4b83-46e5-85c8-a5e144090f3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6. Scaling/simulator.html" beforeDir="false" afterPath="$PROJECT_DIR$/6. Scaling/simulator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/7. Rotation/simulator.html" beforeDir="false" afterPath="$PROJECT_DIR$/7. Rotation/simulator.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,71 +24,56 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="cpp" value="1" />
           <entry key="html" value="5" />
           <entry key="php" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="C++" value="1" />
           <entry key="HTML" value="5" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1204" />
+          <entry key="html" value="1364" />
           <entry key="php" value="3" />
+          <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1204" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="HTML" value="1364" />
+          <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/6. Scaling/simulator.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/7. Rotation/simulator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="576" column="9" lean-forward="true" selection-start-line="563" selection-start-column="7" selection-end-line="576" selection-end-column="9" />
+            <state relative-caret-position="24">
+              <caret line="151" column="21" selection-start-line="151" selection-start-column="21" selection-end-line="151" selection-end-column="21" />
               <folding>
-                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#table#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#tr#0;n#table#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#tr#1;n#table#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#tr#1;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#tr#2;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#tr#3;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#tr#4;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#tr#5;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#tr#5;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#tr#6;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#tr#6;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#tr#7;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#tr#7;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#td#0;n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tr#10;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#td#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#10;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/7. Rotation/simulator.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="564" column="13" lean-forward="true" selection-start-line="564" selection-start-column="13" selection-end-line="564" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -111,7 +95,12 @@
       <find>opac</find>
       <find>scal</find>
       <find>sca</find>
+      <find>clickFlag</find>
+      <find>maxlength</find>
     </findStrings>
+    <replaceStrings>
+      <replace>maxlength=&quot;6&quot; size=&quot;6&quot;</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -122,6 +111,7 @@
         <option value="$USER_HOME$/Downloads/template/labs/exp1/simulation.php" />
         <option value="$PROJECT_DIR$/4. Circle/simulator.html" />
         <option value="$PROJECT_DIR$/6. Scaling/simulator.html" />
+        <option value="$PROJECT_DIR$/7. Rotation/rotate.cpp" />
         <option value="$PROJECT_DIR$/7. Rotation/simulator.html" />
       </list>
     </option>
@@ -172,6 +162,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -194,12 +189,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555516274604</updated>
-      <workItem from="1555516284628" duration="7605000" />
+      <workItem from="1555516284628" duration="9376000" />
     </task>
+    <task id="LOCAL-00001" summary="Bug fix">
+      <created>1555526018983</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555526018984</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7605000" />
+    <option name="totallyTimeSpent" value="9376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="725" extended-state="0" />
@@ -212,6 +215,7 @@
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.328594" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -229,6 +233,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../indexnew3.html">
@@ -284,10 +293,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../rotate.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/7. Rotation/simulator.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="564" column="13" lean-forward="true" selection-start-line="564" selection-start-column="13" selection-end-line="564" selection-end-column="13" />
+        <state relative-caret-position="24">
+          <caret line="151" column="21" selection-start-line="151" selection-start-column="21" selection-end-line="151" selection-end-column="21" />
+          <folding>
+            <element signature="n#tr#1;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#2;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#3;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#4;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#5;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#6;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#7;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#td#0;n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#td#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#10;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
