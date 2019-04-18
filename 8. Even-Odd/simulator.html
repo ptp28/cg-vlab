@@ -4,9 +4,9 @@
     <meta charset="utf-8"/>
     <title>Even Odd</title>
     <style>
-        /* table,td {
+         table,td {
           border: solid;
-        } */
+        }
         .tableOuter {
             table-layout: auto;
             width: 100%;
@@ -70,78 +70,91 @@
     </div>
     <div class="column">
         <table cellspacing="10" class="tableOuter">
-            <tr name="step1" style="opacity: 0">
+            <tr>
                 <td>
-                    1. Enter Scaling matrix :
+                    1. : Draw line parallel to X-axis towards X=0
                 </td>
+            </tr>
+            <tr>
                 <td>
-                    <table class="matrix">
-                        <tr>
-                            <td><input type="text" id="m0" maxlength="3" size="3"></td>
-                            <td><input type="text" id="m1" maxlength="3" size="3"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" id="m2" maxlength="3" size="3"></td>
-                            <td><input type="text" id="m3" maxlength="3" size="3"></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr name="step1" style="opacity: 0">
-                <td colspan="2">
-                    <input type="button" onclick="checkScaleMatrix();" value="CHECK MATRIX"
-                           style="width:100%; height:30px;">
+                    2. : Enter number of intersections :
+                    <input type="text" maxlength="3" size="3" id="acceptIntersectionCount">
                 </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>
+                    <input type="button" value="Check number of interestions" ONCLICK="checkStep2();" style="width: 100% ; height: 50px">
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>3. : Enter the intersected points below : </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr name="step2" style="opacity: 0">
-                <td colspan="2">
-                    2. Enter the scaled co-ordinates for the given points :
+                <td id="enterPoints">
                 </td>
             </tr>
-            <tr name="step2" style="opacity: 0">
-                <td colspan="2">
-                    <table id="tablePoints" cellspacing="10" cellpadding="3">
-                        <tr>
-                            <td>
-                            </td>
-                            <td>
-                            </td>
-                        </tr>
-                    </table>
+            <tr>
+                <td>
+                    <input type="button" value="Check Coordinates" ONCLICK="checkStep3();" style="width: 100% ; height: 50px">
                 </td>
             </tr>
-            <tr name="step2" style="opacity: 0">
-                <td colspan="2">
-                    <input type="button" onclick="checkScaledCoord();" value="CHECK SCALED CO-ORDINATES"
-                           style="width:100%; height:30px;">
+            <tr>
+                <td>
+                    4. : Are any of the intersection points on a vertex :
+                    <br>
+                    <input type="radio" name="vertexCheck" value="YES"> YES
+                    <br>
+                    <input type="radio" name="vertexCheck" value="NO"> NO
+                    <br>
+                    <input type="button" value="Check" ONCLICK="checkStep4();" style="width: 100% ; height: 50px">
                 </td>
             </tr>
-            <tr name="step3" style="opacity: 0">
-                <td colspan="2">
-                    3. Plot the scaled points on the canvas
+            <tr>
+                <td>
+                    5. : Do the edges of that vertex lie on the same side :
+                    <br>
+                    <input type="radio" name="edgeCheck" value="YES"> YES
+                    <br>
+                    <input type="radio" name="edgeCheck" value="NO"> NO
+                    <br>
+                    <input type="button" value="Check " ONCLICK="checkStep5();" style="width: 100% ; height: 50px">
                 </td>
             </tr>
-            <tr name="step4" style="opacity: 0">
-                <td colspan="2">
-                    4. Click the button below to join the points
+            <tr>
+                <td>
+                    6. : Therefore will the intersection be counted as even or odd :
+                    <br>
+                    <input type="radio" name="evenoddCheck" value="EVEN"> EVEN
+                    <br>
+                    <input type="radio" name="evenoddCheck" value="ODD"> ODD
+                    <br>
+                    <input type="button" value="Check " ONCLICK="checkStep6();" style="width: 100% ; height: 50px">
                 </td>
             </tr>
-            <tr name="step4" style="opacity: 0">
-                <td colspan="2">
-                    <input type="button" onclick="connectPoints();" value="JOIN POINTS"
-                           style="width:100%; height:30px;">
+            <tr>
+                <td>
+                    7. : Total intersections are even or odd :
+                    <br>
+                    <input type="radio" name="totalCheck" value="EVEN"> EVEN
+                    <br>
+                    <input type="radio" name="totalCheck" value="ODD"> ODD
+                    <br>
+                    <input type="button" value="Check " ONCLICK="checkStep7();" style="width: 100% ; height: 50px">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    8. : Conclusion :
+                    <br>
+                    Where does the point lie -
+                    <br>
+                    <input type="radio" name="answerCheck" value="INSIDE"> INSIDE
+                    <br>
+                    <input type="radio" name="answerCheck" value="OUTSIDE"> OUTSIDE
+                    <br>
+                    <input type="radio" name="answerCheck"value="NA"> CANNOT SAY
+                    <br>
+                    <input type="button" value="Check " ONCLICK="checkStep8();" style="width: 100% ; height: 50px">
                 </td>
             </tr>
         </table>
@@ -150,9 +163,11 @@
 <script>
     var qnumber;
     var questions = [];
-    questions.push("Scale the given line by Sx=2 and Sy=2 ");
-    questions.push("Scale the given square by Sx=0.5 and Sy=0.5 ");
-    questions.push("Scale the given triangle by Sx=3 and Sy=2");
+    questions.push("Prove that the point (20,21) lies outside the polygon using even-odd method.");
+    questions.push("Prove that the point (10,13) lies inside the polygon using even-odd method.");
+    questions.push("Prove that the point (20,21) lies outside the polygon using even-odd method.");
+    questions.push("Prove that the point (20,21) lies outside the polygon using even-odd method.");
+    questions.push("Prove that the point (20,21) lies outside the polygon using even-odd method.");
     var canvas = document.getElementById("mycanvas");
     var context = canvas.getContext("2d");
     var i = 0;
@@ -161,20 +176,21 @@
     var c = -1;
     var squarecontainer = [];
     var objectCoord = [];
-    var scaleA = [];
-    var points = [];
-    var scaleMatrix = [];
-    var scaledCoord = [];
-    var pixelCount = [];
-    var pointsHint = [];
-
-    var step1 = document.getElementsByName("step1");
-    var step2 = document.getElementsByName("step2");
-    var step3 = document.getElementsByName("step3");
-    var step4 = document.getElementsByName("step4");
+    var intersectionCount = [];
+    var parallelXLines = [];
+    var intersectedPoints = [];
+    var step4Answer = [];
+    var step5Answer = [];
+    var step6Answer = [];
+    var step7Answer = [];
+    var step8Answer = [];
 
     var clickFlag = true;
     var startSim = false;
+
+    intersectionCount.push({c:1,q:0});
+    intersectionCount.push({c:2,q:1});
+    intersectionCount.push({c:3,q:2});
 
     objectCoord.push({ x:5 , y:4 });
     objectCoord.push({ x:5 , y:5 });
@@ -235,6 +251,33 @@
     // objectCoord.push({ x: , y: });
     // objectCoord.push({ x: , y: });
 
+    parallelXLines.push({x:19 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:18 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:17 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:16 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:15 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:14 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:13 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:12 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:11 , y:21 ,q:0 ,i:true});
+    parallelXLines.push({x:10 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:9 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:8 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:7 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:6 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:5 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:4 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:3 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:2 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:1 , y:21 ,q:0 ,i:false});
+    parallelXLines.push({x:0 , y:21 ,q:0 ,i:false});
+
+    intersectedPoints.push({x:11 , y:21 , q:0});
+    intersectedPoints.push({x:1 , y:2 , q:1});
+
+    step4Answer.push({val:"YES" , q: 0});
+
+
 
 
 
@@ -249,80 +292,79 @@
         }
     }
 
-    // function mouseevt(x, y) {
-    //     if (true) {
-    //         for (i = 0; i < squarecontainer.length; i++) {
-    //             if (squarecontainer[i].square.mycolor == 'red') {
-    //                 squarecontainer[i].square.mycolor = 'grey';
-    //                 squarecontainer[i].flag = 0;
-    //                 squarecontainer[i].square.draw();
-    //             }
-    //         }
-    //         for (i = 0; i < squarecontainer.length; i++) {
-    //             if (x >= squarecontainer[i].x1 && x <= (squarecontainer[i].x1 + 25) && y >= squarecontainer[i].y1 && y <= (squarecontainer[i].y1 + 25)) {
-    //                 if (squarecontainer[i].square.mycolor == 'green') {
-    //                     return;
-    //                 }
-    //                 else {
-    //                     squarecontainer[i].square.mycolor = "yellow";
-    //                     squarecontainer[i].square.draw();
-    //                     squarecontainer[i].flag = 1;
-    //                     break;
-    //                 }
-    //             }
-    //         }
-    //         context.clearRect(0, 0, canvas.width, canvas.height);
-    //         for (i = 0; i < squarecontainer.length; i++) {
-    //             squarecontainer[i].square.draw();
-    //         }
-    //         //checkPixels();
-    //     }
-    //     else {
-    //         alert("Please follow the instructions to complete the simulation");
-    //     }
-    //     if (false) {
-    //         alert("Click on the 'START SIMULATOR' button to start simulation");
-    //     }
-    // }
-    //
-    // countPixelFlag = 0;
-    //
-    // function checkPixels() {
-    //     for (j = 0; j < scaledCoord.length; j++) {
-    //         if (scaledCoord[j].q == qnumber) {
-    //             for (i = 0; i < squarecontainer.length; i++) {
-    //                 if (squarecontainer[i].square.mycolor === "yellow" || squarecontainer[i].square.mycolor === "red") {
-    //                     if (squarecontainer[i].cols == scaledCoord[j].x && squarecontainer[i].rows == scaledCoord[j].y) {
-    //                         squarecontainer[i].square.mycolor = "green";
-    //                         countPixelFlag++;
-    //                         if (countPixelFlag == pixelCount[qnumber].c) {
-    //                             squarecontainer[i].square.draw();
-    //                             for (i = 0; i < step3.length; i++) {
-    //                                 step3[i].style.opacity = "0.2";
-    //                             }
-    //                             for (i = 0; i < step4.length; i++) {
-    //                                 step4[i].style.opacity = "1";
-    //                             }
-    //                             clickFlag = true;
-    //                         }
-    //                         break;
-    //                     }
-    //                     else {
-    //                         squarecontainer[i].square.mycolor = "red";
-    //                         squarecontainer[i].square.draw();
-    //                         break;
-    //                     }
-    //                 }
-    //                 squarecontainer[i].square.draw();
-    //             }
-    //         }
-    //     }
-    // }
-    //
-    // function clearCanvas() {
-    //     location.reload();
-    // }
-    //
+    function mouseevt(x, y) {
+        if (true) {
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (squarecontainer[i].square.mycolor == 'red') {
+                    squarecontainer[i].square.mycolor = 'grey';
+                    squarecontainer[i].flag = 0;
+                    squarecontainer[i].square.draw();
+                }
+            }
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (x >= squarecontainer[i].x1 && x <= (squarecontainer[i].x1 + 25) && y >= squarecontainer[i].y1 && y <= (squarecontainer[i].y1 + 25)) {
+                    if (squarecontainer[i].square.mycolor == 'green') {
+                        return;
+                    }
+                    else {
+                        squarecontainer[i].square.mycolor = "orange";
+                        squarecontainer[i].square.draw();
+                        squarecontainer[i].flag = 1;
+                        break;
+                    }
+                }
+            }
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            for (i = 0; i < squarecontainer.length; i++) {
+                squarecontainer[i].square.draw();
+            }
+            checkPixels();
+        }
+        else {
+            alert("Please follow the instructions to complete the simulation");
+        }
+        if (false) {
+            alert("Click on the 'START SIMULATOR' button to start simulation");
+        }
+    }
+
+    countPixelFlag = 0;
+
+    function checkPixels() {
+        for (j = 0; j < parallelXLines.length; j++) {
+            if (parallelXLines[j].q == qnumber) {
+                for (i = 0; i < squarecontainer.length; i++) {
+                    if (squarecontainer[i].square.mycolor === "orange" || squarecontainer[i].square.mycolor === "red") {
+                        if(squarecontainer[i].cols == parallelXLines[j].x && squarecontainer[i].rows == parallelXLines[j].y)
+                        {
+                            if(parallelXLines[j].i == true)
+                            {
+                                squarecontainer[i].square.mycolor = "green";
+                                squarecontainer[i].square.draw();
+                            }
+                            else
+                            {
+                                squarecontainer[i].square.mycolor = "yellow";
+                                squarecontainer[i].square.draw();
+                            }
+
+                        }
+                        else {
+                                squarecontainer[i].square.mycolor = "red";
+                                squarecontainer[i].square.draw();
+                                break;
+                            }
+                        }
+                    }
+                    squarecontainer[i].square.draw();
+                }
+            }
+    }
+
+    function clearCanvas() {
+        location.reload();
+    }
+
     // function reset() {
     //     context.clearRect(0, 0, canvas.width, canvas.height);
     //     for (i = 0; i < squarecontainer.length; i++) {
@@ -412,6 +454,7 @@
     changequestion(0);
 
     function changequestion(j) {
+        qnumber = j;
         for (j = 0; j < objectCoord.length; j++) {
                     for (i = 0; i < squarecontainer.length; i++) {
                             if (objectCoord[j].x == squarecontainer[i].cols && objectCoord[j].y == squarecontainer[i].rows) {
@@ -421,6 +464,80 @@
                     }
                 }
     }
+
+    function checkStep2()
+    {
+        var enteredIntersection = document.getElementById("acceptIntersectionCount").value;
+        if(enteredIntersection == intersectionCount[qnumber].c)
+        {
+            alert("Correct");
+            var cell = document.getElementById("enterPoints");
+            for(i=0;i<enteredIntersection;i++)
+            {
+                cell.innerHTML = cell.innerHTML + "Enter Coordinates of intersection point "+(i+1)+" - <br>";
+                var str = "<input type='text' name='xCoord' maxlength=3 size=3>";
+                cell.innerHTML = cell.innerHTML + "X : ";
+                cell.innerHTML = cell.innerHTML + str;
+                var str = "<input type='text' name='yCoord' maxlength=3 size=3>";
+                cell.innerHTML = cell.innerHTML + "Y : ";
+                cell.innerHTML = cell.innerHTML + str;
+                cell.innerHTML = cell.innerHTML + "<br>";
+            }
+        }
+        else
+        {
+            alert("INCORRECT");
+        }
+    }
+
+    function checkStep3()
+    {
+        var count = 0;
+        var enteredXCoord = document.getElementsByName("xCoord");
+        var enteredYCoord = document.getElementsByName("yCoord");
+        for(i=0;i<intersectedPoints.length;i++)
+        {
+            if(intersectedPoints[i].q == qnumber)
+            {
+                for(j=0;j<enteredXCoord.length;j++)
+                {
+                    if(intersectedPoints[i].x == enteredXCoord[j].value && intersectedPoints[i].y == enteredYCoord[j].value)
+                    {
+                        count++;
+                    }
+                }
+            }
+        }
+        if(count == intersectionCount[qnumber].c)
+        {
+            alert("ALL CORRECT");
+        }
+        else
+        {
+            alert("WRONG");
+        }
+    }
+
+    function checkStep4()
+    {
+        var step4 = document.getElementsByName("vertexCheck");
+        for(i=0 ;i<step4.length;i++)
+        {
+            if(step4[i].checked)
+            {
+                if(step4[i].value == step4Answer[qnumber].val)
+                {
+                    alert("correct");
+                }
+            }
+        }
+    }
+
+    function checkStep5()
+    {
+        var step5 = document.getElementsByName("edgeCheck");
+    }
+
     //
     // function changequestion(j) {
     //     var we;
