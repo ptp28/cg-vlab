@@ -56,9 +56,9 @@
     var questions = [];
     questions.push("Draw a line from (2,3) to (12,8) using DDA Line Drawing Algorithm");
     questions.push("Draw a line from (9,3) to (9,11) using DDA Line Drawing Algorithm");
-    questions.push("Draw a line from (3,6) to (11,9) using DDA Line Drawing Algorithm");
-    questions.push("Draw a line from (0,2) to (2,10) using DDA Line Drawing Algorithm");
-    questions.push("Draw a line from (1,1) to (13,10) using DDA Line Drawing Algorithm");
+    questions.push("Draw a line from (1,1) to (3,10) using DDA Line Drawing Algorithm");
+    questions.push("Draw a line from (13,2) to (2,7) using DDA Line Drawing Algorithm");
+    questions.push("Draw a line from (7,10) to (9,1) using DDA Line Drawing Algorithm");
     var canvas = document.getElementById("mycanvas");
     var context = canvas.getContext("2d");
     var i = 0;
@@ -89,39 +89,42 @@
     dda.push({x: 9, y: 10, q: 1});
     dda.push({x: 9, y: 11, q: 1});
 
-    dda.push({x: 3,y: 6,q: 2});
-    dda.push({x: 4, y: 6, q: 2});
-    dda.push({x: 5, y: 6, q: 2});
-    dda.push({x: 6, y: 6, q: 2});
-    dda.push({x: 7, y: 6, q: 2});
-    dda.push({x: 8, y: 7, q: 2});
-    dda.push({x: 9, y: 7, q: 2});
-    dda.push({x: 10, y: 8, q: 2});
-    dda.push({x: 11, y: 9, q: 2});
+    dda.push({x:1 ,y:1 ,q: 2});
+    dda.push({x:2 ,y:2 ,q: 2});
+    dda.push({x:2 ,y:3 ,q: 2});
+    dda.push({x:2 ,y:4 ,q: 2});
+    dda.push({x:2 ,y:5 ,q: 2});
+    dda.push({x:3 ,y:6 ,q: 2});
+    dda.push({x:3 ,y:7 ,q: 2});
+    dda.push({x:3 ,y:8 ,q: 2});
+    dda.push({x:3 ,y:9 ,q: 2});
+    dda.push({x:3 ,y:10 ,q: 2});
+    
 
-    dda.push({x: 0,y: 2,q: 3});
-    dda.push({x: 0,y: 3,q: 3});
-    dda.push({x: 0,y: 4,q: 3});
-    dda.push({x: 0,y: 5,q: 3});
-    dda.push({x: 0,y: 6,q: 3});
-    dda.push({x: 1,y: 7,q: 3});
-    dda.push({x: 1,y: 8,q: 3});
-    dda.push({x: 2,y: 9,q: 3});
-    dda.push({x: 2,y: 10,q: 3});
+    dda.push({x:13 ,y:2 ,q: 3});
+    dda.push({x:12 ,y:3 ,q: 3});
+    dda.push({x:11 ,y:3 ,q: 3});
+    dda.push({x:10 ,y:4 ,q: 3});
+    dda.push({x: 9 ,y:4 ,q: 3});
+    dda.push({x: 8 ,y:5 ,q: 3});
+    dda.push({x: 7 ,y:5 ,q: 3});
+    dda.push({x: 6 ,y:6 ,q: 3});
+    dda.push({x: 5 ,y:6 ,q: 3});
+    dda.push({x: 4 ,y:7 ,q: 3});
+    dda.push({x: 3 ,y:7 ,q: 3});
+    dda.push({x: 2 ,y:7 ,q: 3});
+    
 
-    dda.push({x: 1,y: 1,q: 4});
-    dda.push({x: 2,y: 2,q: 4});
-    dda.push({x: 3,y: 3,q: 4});
-    dda.push({x: 4,y: 4,q: 4});
-    dda.push({x: 5,y: 5,q: 4});
-    dda.push({x: 6,y: 6,q: 4});
-    dda.push({x: 7,y: 7,q: 4});
+    dda.push({x: 7,y: 10,q: 4});
+    dda.push({x: 8,y: 9,q: 4});
     dda.push({x: 8,y: 8,q: 4});
-    dda.push({x: 9,y: 8,q: 4});
-    dda.push({x: 10,y: 9,q: 4});
-    dda.push({x: 11,y: 9,q: 4});
-    dda.push({x: 12,y: 10,q: 4});
-    dda.push({x: 13,y: 10,q: 4});
+    dda.push({x: 8,y: 7,q: 4});
+    dda.push({x: 8,y: 6,q: 4});
+    dda.push({x: 9,y: 5,q: 4}); 
+    dda.push({x: 9,y: 4,q: 4});	
+    dda.push({x: 9,y: 3,q: 4});	
+    dda.push({x: 9,y: 2,q: 4});
+    dda.push({x: 9,y: 1,q: 4});		
 
     var clickFlag = false;
 
