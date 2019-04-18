@@ -4,15 +4,14 @@
     <meta charset="utf-8"/>
     <title>Even Odd</title>
     <style>
-         table,td {
-          border: solid;
+        td {
+            border:thick solid;
         }
+
         .tableOuter {
             table-layout: auto;
             width: 100%;
-            border: solid;
-            border-color: black;
-            border-width: medium;
+            border: thick solid black;
         }
 
         .row {
@@ -68,75 +67,76 @@
 <br/>
 <div class="row">
     <div class="column">
-        <canvas id="mycanvas" width="800" height="600" style="border:solid;border-color:black;"></canvas>
+        <canvas id="mycanvas" width="800" height="600" style="border:thick solid;border-color:black;"></canvas>
     </div>
     <div class="column">
-        <table class="tableOuter">
-            <tr id="step1" style="opacity: 0">
-                <td>
+        <table class="tableOuter" id="questionTable">
+            <tr>
+                <td id="step1" style="opacity: 0">
                     1. : Draw line parallel to X-axis towards X=0
                 </td>
             </tr>
-            <tr id="step2" style="opacity: 0">
-                <td>
+            <tr>
+                <td id="step2" style="opacity: 0">
                     2. : Enter number of intersections :
                     <input type="text" maxlength="3" size="3" id="acceptIntersectionCount">
                     <br>
-                    <input type="button" value="Check number of intersections" ONCLICK="checkStep2();" style="width: 100% ; height: 50px">
+                    <input type="button" value="Check number of intersections" ONCLICK="checkStep2();"
+                           style="width: 100% ; height: 70px">
                 </td>
             </tr>
-            <tr id="step3" style="opacity: 0">
-                <td id="enterPoints">
+            <tr>
+                <td id="step3" style="opacity: 0">
                     3. : Enter the intersected points below :
                     <br>
                 </td>
             </tr>
-            <tr  id="step4" style="opacity: 0">
-                <td>
+            <tr>
+                <td id="step4" style="opacity: 0">
                     4. : Are any of the intersection points on a vertex :
                     <br>
                     <input type="radio" name="vertexCheck" value="YES"> YES
                     <br>
                     <input type="radio" name="vertexCheck" value="NO"> NO
                     <br>
-                    <input type="button" value="Check" ONCLICK="checkStep4();" style="width: 100% ; height: 50px">
+                    <input type="button" value="Check" ONCLICK="checkStep4();" style="width: 100% ; height: 70px">
                 </td>
             </tr>
-            <tr  id="step5" style="opacity: 0">
-                <td>
+            <tr>
+                <td id="step5" style="opacity: 0">
                     5. : Do the edges of that vertex lie on the same side :
                     <br>
                     <input type="radio" name="edgeCheck" value="YES"> YES
                     <br>
                     <input type="radio" name="edgeCheck" value="NO"> NO
                     <br>
-                    <input type="button" value="Check " ONCLICK="checkStep5();" style="width: 100% ; height: 50px">
+                    <input type="button" value="Check " ONCLICK="checkStep5();" style="width: 100% ; height: 70px">
                 </td>
             </tr>
-            <tr id="step6" style="opacity: 0">
-                <td>
+            <tr>
+                <td  id="step6" style="opacity: 0">
                     6. : Therefore will the intersection be counted as even or odd :
                     <br>
                     <input type="radio" name="evenoddCheck" value="EVEN"> EVEN
                     <br>
                     <input type="radio" name="evenoddCheck" value="ODD"> ODD
                     <br>
-                    <input type="button" value="Check " ONCLICK="checkStep6();" style="width: 100% ; height: 50px">
+                    <input type="button" value="Check " ONCLICK="checkStep6();" style="width: 100% ; height: 70px">
                 </td>
             </tr>
-            <tr id="step7" style="opacity: 0">
-                <td>
+            <tr>
+                <td id="step7" style="opacity: 0">
                     7. : Total intersections are even or odd :
                     <br>
                     <input type="radio" name="totalCheck" value="EVEN"> EVEN
                     <br>
                     <input type="radio" name="totalCheck" value="ODD"> ODD
                     <br>
-                    <input type="button" value="Check " ONCLICK="checkStep7();" style="width: 100% ; height: 50px">
+                    <input type="button" value="Check " ONCLICK="checkStep7();" style="width: 100% ; height: 70px">
                 </td>
             </tr>
-            <tr id="step8" style="opacity: 0">
-                <td>
+            <tr>
+                <td id="step8" style="opacity: 0">
                     8. : Conclusion :
                     <br>
                     Where does the point lie -
@@ -145,9 +145,9 @@
                     <br>
                     <input type="radio" name="answerCheck" value="OUTSIDE"> OUTSIDE
                     <br>
-                    <input type="radio" name="answerCheck"value="NA"> CANNOT SAY
+                    <input type="radio" name="answerCheck" value="NA"> CANNOT SAY
                     <br>
-                    <input type="button" value="Check " ONCLICK="checkStep8();" style="width: 100% ; height: 50px">
+                    <input type="button" value="Check " ONCLICK="checkStep8();" style="width: 100% ; height: 70px">
                 </td>
             </tr>
         </table>
@@ -173,203 +173,216 @@
     var parallelXLines = [];
     var parallelXLinesCount = [];
     var intersectedPoints = [];
+    var step1 = document.getElementById("step1");
+    var step2 = document.getElementById("step2");
+    var step3 = document.getElementById("step3");
+    var step4 = document.getElementById("step4");
+    var step5 = document.getElementById("step5");
+    var step6 = document.getElementById("step6");
+    var step7 = document.getElementById("step7");
+    var step8 = document.getElementById("step8");
     var step4Answer = [];
     var step5Answer = [];
     var step6Answer = [];
     var step7Answer = [];
     var step8Answer = [];
+    var evenOddQ = [];
 
     var clickFlag = true;
     var startSim = false;
 
-    objectCoord.push({ x:5 , y:4 });
-    objectCoord.push({ x:5 , y:5 });
-    objectCoord.push({ x:5 , y:6 });
-    objectCoord.push({ x:5 , y:7 });
-    objectCoord.push({ x:5 , y:8 });
-    objectCoord.push({ x:5 , y:9 });
-    objectCoord.push({ x:5 , y:10 });
-    objectCoord.push({ x:5 , y:11 });
-    objectCoord.push({ x:5 , y:12 });
-    objectCoord.push({ x:5 , y:13 });
-    objectCoord.push({ x:5 , y:14 });
-    objectCoord.push({ x:5 , y:15 });
-    objectCoord.push({ x:5 , y:16 });
-    objectCoord.push({ x:5 , y:17 });
-    objectCoord.push({ x:6 , y:18 });
-    objectCoord.push({ x:7 , y:18 });
-    objectCoord.push({ x:8 , y:19 });
-    objectCoord.push({ x:9 , y:19 });
-    objectCoord.push({ x:10 , y:20 });
-    objectCoord.push({ x:11 , y:21 });
-    objectCoord.push({ x:12 , y:20 });
-    objectCoord.push({ x:13 , y:20 });
-    objectCoord.push({ x:14 , y:19 });
-    objectCoord.push({ x:15 , y:19 });
-    objectCoord.push({ x:16 , y:18 });
-    objectCoord.push({ x:17 , y:18 });
-    objectCoord.push({ x:17 , y:17 });
-    objectCoord.push({ x:17 , y:16 });
-    objectCoord.push({ x:17 , y:15 });
-    objectCoord.push({ x:17 , y:14 });
-    objectCoord.push({ x:17 , y:13 });
-    objectCoord.push({ x:17 , y:12 });
-    objectCoord.push({ x:17 , y:11 });
-    objectCoord.push({ x:17 , y:10 });
-    objectCoord.push({ x:17 , y:9 });
-    objectCoord.push({ x:17 , y:8 });
-    objectCoord.push({ x:17 , y:7 });
-    objectCoord.push({ x:17 , y:6 });
-    objectCoord.push({ x:17 , y:5 });
-    objectCoord.push({ x:17 , y:4 });
-    objectCoord.push({ x:17 , y:3 });
-    objectCoord.push({ x:17 , y:2 });
-    objectCoord.push({ x:16 , y:3 });
-    objectCoord.push({ x:15 , y:4 });
-    objectCoord.push({ x:15 , y:5 });
-    objectCoord.push({ x:14 , y:6 });
-    objectCoord.push({ x:13 , y:7 });
-    objectCoord.push({ x:13 , y:8 });
-    objectCoord.push({ x:12 , y:9 });
-    objectCoord.push({ x:12 , y:10 });
-    objectCoord.push({ x:11 , y:9 });
-    objectCoord.push({ x:10 , y:8 });
-    objectCoord.push({ x:9 , y:7 });
-    objectCoord.push({ x:8 , y:7 });
-    objectCoord.push({ x:7 , y:6 });
-    objectCoord.push({ x:6 , y:5 });
-    // objectCoord.push({ x: , y: });
-    // objectCoord.push({ x: , y: });
+    evenOddQ.push({x:20 ,y:21 ,q:0});
+    evenOddQ.push({x:10 ,y:13 ,q:1});
+    evenOddQ.push({x:15 ,y:10 ,q:2});
+    evenOddQ.push({x:19 ,y:6 ,q:3});
+    evenOddQ.push({x:9 ,y:17 ,q:4});
 
-    parallelXLines.push({x:19 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:18 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:17 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:16 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:15 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:14 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:13 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:12 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:11 , y:21 ,q:0 ,i:true});
-    parallelXLines.push({x:10 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:9 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:8 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:7 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:6 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:5 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:4 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:3 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:2 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:1 , y:21 ,q:0 ,i:false});
-    parallelXLines.push({x:0 , y:21 ,q:0 ,i:false});
+    objectCoord.push({x: 5, y: 4});
+    objectCoord.push({x: 5, y: 5});
+    objectCoord.push({x: 5, y: 6});
+    objectCoord.push({x: 5, y: 7});
+    objectCoord.push({x: 5, y: 8});
+    objectCoord.push({x: 5, y: 9});
+    objectCoord.push({x: 5, y: 10});
+    objectCoord.push({x: 5, y: 11});
+    objectCoord.push({x: 5, y: 12});
+    objectCoord.push({x: 5, y: 13});
+    objectCoord.push({x: 5, y: 14});
+    objectCoord.push({x: 5, y: 15});
+    objectCoord.push({x: 5, y: 16});
+    objectCoord.push({x: 5, y: 17});
+    objectCoord.push({x: 6, y: 18});
+    objectCoord.push({x: 7, y: 18});
+    objectCoord.push({x: 8, y: 19});
+    objectCoord.push({x: 9, y: 19});
+    objectCoord.push({x: 10, y: 20});
+    objectCoord.push({x: 11, y: 21});
+    objectCoord.push({x: 12, y: 20});
+    objectCoord.push({x: 13, y: 20});
+    objectCoord.push({x: 14, y: 19});
+    objectCoord.push({x: 15, y: 19});
+    objectCoord.push({x: 16, y: 18});
+    objectCoord.push({x: 17, y: 18});
+    objectCoord.push({x: 17, y: 17});
+    objectCoord.push({x: 17, y: 16});
+    objectCoord.push({x: 17, y: 15});
+    objectCoord.push({x: 17, y: 14});
+    objectCoord.push({x: 17, y: 13});
+    objectCoord.push({x: 17, y: 12});
+    objectCoord.push({x: 17, y: 11});
+    objectCoord.push({x: 17, y: 10});
+    objectCoord.push({x: 17, y: 9});
+    objectCoord.push({x: 17, y: 8});
+    objectCoord.push({x: 17, y: 7});
+    objectCoord.push({x: 17, y: 6});
+    objectCoord.push({x: 17, y: 5});
+    objectCoord.push({x: 17, y: 4});
+    objectCoord.push({x: 17, y: 3});
+    objectCoord.push({x: 17, y: 2});
+    objectCoord.push({x: 16, y: 3});
+    objectCoord.push({x: 15, y: 4});
+    objectCoord.push({x: 15, y: 5});
+    objectCoord.push({x: 14, y: 6});
+    objectCoord.push({x: 13, y: 7});
+    objectCoord.push({x: 13, y: 8});
+    objectCoord.push({x: 12, y: 9});
+    objectCoord.push({x: 12, y: 10});
+    objectCoord.push({x: 11, y: 9});
+    objectCoord.push({x: 10, y: 8});
+    objectCoord.push({x: 9, y: 7});
+    objectCoord.push({x: 8, y: 7});
+    objectCoord.push({x: 7, y: 6});
+    objectCoord.push({x: 6, y: 5});
 
-    parallelXLines.push({x:9 , y:13 ,q:1 ,i:false});
-    parallelXLines.push({x:8 , y:13 ,q:1 ,i:false});
-    parallelXLines.push({x:7 , y:13 ,q:1 ,i:false});
-    parallelXLines.push({x:6 , y:13 ,q:1 ,i:false});
-    parallelXLines.push({x:5 , y:13 ,q:1 ,i:true});
-    parallelXLines.push({x:4 , y:13 ,q:1 ,i:false});
-    parallelXLines.push({x:3 , y:13 ,q:1 ,i:false});
-    parallelXLines.push({x:2 , y:13 ,q:1 ,i:false});
-    parallelXLines.push({x:1 , y:13 ,q:1 ,i:false});
-    parallelXLines.push({x:0 , y:13 ,q:1 ,i:false});
+    parallelXLines.push({x: 19, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 18, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 17, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 16, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 15, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 14, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 13, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 12, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 11, y: 21, q: 0, i: true});
+    parallelXLines.push({x: 10, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 9, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 8, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 7, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 6, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 5, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 4, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 3, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 2, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 1, y: 21, q: 0, i: false});
+    parallelXLines.push({x: 0, y: 21, q: 0, i: false});
 
-    parallelXLines.push({x:14 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:13 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:12 , y:10 ,q:2 ,i:true});
-    parallelXLines.push({x:11 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:10 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:9 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:8 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:7 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:6 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:5 , y:10 ,q:2 ,i:true});
-    parallelXLines.push({x:4 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:3 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:2 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:1 , y:10 ,q:2 ,i:false});
-    parallelXLines.push({x:0 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x: 9, y: 13, q: 1, i: false});
+    parallelXLines.push({x: 8, y: 13, q: 1, i: false});
+    parallelXLines.push({x: 7, y: 13, q: 1, i: false});
+    parallelXLines.push({x: 6, y: 13, q: 1, i: false});
+    parallelXLines.push({x: 5, y: 13, q: 1, i: true});
+    parallelXLines.push({x: 4, y: 13, q: 1, i: false});
+    parallelXLines.push({x: 3, y: 13, q: 1, i: false});
+    parallelXLines.push({x: 2, y: 13, q: 1, i: false});
+    parallelXLines.push({x: 1, y: 13, q: 1, i: false});
+    parallelXLines.push({x: 0, y: 13, q: 1, i: false});
 
-    parallelXLines.push({x:18 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:17 , y:6 ,q:3 ,i:true});
-    parallelXLines.push({x:16 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:15 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:14 , y:6 ,q:3 ,i:true});
-    parallelXLines.push({x:13 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:12 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:11 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:10 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:9 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:8 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:7 , y:6 ,q:3 ,i:true});
-    parallelXLines.push({x:6 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:5 , y:6 ,q:3 ,i:true});
-    parallelXLines.push({x:4 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:3 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:2 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:1 , y:6 ,q:3 ,i:false});
-    parallelXLines.push({x:0 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x: 14, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 13, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 12, y: 10, q: 2, i: true});
+    parallelXLines.push({x: 11, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 10, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 9, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 8, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 7, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 6, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 5, y: 10, q: 2, i: true});
+    parallelXLines.push({x: 4, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 3, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 2, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 1, y: 10, q: 2, i: false});
+    parallelXLines.push({x: 0, y: 10, q: 2, i: false});
 
-    parallelXLines.push({x:8 , y:17 ,q:4 ,i:false});
-    parallelXLines.push({x:7 , y:17 ,q:4 ,i:false});
-    parallelXLines.push({x:6 , y:17 ,q:4 ,i:false});
-    parallelXLines.push({x:5 , y:17 ,q:4 ,i:true});
-    parallelXLines.push({x:4 , y:17 ,q:4 ,i:false});
-    parallelXLines.push({x:3 , y:17 ,q:4 ,i:false});
-    parallelXLines.push({x:2 , y:17 ,q:4 ,i:false});
-    parallelXLines.push({x:1 , y:17 ,q:4 ,i:false});
-    parallelXLines.push({x:0 , y:17 ,q:4 ,i:false});
+    parallelXLines.push({x: 18, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 17, y: 6, q: 3, i: true});
+    parallelXLines.push({x: 16, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 15, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 14, y: 6, q: 3, i: true});
+    parallelXLines.push({x: 13, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 12, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 11, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 10, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 9, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 8, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 7, y: 6, q: 3, i: true});
+    parallelXLines.push({x: 6, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 5, y: 6, q: 3, i: true});
+    parallelXLines.push({x: 4, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 3, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 2, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 1, y: 6, q: 3, i: false});
+    parallelXLines.push({x: 0, y: 6, q: 3, i: false});
 
-    parallelXLinesCount.push({c:20 , q:0});
-    parallelXLinesCount.push({c:10 , q:1});
-    parallelXLinesCount.push({c:15 , q:2});
-    parallelXLinesCount.push({c:19 , q:3});
-    parallelXLinesCount.push({c:9 , q:4});
+    parallelXLines.push({x: 8, y: 17, q: 4, i: false});
+    parallelXLines.push({x: 7, y: 17, q: 4, i: false});
+    parallelXLines.push({x: 6, y: 17, q: 4, i: false});
+    parallelXLines.push({x: 5, y: 17, q: 4, i: true});
+    parallelXLines.push({x: 4, y: 17, q: 4, i: false});
+    parallelXLines.push({x: 3, y: 17, q: 4, i: false});
+    parallelXLines.push({x: 2, y: 17, q: 4, i: false});
+    parallelXLines.push({x: 1, y: 17, q: 4, i: false});
+    parallelXLines.push({x: 0, y: 17, q: 4, i: false});
 
-    intersectionCount.push({c:1,q:0});
-    intersectionCount.push({c:1,q:1});
-    intersectionCount.push({c:2,q:2});
-    intersectionCount.push({c:4,q:3});
-    intersectionCount.push({c:1,q:4});
+    parallelXLinesCount.push({c: 20, q: 0});
+    parallelXLinesCount.push({c: 10, q: 1});
+    parallelXLinesCount.push({c: 15, q: 2});
+    parallelXLinesCount.push({c: 19, q: 3});
+    parallelXLinesCount.push({c: 9, q: 4});
 
-    intersectedPoints.push({x:11 , y:21 , q:0});
-    intersectedPoints.push({x:5 , y:13 , q:1});
-    intersectedPoints.push({x:12 , y:10 , q:2});
-    intersectedPoints.push({x:5 , y:10 , q:2});
-    intersectedPoints.push({x:17 , y:6 , q:3});
-    intersectedPoints.push({x:14 , y:6 , q:3});
-    intersectedPoints.push({x:7 , y:6 , q:3});
-    intersectedPoints.push({x:5 , y:6 , q:3});
-    intersectedPoints.push({x:5 , y:17 , q:4});
+    intersectionCount.push({c: 1, q: 0});
+    intersectionCount.push({c: 1, q: 1});
+    intersectionCount.push({c: 2, q: 2});
+    intersectionCount.push({c: 4, q: 3});
+    intersectionCount.push({c: 1, q: 4});
 
-    step4Answer.push({val:"YES" , q: 0});
-    step4Answer.push({val:"NO" , q: 1});
-    step4Answer.push({val:"YES" , q: 2});
-    step4Answer.push({val:"NO" , q: 3});
-    step4Answer.push({val:"YES" , q: 4});
+    intersectedPoints.push({x: 11, y: 21, q: 0});
+    intersectedPoints.push({x: 5, y: 13, q: 1});
+    intersectedPoints.push({x: 12, y: 10, q: 2});
+    intersectedPoints.push({x: 5, y: 10, q: 2});
+    intersectedPoints.push({x: 17, y: 6, q: 3});
+    intersectedPoints.push({x: 14, y: 6, q: 3});
+    intersectedPoints.push({x: 7, y: 6, q: 3});
+    intersectedPoints.push({x: 5, y: 6, q: 3});
+    intersectedPoints.push({x: 5, y: 17, q: 4});
 
-    step5Answer.push({val:"YES" , q: 0});
-    step5Answer.push({val:"NO" , q: 1});
-    step5Answer.push({val:"YES" , q: 2});
-    step5Answer.push({val:"NO" , q: 3});
-    step5Answer.push({val:"NO" , q: 4});
+    step4Answer.push({val: "YES", q: 0});
+    step4Answer.push({val: "NO", q: 1});
+    step4Answer.push({val: "YES", q: 2});
+    step4Answer.push({val: "NO", q: 3});
+    step4Answer.push({val: "YES", q: 4});
 
-    step6Answer.push({val:"EVEN" , q:0});
-    step6Answer.push({val:"ODD" , q: 1});
-    step6Answer.push({val:"EVEN" , q:2});
-    step6Answer.push({val:"ODD" , q: 3});
-    step6Answer.push({val:"ODD" , q: 4});
+    step5Answer.push({val: "YES", q: 0});
+    step5Answer.push({val: "NO", q: 1});
+    step5Answer.push({val: "YES", q: 2});
+    step5Answer.push({val: "NO", q: 3});
+    step5Answer.push({val: "NO", q: 4});
 
-    step7Answer.push({val:"EVEN" , q:0});
-    step7Answer.push({val:"ODD" , q: 1});
-    step7Answer.push({val:"ODD" , q: 2});
-    step7Answer.push({val:"EVEN" , q:3});
-    step7Answer.push({val:"ODD" , q: 4});
+    step6Answer.push({val: "EVEN", q: 0});
+    step6Answer.push({val: "ODD", q: 1});
+    step6Answer.push({val: "EVEN", q: 2});
+    step6Answer.push({val: "ODD", q: 3});
+    step6Answer.push({val: "ODD", q: 4});
 
-    step8Answer.push({val:"OUTSIDE" , q:0});
-    step8Answer.push({val:"INSIDE" , q:1});
-    step8Answer.push({val:"INSIDE" , q:2});
-    step8Answer.push({val:"OUTSIDE" , q:3});
-    step8Answer.push({val:"INSIDE" , q:4});
+    step7Answer.push({val: "EVEN", q: 0});
+    step7Answer.push({val: "ODD", q: 1});
+    step7Answer.push({val: "ODD", q: 2});
+    step7Answer.push({val: "EVEN", q: 3});
+    step7Answer.push({val: "ODD", q: 4});
+
+    step8Answer.push({val: "OUTSIDE", q: 0});
+    step8Answer.push({val: "INSIDE", q: 1});
+    step8Answer.push({val: "INSIDE", q: 2});
+    step8Answer.push({val: "OUTSIDE", q: 3});
+    step8Answer.push({val: "INSIDE", q: 4});
 
 
     for (j = 0; j < 600; j = j + 25) {
@@ -384,7 +397,7 @@
     }
 
     function mouseevt(x, y) {
-        if (true) {
+        if (!clickFlag) {
             for (i = 0; i < squarecontainer.length; i++) {
                 if (squarecontainer[i].square.mycolor == 'red') {
                     squarecontainer[i].square.mycolor = 'grey';
@@ -414,7 +427,7 @@
         else {
             alert("Please follow the instructions to complete the simulation");
         }
-        if (false) {
+        if (!startSim) {
             alert("Click on the 'START SIMULATOR' button to start simulation");
         }
     }
@@ -459,126 +472,116 @@
         location.reload();
     }
 
-    // function reset() {
-    //     context.clearRect(0, 0, canvas.width, canvas.height);
-    //     for (i = 0; i < squarecontainer.length; i++) {
-    //         squarecontainer[i].square.mycolor = 'grey';
-    //         squarecontainer[i].square.textColor = "white";
-    //         squarecontainer[i].flag = 0;
-    //         squarecontainer[i].square.draw();
-    //     }
-    //
-    //     document.getElementById("m0").value = "";
-    //     document.getElementById("m1").value = "";
-    //     document.getElementById("m2").value = "";
-    //     document.getElementById("m3").value = "";
-    //
-    //     var table = document.getElementById("tablePoints");
-    //     while (table.rows.length > 1) {
-    //         table.deleteRow(1);
-    //     }
-    //
-    //     startSim = false;
-    //     for (i = 0; i < step1.length; i++) {
-    //         step1[i].style.opacity = "0";
-    //     }
-    //     for (i = 0; i < step2.length; i++) {
-    //         step2[i].style.opacity = "0";
-    //     }
-    //     for (i = 0; i < step3.length; i++) {
-    //         step3[i].style.opacity = "0";
-    //     }
-    //     for (i = 0; i < step4.length; i++) {
-    //         step4[i].style.opacity = "0";
-    //     }
-    //     clickFlag = true;
-    // }
-    //
-    // function checkScaleMatrix() {
-    //     var mat = [];
-    //     for (i = 0; i < 4; i++) {
-    //         mat.push(document.getElementById("m" + i).value);
-    //     }
-    //     if (mat[0] == scaleMatrix[qnumber].m0 && mat[1] == scaleMatrix[qnumber].m1 && mat[2] == scaleMatrix[qnumber].m2 && mat[3] == scaleMatrix[qnumber].m3) {
-    //         alert("Scaling matrix is correct");
-    //         for (i = 0; i < step2.length; i++) {
-    //             step2[i].style.opacity = "1";
-    //         }
-    //         for (i = 0; i < step1.length; i++) {
-    //             step1[i].style.opacity = "0.2";
-    //         }
-    //     }
-    //     else {
-    //         alert("Scaling matrix is incorrect");
-    //     }
-    // }
-    //
-    // function checkScaledCoord() {
-    //     var count = 0;
-    //     for (i = 0; i < scaledCoord.length; i++) {
-    //         if (scaledCoord[i].q == qnumber) {
-    //             var scaledPointsX = document.getElementsByName("xScaled" + qnumber);
-    //             var scaledPointsY = document.getElementsByName("yScaled" + qnumber);
-    //             for (j = 0; j < scaledPointsX.length; j++) {
-    //                 if (scaledPointsX[j].value != scaledCoord[i].x || scaledPointsY[j].value != scaledCoord[i].y) {
-    //                     // alert("INVALID A:" + scaledPointsX[j].value +" D:"+ scaledCoord[i].x + "A:" +scaledPointsY[j].value +" D:"+ scaledCoord[i].y);
-    //                 }
-    //                 else {
-    //                     count++;
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     if (count == scaledPointsX.length) {
-    //         alert("Matrices correct");
-    //         for (i = 0; i < step2.length; i++) {
-    //             step2[i].style.opacity = "0.2";
-    //         }
-    //         for (i = 0; i < step3.length; i++) {
-    //             step3[i].style.opacity = "1";
-    //         }
-    //         clickFlag = false;
-    //     }
-    //     else
-    //     {
-    //         alert("Matrices are incorrect");
-    //     }
-    // }
-    //
+    function reset() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        for (i = 0; i < squarecontainer.length; i++) {
+            squarecontainer[i].square.mycolor = 'grey';
+            squarecontainer[i].square.textColor = "white";
+            squarecontainer[i].flag = 0;
+            squarecontainer[i].square.draw();
+        }
+
+        document.getElementById("acceptIntersectionCount").value = "";
+        document.getElementById("step3").innerHTML = "3. : Enter the intersected points below : <br>";
+
+        startSim = false;
+        clickFlag = true;
+
+        var step4Elements = document.getElementsByName("vertexCheck");
+        var step5Elements = document.getElementsByName("edgeCheck");
+        var step6Elements = document.getElementsByName("evenoddCheck");
+        var step7Elements = document.getElementsByName("totalCheck");
+        var step8Elements = document.getElementsByName("answerCheck");
+
+        for(i=0;i<2;i++)
+        {
+            step4Elements[i].checked = false;
+            step5Elements[i].checked = false;
+            step6Elements[i].checked = false;
+            step7Elements[i].checked = false;
+            step8Elements[i].checked = false;
+        }
+
+        step1.style.opacity = "0";
+        step2.style.opacity = "0";
+        step3.style.opacity = "0";
+        step4.style.opacity = "0";
+        step5.style.opacity = "0";
+        step6.style.opacity = "0";
+        step7.style.opacity = "0";
+        step8.style.opacity = "0";
+
+        step1.style.borderColor = "black";
+        step1.style.backgroundColor = "white";
+        step2.style.borderColor = "black";
+        step2.style.backgroundColor = "white";
+        step3.style.borderColor = "black";
+        step3.style.backgroundColor = "white";
+        step4.style.borderColor = "black";
+        step4.style.backgroundColor = "white";
+        step5.style.borderColor = "black";
+        step5.style.backgroundColor = "white";
+        step6.style.borderColor = "black";
+        step6.style.backgroundColor = "white";
+        step7.style.borderColor = "black";
+        step7.style.backgroundColor = "white";
+        step8.style.borderColor = "black";
+        step8.style.backgroundColor = "white";
+
+        document.getElementById("mycanvas").style.borderColor = "black";
+        document.getElementById("questionTable").style.borderColor = "black";
+    }
+
     changequestion(0);
 
     function changequestion(j) {
         qnumber = j;
         document.getElementById("question").innerHTML = questions[qnumber];
+        reset();
 
         for (j = 0; j < objectCoord.length; j++) {
-                    for (i = 0; i < squarecontainer.length; i++) {
-                            if (objectCoord[j].x == squarecontainer[i].cols && objectCoord[j].y == squarecontainer[i].rows) {
-                                squarecontainer[i].square.mycolor = "blue";
-                            }
-                            squarecontainer[i].square.draw();
-                    }
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (objectCoord[j].x == squarecontainer[i].cols && objectCoord[j].y == squarecontainer[i].rows) {
+                    squarecontainer[i].square.mycolor = "blue";
                 }
-    }
+                squarecontainer[i].square.draw();
+            }
+        }
 
-    function checkStep1(countFlag)
-    {
-        if(countFlag == parallelXLinesCount[qnumber].c)
-        {
-            alert("ALL MARKED");
+        for (j = 0; j < evenOddQ.length; j++) {
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (evenOddQ[j].x == squarecontainer[i].cols && evenOddQ[j].y == squarecontainer[i].rows && evenOddQ[j].q == qnumber) {
+                    squarecontainer[i].square.mycolor = "black";
+                }
+                squarecontainer[i].square.draw();
+            }
         }
     }
 
-    function checkStep2()
-    {
+    function checkStep1(countFlag) {
+        if (countFlag == parallelXLinesCount[qnumber].c) {
+            step2.style.opacity = 1;
+            step1.style.opacity = 0.5;
+            step1.style.borderColor = "green";
+            step1.style.backgroundColor = "#7bed9f";
+        }
+    }
+
+    function checkStep2() {
         var enteredIntersection = document.getElementById("acceptIntersectionCount").value;
-        if(enteredIntersection == intersectionCount[qnumber].c)
-        {
-            alert("Correct");
-            var cell = document.getElementById("enterPoints");
-            for(i=0;i<enteredIntersection;i++)
-            {
-                cell.innerHTML = cell.innerHTML + "Enter Coordinates of intersection point "+(i+1)+" - <br>";
+        if (enteredIntersection == intersectionCount[qnumber].c) {
+            // alert("Correct");
+
+            step2.style.opacity = 0.5;
+            step3.style.opacity = 1;
+            step2.style.borderColor = "green";
+            step2.style.backgroundColor = "#7bed9f";
+
+            clickFlag = true;
+
+            var cell = document.getElementById("step3");
+            for (i = 0; i < enteredIntersection; i++) {
+                cell.innerHTML = cell.innerHTML + "Enter Coordinates of intersection point " + (i + 1) + " - <br>";
                 var str = "<input type='text' name='xCoord' maxlength=3 size=3>";
                 cell.innerHTML = cell.innerHTML + "X : ";
                 cell.innerHTML = cell.innerHTML + str;
@@ -587,252 +590,154 @@
                 cell.innerHTML = cell.innerHTML + str;
                 cell.innerHTML = cell.innerHTML + "<br>";
             }
-            cell.innerHTML = cell.innerHTML + "<br>" + "<input type='button' value='Check Coordinates' ONCLICK='checkStep3();' style='width: 100% ; height: 50px;'>";
+            cell.innerHTML = cell.innerHTML + "<br>" + "<input type='button' value='Check Coordinates' ONCLICK='checkStep3();' style='width: 100% ; height: 70px;'>";
         }
-        else
-        {
-            alert("INCORRECT");
+        else {
+            step2.style.borderColor = "red";
         }
     }
 
-    function checkStep3()
-    {
+    function checkStep3() {
         var count = 0;
         var enteredXCoord = document.getElementsByName("xCoord");
         var enteredYCoord = document.getElementsByName("yCoord");
-        for(i=0;i<intersectedPoints.length;i++)
-        {
-            if(intersectedPoints[i].q == qnumber)
-            {
-                for(j=0;j<enteredXCoord.length;j++)
-                {
-                    if(intersectedPoints[i].x == enteredXCoord[j].value && intersectedPoints[i].y == enteredYCoord[j].value)
-                    {
+        for (i = 0; i < intersectedPoints.length; i++) {
+            if (intersectedPoints[i].q == qnumber) {
+                for (j = 0; j < enteredXCoord.length; j++) {
+                    if (intersectedPoints[i].x == enteredXCoord[j].value && intersectedPoints[i].y == enteredYCoord[j].value) {
                         count++;
                     }
                 }
             }
         }
-        if(count == intersectionCount[qnumber].c)
-        {
-            alert("ALL CORRECT");
+        if (count == intersectionCount[qnumber].c) {
+            // alert("ALL CORRECT");
+            step3.style.opacity = 0.5;
+            step4.style.opacity = 1;
+            step3.style.borderColor = "green";
+            step3.style.backgroundColor = "#7bed9f";
         }
-        else
-        {
-            alert("WRONG");
+        else {
+            step3.style.borderColor = "red";
         }
     }
 
-    function checkStep4()
-    {
-        var step4 = document.getElementsByName("vertexCheck");
-        for(i=0 ;i<step4.length;i++)
-        {
-            if(step4[i].checked)
-            {
-                if(step4[i].value == step4Answer[qnumber].val)
+    function checkStep4() {
+        var step4Elements = document.getElementsByName("vertexCheck");
+        for (i = 0; i < step4Elements.length; i++) {
+            if (step4Elements[i].checked) {
+                if (step4Elements[i].value == step4Answer[qnumber].val) {
+                    // alert("correct");
+                    step4.style.opacity = 0.5;
+                    step5.style.opacity = 1;
+                    step4.style.borderColor = "green";
+                    step4.style.backgroundColor = "#7bed9f";
+                    break;
+                }
+                else
                 {
-                    alert("correct");
+                    step4.style.borderColor = "red";
                 }
             }
         }
     }
 
-    function checkStep5()
-    {
-        var step5 = document.getElementsByName("edgeCheck");
-        for(i=0 ;i<step5.length;i++)
-        {
-            if(step5[i].checked)
-            {
-                if(step5[i].value == step5Answer[qnumber].val)
+    function checkStep5() {
+        var step5Elements = document.getElementsByName("edgeCheck");
+        for (i = 0; i < step5Elements.length; i++) {
+            if (step5Elements[i].checked) {
+                if (step5Elements[i].value == step5Answer[qnumber].val) {
+                    // alert("correct");
+                    step5.style.opacity = 0.5;
+                    step6.style.opacity = 1;
+                    step5.style.borderColor = "green";
+                    step5.style.backgroundColor = "#7bed9f";
+                    break;
+                }
+                else
                 {
-                    alert("correct");
+                    step5.style.borderColor = "red";
                 }
             }
         }
     }
 
-    function checkStep6()
-    {
-        var step6 = document.getElementsByName("evenoddCheck");
-        for(i=0 ;i<step6.length;i++)
-        {
-            if(step6[i].checked)
-            {
-                if(step6[i].value == step6Answer[qnumber].val)
+    function checkStep6() {
+        var step6Elements = document.getElementsByName("evenoddCheck");
+        for (i = 0; i < step6Elements.length; i++) {
+            if (step6Elements[i].checked) {
+                if (step6Elements[i].value == step6Answer[qnumber].val) {
+                    // alert("correct");
+                    step6.style.opacity = 0.5;
+                    step7.style.opacity = 1;
+                    step6.style.borderColor = "green";
+                    step6.style.backgroundColor = "#7bed9f";
+                    break;
+                }
+                else
                 {
-                    alert("correct");
+                    step6.style.borderColor = "red";
                 }
             }
         }
     }
 
-    function checkStep7()
-    {
-        var step7 = document.getElementsByName("totalCheck");
-        for(i=0 ;i<step7.length;i++)
-        {
-            if(step7[i].checked)
-            {
-                if(step7[i].value == step7Answer[qnumber].val)
+    function checkStep7() {
+        var step7Elements = document.getElementsByName("totalCheck");
+        for (i = 0; i < step7Elements.length; i++) {
+            if (step7Elements[i].checked) {
+                if (step7Elements[i].value == step7Answer[qnumber].val) {
+                    // alert("correct");
+
+                    step7.style.opacity = 0.5;
+                    step8.style.opacity = 1;
+                    step7.style.borderColor = "green";
+                    step7.style.backgroundColor = "#7bed9f";
+                    break;
+                }
+                else
                 {
-                    alert("correct");
+                    step7.style.borderColor = "red";
                 }
             }
         }
     }
 
-    function checkStep8()
-    {
-        var step8 = document.getElementsByName("answerCheck");
-        for(i=0 ;i<step8.length;i++)
-        {
-            if(step8[i].checked)
-            {
-                if(step8[i].value == step8Answer[qnumber].val)
+    function checkStep8() {
+        var step8Elements = document.getElementsByName("answerCheck");
+        for (i = 0; i < step8Elements.length; i++) {
+            if (step8Elements[i].checked) {
+                if (step8Elements[i].value == step8Answer[qnumber].val) {
+                    // alert("correct");
+
+                    step8.style.opacity = 0.5;
+                    step8.style.borderColor = "green";
+                    document.getElementById("mycanvas").style.borderColor = "green";
+                    document.getElementById("questionTable").style.borderColor = "green";
+                    step8.style.backgroundColor = "#7bed9f";
+                    alert("HENCE PROVED");
+                }
+                else
                 {
-                    alert("correct");
+                    step8.style.borderColor = "red";
                 }
             }
         }
     }
 
-    //
-    // function changequestion(j) {
-    //     var we;
-    //     qnumber = j;
-    //     we = "" + questions[j];
-    //     reset();
-    //     document.getElementById("question").innerHTML = null;
-    //     document.getElementById("question").innerHTML = we;
-    //     for (j = 0; j < scaleQ.length; j++) {
-    //         for (i = 0; i < squarecontainer.length; i++) {
-    //             if (scaleQ[j].q == qnumber) {
-    //                 if (scaleQ[j].x == squarecontainer[i].cols && scaleQ[j].y == squarecontainer[i].rows) {
-    //                     squarecontainer[i].square.mycolor = "blue";
-    //                 }
-    //                 squarecontainer[i].square.draw();
-    //             }
-    //         }
-    //     }
-    //
-    //     var table = document.getElementById("tablePoints");
-    //     while (table.rows.length > 1) {
-    //         table.deleteRow(1);
-    //     }
-    //
-    //     var id = 1;
-    //     for (i = 0; i < points.length; i++) {
-    //         if (points[i].q == qnumber) {
-    //             var row = table.insertRow();
-    //             var cellLeft = row.insertCell();
-    //             var cellRight = row.insertCell();
-    //             var cellEqual = row.insertCell();
-    //             var cellQuestion = row.insertCell();
-    //
-    //             var tb1 = document.createElement("table");
-    //             tb1.setAttribute("class", "matrix");
-    //             tb1.align = "right";
-    //             var tr1 = document.createElement("tr");
-    //             var td1 = document.createElement("td");
-    //             td1.innerHTML = points[i].x;
-    //             tb1.appendChild(tr1);
-    //             tr1.appendChild(td1);
-    //             var tr2 = document.createElement("tr");
-    //             var td2 = document.createElement("td");
-    //             td2.innerHTML = points[i].y;
-    //             tb1.appendChild(tr2);
-    //             tr2.appendChild(td2);
-    //             cellLeft.appendChild(tb1);
-    //
-    //             var tb2 = document.createElement("table");
-    //             tb2.setAttribute("class", "matrix");
-    //             tr1 = document.createElement("tr");
-    //             td1 = document.createElement("td");
-    //             td1.innerHTML = scaleMatrix[qnumber].m0;
-    //             td2 = document.createElement("td");
-    //             td2.innerHTML = scaleMatrix[qnumber].m1;
-    //             tr1.appendChild(td1);
-    //             tr1.appendChild(td2);
-    //             tb2.appendChild(tr1);
-    //             tr2 = document.createElement("tr");
-    //             td1 = document.createElement("td");
-    //             td1.innerHTML = scaleMatrix[qnumber].m2;
-    //             td2 = document.createElement("td");
-    //             td2.innerHTML = scaleMatrix[qnumber].m3;
-    //             tr2.appendChild(td1);
-    //             tr2.appendChild(td2);
-    //             tb2.appendChild(tr2);
-    //             cellRight.appendChild(tb2);
-    //
-    //             cellEqual.innerHTML = " = ";
-    //
-    //             tb1 = document.createElement("table");
-    //             tb1.setAttribute("class", "matrix");
-    //             tb1.align = "left";
-    //             var tr1 = document.createElement("tr");
-    //             var td1 = document.createElement("td");
-    //             var xScaled = document.createElement("input");
-    //             xScaled.type = "text";
-    //             xScaled.maxlength = "3";
-    //             xScaled.size = "3";
-    //             xScaled.id = "xScaled" + id;
-    //             xScaled.name = "xScaled" + qnumber;
-    //             td1.appendChild(xScaled);
-    //             tb1.appendChild(tr1);
-    //             tr1.appendChild(td1);
-    //             var tr2 = document.createElement("tr");
-    //             var td2 = document.createElement("td");
-    //             var yScaled = document.createElement("input");
-    //             yScaled.type = "text";
-    //             yScaled.maxlength = "3";
-    //             yScaled.size = "3";
-    //             yScaled.id = "yScaled" + id;
-    //             yScaled.name = "yScaled" + qnumber;
-    //             td2.appendChild(yScaled);
-    //             tb1.appendChild(tr2);
-    //             tr2.appendChild(td2);
-    //             cellQuestion.appendChild(tb1);
-    //             id++;
-    //         }
-    //     }
-    // }
-    //
-    // function start() {
-    //     startSim = true;
-    //     for (i = 0; i < step1.length; i++) {
-    //         step1[i].style.opacity = "1";
-    //     }
-    //     for (i = 0; i < step2.length; i++) {
-    //         step2[i].style.opacity = "0";
-    //     }
-    //     for (i = 0; i < step3.length; i++) {
-    //         step3[i].style.opacity = "0";
-    //     }
-    //     for (i = 0; i < step4.length; i++) {
-    //         step4[i].style.opacity = "0";
-    //     }
-    //     clickFlag = true;
-    // }
-    //
-    // function connectPoints() {
-    //     for (j = 0; j < scaleA.length; j++) {
-    //         for (i = 0; i < squarecontainer.length; i++) {
-    //             if (scaleA[j].x == squarecontainer[i].cols && scaleA[j].y == squarecontainer[i].rows && scaleA[j].q == qnumber) {
-    //                 squarecontainer[i].square.mycolor = "green";
-    //             }
-    //             else {
-    //                 squarecontainer[i].square.textColor = "#95a5a6";
-    //             }
-    //             squarecontainer[i].square.draw();
-    //         }
-    //     }
-    //     for (i = 0; i < step4.length; i++) {
-    //         step4[i].style.opacity = "0.2";
-    //     }
-    //     alert("You have successfully scaled the object");
-    // }
+    function start() {
+        step1.style.opacity = "1";
+        step2.style.opacity = "0";
+        step3.style.opacity = "0";
+        step4.style.opacity = "0";
+        step5.style.opacity = "0";
+        step6.style.opacity = "0";
+        step7.style.opacity = "0";
+        step8.style.opacity = "0";
+
+        clickFlag = false;
+        startSim = true;
+    }
 </script>
 <script src="mouseevent.ob.js"></script>
 </body>
