@@ -4,6 +4,12 @@
     <meta charset="utf-8"/>
     <title>DDA Algorithm</title>
     <style>
+        table {
+            border: solid;
+        }
+        .divideTable {
+            border-right: solid;
+        }
         .row {
             display: flex;
         }
@@ -37,6 +43,11 @@
 <canvas id="mycanvas" width="800" height="600" style="border:solid;border-color:black"></canvas>
     </div>
     <div class="column">
+        <table id="correctPoints" style="visibility: hidden; text-align: center">
+            <th colspan="4" style="border-bottom: solid">
+                CORRECT COORDINATES
+            </th>
+        </table>
 <p id="key"></p>
     </div>
 </div>
@@ -170,9 +181,32 @@
                 squarecontainer[i].square.draw();
             }
         }
+        generateTable();
         var P = document.getElementById("key");
         P.innerHTML = "Green - Correctly Plotted Co-ordinates <br>" + "Red - Wrong Co-ordinates plotted <br>" + "Black - Co-ordinates which are correct but not plotted <br>"
 
+    }
+
+    function generateTable()
+    {
+        var answerTable = document.getElementById("correctPoints");
+        for(i=0;i<dda.length;i++)
+        {
+            if(dda[i].q == qnumber)
+            {
+                var row = answerTable.insertRow();
+                var cellLeftQ = row.insertCell();
+                var cellLeftA = row.insertCell();
+                var cellRightQ = row.insertCell();
+                var cellRightA = row.insertCell();
+                cellLeftQ.innerHTML = "X : ";
+                cellLeftA.innerHTML = dda[i].x;
+                cellLeftA.setAttribute("class", "divideTable");
+                cellRightQ.innerHTML = "Y : ";
+                cellRightA.innerHTML = dda[i].y;
+            }
+        }
+        answerTable.style.visibility="visible";
     }
 
     function clearCanvas() {
@@ -186,8 +220,13 @@
             squarecontainer[i].square.textColor = "white";
             squarecontainer[i].flag = 0;
             squarecontainer[i].square.draw();
-
         }
+        var answerTable = document.getElementById("correctPoints");
+        while (answerTable.rows.length > 1) {
+            answerTable.deleteRow(1);
+        }
+        answerTable.style.visibility="hidden";
+        document.getElementById("key").innerHTML = "";
     }
 
     changequestion(0);
