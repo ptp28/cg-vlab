@@ -58,6 +58,8 @@
 <input type="button" value="Q1" id="1" onclick="changequestion(0)"/>
 <input type="button" value="Q2" id="2" onclick="changequestion(1)"/>
 <input type="button" value="Q3" id="3" onclick="changequestion(2)"/>
+<input type="button" value="Q4" id="4" onclick="changequestion(3)"/>
+<input type="button" value="Q5" id="5" onclick="changequestion(4)"/>
 <hr>
 <input type="button" value="START SIMUALTOR" onclick="start();"/>
 <input type="button" value="Clear Canvas" onclick="clearCanvas();"/>
@@ -69,36 +71,27 @@
         <canvas id="mycanvas" width="800" height="600" style="border:solid;border-color:black;"></canvas>
     </div>
     <div class="column">
-        <table cellspacing="10" class="tableOuter">
-            <tr>
+        <table class="tableOuter">
+            <tr id="step1" style="opacity: 0">
                 <td>
                     1. : Draw line parallel to X-axis towards X=0
                 </td>
             </tr>
-            <tr>
+            <tr id="step2" style="opacity: 0">
                 <td>
                     2. : Enter number of intersections :
                     <input type="text" maxlength="3" size="3" id="acceptIntersectionCount">
+                    <br>
+                    <input type="button" value="Check number of intersections" ONCLICK="checkStep2();" style="width: 100% ; height: 50px">
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <input type="button" value="Check number of interestions" ONCLICK="checkStep2();" style="width: 100% ; height: 50px">
-                </td>
-            </tr>
-            <tr>
-                <td>3. : Enter the intersected points below : </td>
-            </tr>
-            <tr>
+            <tr id="step3" style="opacity: 0">
                 <td id="enterPoints">
+                    3. : Enter the intersected points below :
+                    <br>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <input type="button" value="Check Coordinates" ONCLICK="checkStep3();" style="width: 100% ; height: 50px">
-                </td>
-            </tr>
-            <tr>
+            <tr  id="step4" style="opacity: 0">
                 <td>
                     4. : Are any of the intersection points on a vertex :
                     <br>
@@ -109,7 +102,7 @@
                     <input type="button" value="Check" ONCLICK="checkStep4();" style="width: 100% ; height: 50px">
                 </td>
             </tr>
-            <tr>
+            <tr  id="step5" style="opacity: 0">
                 <td>
                     5. : Do the edges of that vertex lie on the same side :
                     <br>
@@ -120,7 +113,7 @@
                     <input type="button" value="Check " ONCLICK="checkStep5();" style="width: 100% ; height: 50px">
                 </td>
             </tr>
-            <tr>
+            <tr id="step6" style="opacity: 0">
                 <td>
                     6. : Therefore will the intersection be counted as even or odd :
                     <br>
@@ -131,7 +124,7 @@
                     <input type="button" value="Check " ONCLICK="checkStep6();" style="width: 100% ; height: 50px">
                 </td>
             </tr>
-            <tr>
+            <tr id="step7" style="opacity: 0">
                 <td>
                     7. : Total intersections are even or odd :
                     <br>
@@ -142,7 +135,7 @@
                     <input type="button" value="Check " ONCLICK="checkStep7();" style="width: 100% ; height: 50px">
                 </td>
             </tr>
-            <tr>
+            <tr id="step8" style="opacity: 0">
                 <td>
                     8. : Conclusion :
                     <br>
@@ -165,9 +158,9 @@
     var questions = [];
     questions.push("Prove that the point (20,21) lies outside the polygon using even-odd method.");
     questions.push("Prove that the point (10,13) lies inside the polygon using even-odd method.");
-    questions.push("Prove that the point (20,21) lies outside the polygon using even-odd method.");
-    questions.push("Prove that the point (20,21) lies outside the polygon using even-odd method.");
-    questions.push("Prove that the point (20,21) lies outside the polygon using even-odd method.");
+    questions.push("Prove that the point (15,10) lies outside the polygon using even-odd method.");
+    questions.push("Prove that the point (19,6) lies outside the polygon using even-odd method.");
+    questions.push("Prove that the point (9,17) lies outside the polygon using even-odd method.");
     var canvas = document.getElementById("mycanvas");
     var context = canvas.getContext("2d");
     var i = 0;
@@ -178,6 +171,7 @@
     var objectCoord = [];
     var intersectionCount = [];
     var parallelXLines = [];
+    var parallelXLinesCount = [];
     var intersectedPoints = [];
     var step4Answer = [];
     var step5Answer = [];
@@ -187,10 +181,6 @@
 
     var clickFlag = true;
     var startSim = false;
-
-    intersectionCount.push({c:1,q:0});
-    intersectionCount.push({c:2,q:1});
-    intersectionCount.push({c:3,q:2});
 
     objectCoord.push({ x:5 , y:4 });
     objectCoord.push({ x:5 , y:5 });
@@ -206,9 +196,9 @@
     objectCoord.push({ x:5 , y:15 });
     objectCoord.push({ x:5 , y:16 });
     objectCoord.push({ x:5 , y:17 });
-    objectCoord.push({ x:6 , y:17 });
+    objectCoord.push({ x:6 , y:18 });
     objectCoord.push({ x:7 , y:18 });
-    objectCoord.push({ x:8 , y:18 });
+    objectCoord.push({ x:8 , y:19 });
     objectCoord.push({ x:9 , y:19 });
     objectCoord.push({ x:10 , y:20 });
     objectCoord.push({ x:11 , y:21 });
@@ -272,13 +262,114 @@
     parallelXLines.push({x:1 , y:21 ,q:0 ,i:false});
     parallelXLines.push({x:0 , y:21 ,q:0 ,i:false});
 
+    parallelXLines.push({x:9 , y:13 ,q:1 ,i:false});
+    parallelXLines.push({x:8 , y:13 ,q:1 ,i:false});
+    parallelXLines.push({x:7 , y:13 ,q:1 ,i:false});
+    parallelXLines.push({x:6 , y:13 ,q:1 ,i:false});
+    parallelXLines.push({x:5 , y:13 ,q:1 ,i:true});
+    parallelXLines.push({x:4 , y:13 ,q:1 ,i:false});
+    parallelXLines.push({x:3 , y:13 ,q:1 ,i:false});
+    parallelXLines.push({x:2 , y:13 ,q:1 ,i:false});
+    parallelXLines.push({x:1 , y:13 ,q:1 ,i:false});
+    parallelXLines.push({x:0 , y:13 ,q:1 ,i:false});
+
+    parallelXLines.push({x:14 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:13 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:12 , y:10 ,q:2 ,i:true});
+    parallelXLines.push({x:11 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:10 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:9 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:8 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:7 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:6 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:5 , y:10 ,q:2 ,i:true});
+    parallelXLines.push({x:4 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:3 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:2 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:1 , y:10 ,q:2 ,i:false});
+    parallelXLines.push({x:0 , y:10 ,q:2 ,i:false});
+
+    parallelXLines.push({x:18 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:17 , y:6 ,q:3 ,i:true});
+    parallelXLines.push({x:16 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:15 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:14 , y:6 ,q:3 ,i:true});
+    parallelXLines.push({x:13 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:12 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:11 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:10 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:9 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:8 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:7 , y:6 ,q:3 ,i:true});
+    parallelXLines.push({x:6 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:5 , y:6 ,q:3 ,i:true});
+    parallelXLines.push({x:4 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:3 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:2 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:1 , y:6 ,q:3 ,i:false});
+    parallelXLines.push({x:0 , y:6 ,q:3 ,i:false});
+
+    parallelXLines.push({x:8 , y:17 ,q:4 ,i:false});
+    parallelXLines.push({x:7 , y:17 ,q:4 ,i:false});
+    parallelXLines.push({x:6 , y:17 ,q:4 ,i:false});
+    parallelXLines.push({x:5 , y:17 ,q:4 ,i:true});
+    parallelXLines.push({x:4 , y:17 ,q:4 ,i:false});
+    parallelXLines.push({x:3 , y:17 ,q:4 ,i:false});
+    parallelXLines.push({x:2 , y:17 ,q:4 ,i:false});
+    parallelXLines.push({x:1 , y:17 ,q:4 ,i:false});
+    parallelXLines.push({x:0 , y:17 ,q:4 ,i:false});
+
+    parallelXLinesCount.push({c:20 , q:0});
+    parallelXLinesCount.push({c:10 , q:1});
+    parallelXLinesCount.push({c:15 , q:2});
+    parallelXLinesCount.push({c:19 , q:3});
+    parallelXLinesCount.push({c:9 , q:4});
+
+    intersectionCount.push({c:1,q:0});
+    intersectionCount.push({c:1,q:1});
+    intersectionCount.push({c:2,q:2});
+    intersectionCount.push({c:4,q:3});
+    intersectionCount.push({c:1,q:4});
+
     intersectedPoints.push({x:11 , y:21 , q:0});
-    intersectedPoints.push({x:1 , y:2 , q:1});
+    intersectedPoints.push({x:5 , y:13 , q:1});
+    intersectedPoints.push({x:12 , y:10 , q:2});
+    intersectedPoints.push({x:5 , y:10 , q:2});
+    intersectedPoints.push({x:17 , y:6 , q:3});
+    intersectedPoints.push({x:14 , y:6 , q:3});
+    intersectedPoints.push({x:7 , y:6 , q:3});
+    intersectedPoints.push({x:5 , y:6 , q:3});
+    intersectedPoints.push({x:5 , y:17 , q:4});
 
     step4Answer.push({val:"YES" , q: 0});
+    step4Answer.push({val:"NO" , q: 1});
+    step4Answer.push({val:"YES" , q: 2});
+    step4Answer.push({val:"NO" , q: 3});
+    step4Answer.push({val:"YES" , q: 4});
 
+    step5Answer.push({val:"YES" , q: 0});
+    step5Answer.push({val:"NO" , q: 1});
+    step5Answer.push({val:"YES" , q: 2});
+    step5Answer.push({val:"NO" , q: 3});
+    step5Answer.push({val:"NO" , q: 4});
 
+    step6Answer.push({val:"EVEN" , q:0});
+    step6Answer.push({val:"ODD" , q: 1});
+    step6Answer.push({val:"EVEN" , q:2});
+    step6Answer.push({val:"ODD" , q: 3});
+    step6Answer.push({val:"ODD" , q: 4});
 
+    step7Answer.push({val:"EVEN" , q:0});
+    step7Answer.push({val:"ODD" , q: 1});
+    step7Answer.push({val:"ODD" , q: 2});
+    step7Answer.push({val:"EVEN" , q:3});
+    step7Answer.push({val:"ODD" , q: 4});
+
+    step8Answer.push({val:"OUTSIDE" , q:0});
+    step8Answer.push({val:"INSIDE" , q:1});
+    step8Answer.push({val:"INSIDE" , q:2});
+    step8Answer.push({val:"OUTSIDE" , q:3});
+    step8Answer.push({val:"INSIDE" , q:4});
 
 
     for (j = 0; j < 600; j = j + 25) {
@@ -303,7 +394,7 @@
             }
             for (i = 0; i < squarecontainer.length; i++) {
                 if (x >= squarecontainer[i].x1 && x <= (squarecontainer[i].x1 + 25) && y >= squarecontainer[i].y1 && y <= (squarecontainer[i].y1 + 25)) {
-                    if (squarecontainer[i].square.mycolor == 'green') {
+                    if (squarecontainer[i].square.mycolor == 'green' || squarecontainer[i].square.mycolor == 'yellow') {
                         return;
                     }
                     else {
@@ -318,7 +409,7 @@
             for (i = 0; i < squarecontainer.length; i++) {
                 squarecontainer[i].square.draw();
             }
-            checkPixels();
+            checkPixel();
         }
         else {
             alert("Please follow the instructions to complete the simulation");
@@ -330,35 +421,38 @@
 
     countPixelFlag = 0;
 
-    function checkPixels() {
+    function checkPixel() {
         for (j = 0; j < parallelXLines.length; j++) {
             if (parallelXLines[j].q == qnumber) {
                 for (i = 0; i < squarecontainer.length; i++) {
                     if (squarecontainer[i].square.mycolor === "orange" || squarecontainer[i].square.mycolor === "red") {
-                        if(squarecontainer[i].cols == parallelXLines[j].x && squarecontainer[i].rows == parallelXLines[j].y)
-                        {
-                            if(parallelXLines[j].i == true)
-                            {
+                        if (squarecontainer[i].cols == parallelXLines[j].x && squarecontainer[i].rows == parallelXLines[j].y) {
+                            if (parallelXLines[j].i == true) {
                                 squarecontainer[i].square.mycolor = "green";
                                 squarecontainer[i].square.draw();
+                                countPixelFlag++;
+                                checkStep1(countPixelFlag);
+                                break;
                             }
-                            else
-                            {
+                            else {
                                 squarecontainer[i].square.mycolor = "yellow";
                                 squarecontainer[i].square.draw();
+                                countPixelFlag++;
+                                checkStep1(countPixelFlag);
+                                break;
                             }
 
                         }
                         else {
-                                squarecontainer[i].square.mycolor = "red";
-                                squarecontainer[i].square.draw();
-                                break;
-                            }
+                            squarecontainer[i].square.mycolor = "red";
+                            squarecontainer[i].square.draw();
+                            break;
                         }
                     }
-                    squarecontainer[i].square.draw();
                 }
+                squarecontainer[i].square.draw();
             }
+        }
     }
 
     function clearCanvas() {
@@ -455,6 +549,8 @@
 
     function changequestion(j) {
         qnumber = j;
+        document.getElementById("question").innerHTML = questions[qnumber];
+
         for (j = 0; j < objectCoord.length; j++) {
                     for (i = 0; i < squarecontainer.length; i++) {
                             if (objectCoord[j].x == squarecontainer[i].cols && objectCoord[j].y == squarecontainer[i].rows) {
@@ -463,6 +559,14 @@
                             squarecontainer[i].square.draw();
                     }
                 }
+    }
+
+    function checkStep1(countFlag)
+    {
+        if(countFlag == parallelXLinesCount[qnumber].c)
+        {
+            alert("ALL MARKED");
+        }
     }
 
     function checkStep2()
@@ -483,6 +587,7 @@
                 cell.innerHTML = cell.innerHTML + str;
                 cell.innerHTML = cell.innerHTML + "<br>";
             }
+            cell.innerHTML = cell.innerHTML + "<br>" + "<input type='button' value='Check Coordinates' ONCLICK='checkStep3();' style='width: 100% ; height: 50px;'>";
         }
         else
         {
@@ -536,6 +641,61 @@
     function checkStep5()
     {
         var step5 = document.getElementsByName("edgeCheck");
+        for(i=0 ;i<step5.length;i++)
+        {
+            if(step5[i].checked)
+            {
+                if(step5[i].value == step5Answer[qnumber].val)
+                {
+                    alert("correct");
+                }
+            }
+        }
+    }
+
+    function checkStep6()
+    {
+        var step6 = document.getElementsByName("evenoddCheck");
+        for(i=0 ;i<step6.length;i++)
+        {
+            if(step6[i].checked)
+            {
+                if(step6[i].value == step6Answer[qnumber].val)
+                {
+                    alert("correct");
+                }
+            }
+        }
+    }
+
+    function checkStep7()
+    {
+        var step7 = document.getElementsByName("totalCheck");
+        for(i=0 ;i<step7.length;i++)
+        {
+            if(step7[i].checked)
+            {
+                if(step7[i].value == step7Answer[qnumber].val)
+                {
+                    alert("correct");
+                }
+            }
+        }
+    }
+
+    function checkStep8()
+    {
+        var step8 = document.getElementsByName("answerCheck");
+        for(i=0 ;i<step8.length;i++)
+        {
+            if(step8[i].checked)
+            {
+                if(step8[i].value == step8Answer[qnumber].val)
+                {
+                    alert("correct");
+                }
+            }
+        }
     }
 
     //
