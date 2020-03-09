@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Computer Graphics Virtual Lab </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+        <script>
+            window.onload = function () {
+                document.getElementById("theory").className = "active treeview";
+            }
+        </script>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+        
+        <div class="wrapper">
+        	<header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+        <p align="center" style="font-size:1em;"><b>Computer Graphics</b></p>
+    </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"><i class="fa fa-dashboard"></i>Computer Graphics</a>
+              </li>
+              <li>
+                <a href="#"> Digital Differential Analyser (DDA) Line Drawing Algorithm</a>
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+            
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="treeview" id="aim">
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i> <span>Aim</span>
+
+                    </a>
+                </li>
+                <li class="treeview" id="theory">
+                    <a href="theory.html" >
+                        <i class="fa fa-files-o"></i>
+                        <span>Theory</span>
+                    </a>
+                </li>
+             <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                <li class="treeview" id="pretest">
+                    <a href="pretest.html">
+                        <i class="fa fa-files-o"></i> <span>Pre Test</span>
+
+                    </a>
+                </li>
+                
+                <li class="treeview" id="procedure">
+                    <a href="procedure.html">
+                        <i class="fa fa-files-o"></i> <span>Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview" id="simulation">
+                    <a href="simulation.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                
+                <li class="treeview" id="posttest">
+                    <a href=" posttest.html">
+                        <i class=" fa fa-files-o">
+                    </i>
+                    <span>Post Test</span>
+                    <span class="pull-right-container">
+                    </span>
+                    </a>
+                </li>
+                <li class="treeview" id="ref">
+                    <a href="references.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+   
+            <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                    Digital Differential Analyser (DDA) Line Drawing Algorithm <!-- Write experiment name here -->
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                    <h3 style="margin-top:5%"> Theory </h3>
+                    <p style="font-size:130%; margin-top:2%">
+
+                    <!--Theory of experiment -->
+<!--                        <P>-->
+<!--                        <UL>-->
+<!--                            <LI>-->
+<!--                                DDA is an incremental scan conversion method to determine points on screen to draw a line where the Start and End coordinates of the Line segment are provided.-->
+<!--                            </LI>-->
+<!--                            <LI>-->
+<!--                                DDA calculates the length of the line segment with respect to the difference between either X coordinates or Y coordinates, whichever is greater.-->
+<!--                            </LI>-->
+<!--                            <LI>-->
+<!--                                In DDA, we either step across X-Direction and solve for Y (In case of gentle slope lines ) or we step Y-Direction and solve for X (incase of sharp slope lines) with the help of increment in either X and/or Y directions.-->
+<!--                            </LI>-->
+<!--                            <LI>-->
+<!--                                As the increments are calculated with respect to X  or Y direction ,so one of the increment will be either (1,/0/-1) and the other increment may be in float.-->
+<!--                            </LI>-->
+<!--                            <LI>-->
+<!--                                Floating point arithmetic in DDA algorithm is time-consuming which results in poor end point accuracy.-->
+<!--                            </LI>-->
+<!--                            <LI>-->
+<!--                                It is the simplest algorithm and does not require special skills for implementation.-->
+<!--                            </LI>-->
+<!--                        </UL>-->
+<!--                        </P>-->
+                        <object   style="width:100%;height:100%;vertical-align:top;z-index:-1" frameborder="0"
+                                  allowfullscreen  scrolling="auto" allowtransparency="true" data="dda-algorithm-pvg/theory.html"  onload="this.style.height=this.contentDocument.body.scrollHeight +600+'px';" ></object>
+                    </p>
+                </section>
+            <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+                <h4 align="center">COMPUTER GRAPHICS VIRTUAL LAB<!-- Institute Name --> </h4>
+            </footer>
+        </div>
+        
+    </body>
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>
