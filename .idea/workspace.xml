@@ -2,37 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b8bbb1d-4b83-46e5-85c8-a5e144090f3e" name="Default Changelist" comment="Bug fix">
-      <change afterPath="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/simulation/css/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/simulation/images/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/simulation/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/simulation/js/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/simulation/js/mouseevent.ob.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/simulation/js/squareevent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp5/two-d-object-translation/simulation/css/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp5/two-d-object-translation/simulation/images/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp5/two-d-object-translation/simulation/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp5/two-d-object-translation/simulation/js/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp5/two-d-object-translation/simulation/js/mouseevent.ob.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp5/two-d-object-translation/simulation/js/squareevent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/simulation/css/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/simulation/images/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/simulation/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/simulation/js/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/simulation/js/mouseevent.ob.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/simulation/js/squareevent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Aim.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Algorithm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Posttest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Pretest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/References.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Theory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/simulation/css/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/simulation/images/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/simulation/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/simulation/js/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/simulation/js/mouseevent.ob.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/simulation/js/squareevent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/theoryImage1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/theoryImage2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/theoryImage3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/theoryImage4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm-pvg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp2/posttest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp2/posttest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp2/pretest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp2/pretest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp2/procedure.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp2/procedure.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp2/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp2/references.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp2/simulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp2/simulation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp2/theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp2/theory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp3/dda-bresenham-comparison-pvg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp3/posttest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp3/posttest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp3/pretest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp3/pretest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp3/procedure.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp3/procedure.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp3/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp3/references.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp3/simulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp3/simulation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp3/theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp3/theory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm-pvg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp4/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp4/posttest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp4/posttest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp4/pretest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp4/pretest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp4/procedure.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp4/procedure.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp4/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp4/references.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp4/simulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp4/simulation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/exp4/theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp4/theory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp5/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp5/posttest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp5/posttest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp5/pretest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp5/pretest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp5/procedure.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp5/procedure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp5/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp5/references.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp5/simulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp5/simulation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp5/theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp5/theory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp5/two-d-object-translation-pvg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp6/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp6/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp6/posttest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp6/posttest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp6/pretest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp6/pretest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp6/procedure.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp6/procedure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp6/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp6/references.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp6/simulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp6/simulation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp6/theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp6/theory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp6/two-d-object-scaling-pvg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp7/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp7/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp7/posttest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp7/posttest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp7/pretest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp7/pretest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp7/procedure.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp7/procedure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp7/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp7/references.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp7/simulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp7/simulation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp7/theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp7/theory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp7/two-d-object-rotation-pvg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp8/even-odd-method-pvg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp8/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp8/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp8/posttest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp8/posttest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp8/pretest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp8/pretest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp8/procedure.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp8/procedure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp8/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp8/references.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp8/simulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp8/simulation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp8/theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp8/theory.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,9 +76,9 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/exp4/index.html">
+        <entry file="file://$PROJECT_DIR$/labs/exp8/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="129">
               <caret line="120" selection-start-line="120" selection-end-line="135" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#li#7;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -58,9 +88,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/exp4/posttest.html">
+        <entry file="file://$PROJECT_DIR$/labs/exp8/pretest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
+            <state relative-caret-position="508">
+              <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+              <folding>
+                <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labs/exp8/posttest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
               <caret line="136" column="21" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -70,21 +112,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/exp4/pretest.html">
+        <entry file="file://$PROJECT_DIR$/labs/exp8/procedure.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
-              <folding>
-                <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/exp4/procedure.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="444">
               <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -94,9 +124,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/exp4/simulation.html">
+        <entry file="file://$PROJECT_DIR$/labs/exp8/simulation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
+            <state relative-caret-position="508">
               <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -105,14 +135,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/labs/exp4/theory.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labs/exp8/theory.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
+            <state relative-caret-position="452">
               <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/labs/exp8/even-odd-method/Algorithm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -152,47 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/5. Translation/Algorithm.html" />
-        <option value="$PROJECT_DIR$/5. Translation/Pretest.html" />
-        <option value="$PROJECT_DIR$/5. Translation/Posttest.html" />
-        <option value="$PROJECT_DIR$/5. Translation/Theory.html" />
-        <option value="$PROJECT_DIR$/4. Circle/Algorithm.html" />
-        <option value="$PROJECT_DIR$/4. Circle/Theory.html" />
-        <option value="$PROJECT_DIR$/2. Breshenham/Algorithm.html" />
-        <option value="$PROJECT_DIR$/2. Breshenham/Theory.html" />
-        <option value="$PROJECT_DIR$/1. DDA/Algorithm.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/dda-algorithm/Algorithm.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/dda-algorithm/Posttest.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/dda-algorithm/Pretest.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/dda-algorithm/Theory.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/dda-algorithm/Aim.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/procedure.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/references.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/simulation.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/theory.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/index.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/posttest.html" />
-        <option value="$PROJECT_DIR$/labs/exp1/pretest.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm/Aim.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm/Algorithm.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm/Posttest.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm/Pretest.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm/Theory.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/references.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/index.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/posttest.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/pretest.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/procedure.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/simulation.html" />
-        <option value="$PROJECT_DIR$/labs/exp2/theory.html" />
-        <option value="$PROJECT_DIR$/labs/exp3/index.html" />
-        <option value="$PROJECT_DIR$/labs/exp3/posttest.html" />
-        <option value="$PROJECT_DIR$/labs/exp3/pretest.html" />
-        <option value="$PROJECT_DIR$/labs/exp3/procedure.html" />
-        <option value="$PROJECT_DIR$/labs/exp3/references.html" />
-        <option value="$PROJECT_DIR$/labs/exp3/simulation.html" />
-        <option value="$PROJECT_DIR$/labs/exp3/theory.html" />
-        <option value="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/Aim.html" />
         <option value="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/Algorithm.html" />
         <option value="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/Posttest.html" />
         <option value="$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/Pretest.html" />
@@ -203,6 +201,47 @@
         <option value="$PROJECT_DIR$/labs/exp4/procedure.html" />
         <option value="$PROJECT_DIR$/labs/exp4/simulation.html" />
         <option value="$PROJECT_DIR$/labs/exp4/theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/two-d-object-translation/Aim.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/two-d-object-translation/Algorithm.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/two-d-object-translation/Posttest.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/two-d-object-translation/Pretest.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/two-d-object-translation/Theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/index.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/posttest.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/pretest.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/procedure.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/simulation.html" />
+        <option value="$PROJECT_DIR$/labs/exp5/theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/Aim.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/Algorithm.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/Posttest.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/Pretest.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/two-d-object-scaling/Theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/index.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/posttest.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/pretest.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/procedure.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/simulation.html" />
+        <option value="$PROJECT_DIR$/labs/exp6/theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Pretest.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Posttest.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Algorithm.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Aim.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/index.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/posttest.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/pretest.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/procedure.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/simulation.html" />
+        <option value="$PROJECT_DIR$/labs/exp7/theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp8/even-odd-method/Theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp8/index.html" />
+        <option value="$PROJECT_DIR$/labs/exp8/pretest.html" />
+        <option value="$PROJECT_DIR$/labs/exp8/posttest.html" />
+        <option value="$PROJECT_DIR$/labs/exp8/procedure.html" />
+        <option value="$PROJECT_DIR$/labs/exp8/simulation.html" />
+        <option value="$PROJECT_DIR$/labs/exp8/theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp8/even-odd-method/Algorithm.html" />
       </list>
     </option>
   </component>
@@ -234,13 +273,14 @@
               <item name="cg-vlab-gh-pages" type="b2602c69:ProjectViewProjectNode" />
               <item name="cg-vlab-gh-pages" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="exp1" type="462c0819:PsiDirectoryNode" />
+              <item name="exp8" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cg-vlab-gh-pages" type="b2602c69:ProjectViewProjectNode" />
               <item name="cg-vlab-gh-pages" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="exp4" type="462c0819:PsiDirectoryNode" />
+              <item name="exp8" type="462c0819:PsiDirectoryNode" />
+              <item name="even-odd-method" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -297,7 +337,7 @@
       <workItem from="1555516284628" duration="9503000" />
       <workItem from="1555565142568" duration="27619000" />
       <workItem from="1584642001712" duration="1537000" />
-      <workItem from="1584644003128" duration="1479000" />
+      <workItem from="1584644003128" duration="3050000" />
     </task>
     <task id="LOCAL-00001" summary="Bug fix">
       <created>1555526018983</created>
@@ -310,7 +350,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40138000" />
+    <option name="totallyTimeSpent" value="41709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1280" height="730" extended-state="6" />
@@ -345,236 +385,44 @@
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/1. DDA/Pretest.html" />
-    <entry file="file://$PROJECT_DIR$/1. DDA/Theory.html" />
-    <entry file="file://$PROJECT_DIR$/labs/exp1/dda-algorithm/Algorithm.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/two-d-object-translation/Aim.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-609">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="30">
+          <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/dda-algorithm/Posttest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/dda-algorithm/Pretest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/dda-algorithm/Theory.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/two-d-object-translation/Algorithm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/dda-algorithm/Aim.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/two-d-object-translation/Posttest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="71" selection-start-line="2" selection-start-column="71" selection-end-line="2" selection-end-column="71" />
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/references.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/two-d-object-translation/Pretest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/posttest.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/two-d-object-translation/Theory.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="58" lean-forward="true" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/pretest.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/procedure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2055">
-          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/simulation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/css/skins/all-skins.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/theory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="168" column="35" lean-forward="true" selection-start-line="168" selection-start-column="35" selection-end-line="168" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm/Aim.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm/Algorithm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm/Posttest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm/Pretest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/bresenham-line-drawing-algorithm/Theory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/references.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/posttest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="119" column="36" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/pretest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/procedure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="131" column="36" selection-start-line="131" selection-start-column="36" selection-end-line="131" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/simulation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="132" column="36" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp2/theory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="127" column="36" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/dda-bresenham-comparison/Aim.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/dda-bresenham-comparison/Algorithm.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/dda-bresenham-comparison/Posttest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/dda-bresenham-comparison/Pretest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-579" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/dda-bresenham-comparison/References.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/dda-bresenham-comparison/Theory.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="215">
           <caret line="120" selection-start-line="120" selection-end-line="135" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#li#7;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -582,9 +430,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/posttest.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/posttest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
+        <state relative-caret-position="211">
           <caret line="136" column="21" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -592,9 +440,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/pretest.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/pretest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="336">
           <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -602,9 +450,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/procedure.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/procedure.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="456">
           <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -612,124 +460,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/references.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/simulation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp3/theory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/Aim.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/Algorithm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/Posttest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/Pretest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/bresenham-circle-drawing-algorithm/Theory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="118" column="16" selection-start-line="118" selection-start-column="16" selection-end-line="125" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="120" selection-start-line="120" selection-end-line="135" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#7;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/posttest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="136" column="21" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/pretest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/procedure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/simulation.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/simulation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
@@ -739,13 +470,330 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/exp4/theory.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp5/theory.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
+        <state relative-caret-position="297">
+          <caret line="127" column="26" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/two-d-object-scaling/Aim.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="74" selection-start-line="1" selection-start-column="74" selection-end-line="1" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/two-d-object-scaling/Algorithm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/two-d-object-scaling/Posttest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/two-d-object-scaling/Pretest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/two-d-object-scaling/Theory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="120" selection-start-line="120" selection-end-line="135" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#7;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/posttest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="136" column="21" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/pretest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
           <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/procedure.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/simulation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp6/theory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp3/procedure.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp4/posttest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="136" column="21" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/references.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Pretest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Posttest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/two-d-object-rotation/References.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Algorithm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Aim.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/two-d-object-rotation/Theory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="120" selection-start-line="120" selection-end-line="135" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#7;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/posttest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="136" column="21" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/pretest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/procedure.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/simulation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp7/theory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/even-odd-method/Aim.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/even-odd-method/Posttest.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/even-odd-method/Pretest.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/even-odd-method/References.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/even-odd-method/Theory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/references.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="118" column="16" selection-start-line="118" selection-start-column="16" selection-end-line="125" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="120" selection-start-line="120" selection-end-line="135" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#7;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/pretest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/posttest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="136" column="21" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/procedure.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/simulation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/theory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp8/even-odd-method/Algorithm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
         </state>
       </provider>
     </entry>

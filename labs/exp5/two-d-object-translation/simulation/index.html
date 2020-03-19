@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!--Webstorm licence - Parth Parikh-->
+    <title>Translation</title>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<script src="js/squareevent.js"></script>
+<h1>TRANSFORMATIONS - Translation</h1>
+<hr/>
+<p id="question"></p>
+<input type="button" value="Q1" id="1" onclick="changequestion(0)"/>
+<input type="button" value="Q2" id="2" onclick="changequestion(1)"/>
+<input type="button" value="Q3" id="3" onclick="changequestion(2)"/>
+<hr>
+<input type="button" value="Check Co-ordinates" onclick="check();"/>
+<input type="button" value="Clear Canvas" onclick="clearCanvas();"/>
+<br/>
+<hr/>
+<br/>
+<div class="row">
+    <div class="column">
+<canvas id="mycanvas" width="800" height="600" style="border:solid;border-color:black"></canvas>
+    </div>
+    <div class="column">
+<p id="key"></p>
+    </div>
+</div>
+<script>
+    var qnumber;
+    var questions = [];
+    questions.push("Translate the given line by Tx=5 and Ty=12 ");
+    questions.push("Translate the given circle by Tx=11 and Ty=11 ");
+    questions.push("Translate the given triangle by Tx=12 and Ty=3");
+    var canvas = document.getElementById("mycanvas");
+    var context = canvas.getContext("2d");
+    var i = 0;
+    var j = 0;
+    var r = -1;
+    var c = -1;
+    var squarecontainer = [];
+    var translateQ = [];
+    var translateA = [];
+    var translateFactor = [];
+
+    translateQ.push({x: 2, y: 3, q: 0});
+    translateQ.push({x: 3, y: 4, q: 0});
+    translateQ.push({x: 4, y: 4, q: 0});
+    translateQ.push({x: 5, y: 5, q: 0});
+    translateQ.push({x: 6, y: 5, q: 0});
+    translateQ.push({x: 7, y: 6, q: 0});
+    translateQ.push({x: 8, y: 6, q: 0});
+    translateQ.push({x: 9, y: 7, q: 0});
+    translateQ.push({x: 10, y: 7, q: 0});
+    translateQ.push({x: 11, y: 8, q: 0});
+    translateQ.push({x: 12, y: 8, q: 0});
+
+    translateQ.push({x: 7, y: 6, q: 1});
+    translateQ.push({x: 7, y: 10, q: 1});
+    translateQ.push({x: 7, y: 10, q: 1});
+    translateQ.push({x: 7, y: 2, q: 1});
+    translateQ.push({x: 7, y: 2, q: 1});
+    translateQ.push({x: 11, y: 6, q: 1});
+    translateQ.push({x: 11, y: 6, q: 1});
+    translateQ.push({x: 3, y: 6, q: 1});
+    translateQ.push({x: 3, y: 6, q: 1});
+    translateQ.push({x: 8, y: 10, q: 1});
+    translateQ.push({x: 6, y: 10, q: 1});
+    translateQ.push({x: 8, y: 2, q: 1});
+    translateQ.push({x: 6, y: 2, q: 1});
+    translateQ.push({x: 11, y: 7, q: 1});
+    translateQ.push({x: 11, y: 5, q: 1});
+    translateQ.push({x: 3, y: 7, q: 1});
+    translateQ.push({x: 3, y: 5, q: 1});
+    translateQ.push({x: 9, y: 9, q: 1});
+    translateQ.push({x: 5, y: 9, q: 1});
+    translateQ.push({x: 9, y: 3, q: 1});
+    translateQ.push({x: 5, y: 3, q: 1});
+    translateQ.push({x: 10, y: 8, q: 1});
+    translateQ.push({x: 10, y: 4, q: 1});
+    translateQ.push({x: 4, y: 8, q: 1});
+    translateQ.push({x: 4, y: 4, q: 1});
+
+    translateQ.push({x: 3, y: 2, q: 2});
+    translateQ.push({x: 3, y: 3, q: 2});
+    translateQ.push({x: 2, y: 4, q: 2});
+    translateQ.push({x: 2, y: 5, q: 2});
+    translateQ.push({x: 1, y: 6, q: 2});
+    translateQ.push({x: 1, y: 7, q: 2});
+    translateQ.push({x: 1, y: 8, q: 2});
+    translateQ.push({x: 0, y: 9, q: 2});
+    translateQ.push({x: 0, y: 10, q: 2});
+    translateQ.push({x: 1, y: 10, q: 2});
+    translateQ.push({x: 2, y: 10, q: 2});
+    translateQ.push({x: 3, y: 10, q: 2});
+    translateQ.push({x: 4, y: 10, q: 2});
+    translateQ.push({x: 5, y: 10, q: 2});
+    translateQ.push({x: 6, y: 10, q: 2});
+    translateQ.push({x: 7, y: 10, q: 2});
+    translateQ.push({x: 8, y: 10, q: 2});
+    translateQ.push({x: 9, y: 10, q: 2});
+    translateQ.push({x: 8, y: 9, q: 2});
+    translateQ.push({x: 8, y: 8, q: 2});
+    translateQ.push({x: 7, y: 7, q: 2});
+    translateQ.push({x: 6, y: 6, q: 2});
+    translateQ.push({x: 5, y: 5, q: 2});
+    translateQ.push({x: 5, y: 4, q: 2});
+    translateQ.push({x: 4, y: 3, q: 2});
+    translateQ.push({x: 3, y: 2, q: 2});
+
+
+    translateFactor.push({tx:5,ty:12,q:0});
+    translateFactor.push({tx:11,ty:11,q:1});
+    translateFactor.push({tx:12,ty:3,q:2});
+
+    for(i=0;i<translateQ.length;i++)
+    {
+        translateA.push({x:translateQ[i].x + translateFactor[translateQ[i].q].tx, y:translateQ[i].y + translateFactor[translateQ[i].q].ty , q : translateQ[i].q});
+    }
+
+
+    var clickFlag = false;
+
+
+    for (j = 0; j < 600; j = j + 25) {
+        r++;
+        c = -1;
+        for (i = 0; i < 800; i = i + 25) {
+            c++;
+            var a = new mysquare(canvas, i, j, 25, 25);
+            a.draw();
+            squarecontainer.push({square: a, x1: i, y1: j, rows: r, cols: c, flag: 0});
+        }
+    }
+
+    function mouseevt(x, y) {
+        if (!clickFlag) {
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (x >= squarecontainer[i].x1 && x <= (squarecontainer[i].x1 + 25) && y >= squarecontainer[i].y1 && y <= (squarecontainer[i].y1 + 25)) {
+                    squarecontainer[i].square.mycolor = "yellow";
+                    squarecontainer[i].square.draw();
+                    squarecontainer[i].flag = 1;
+                    break;
+                }
+            }
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            for (i = 0; i < squarecontainer.length; i++) {
+                squarecontainer[i].square.draw();
+            }
+        }
+        else
+        {
+            alert("Clear the canvas to try again !");
+        }
+    }
+
+    function check() {
+        clickFlag = true;
+        for (j = 0; j < translateA.length; j++) {
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (squarecontainer[i].flag == 1) {
+                    if (translateA[j].x == squarecontainer[i].cols && translateA[j].y == squarecontainer[i].rows && translateA[j].q == qnumber) {
+                        squarecontainer[i].square.mycolor = "green";
+                    }
+                    else if(squarecontainer[i].square.mycolor != "green")
+                    {
+                        squarecontainer[i].square.mycolor = "red";
+                    }
+                }
+                else if (translateA[j].x == squarecontainer[i].cols && translateA[j].y == squarecontainer[i].rows && translateA[j].q == qnumber) {
+                    squarecontainer[i].square.mycolor = "black";
+                }
+                else
+                {
+                    squarecontainer[i].square.textColor = "#95a5a6";
+                }
+                squarecontainer[i].square.draw();
+            }
+        }
+        var P = document.getElementById("key");
+        P.innerHTML = "Green - Correctly Plotted Co-ordinates <br>" + "Red - Wrong Co-ordinates plotted <br>" + "Black - Co-ordinates which are correct but not plotted <br>"
+
+    }
+
+    function clearCanvas() {
+        location.reload();
+    }
+
+    function reset() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        for (i = 0; i < squarecontainer.length; i++) {
+            squarecontainer[i].square.mycolor = 'grey';
+            squarecontainer[i].square.textColor = "white";
+            squarecontainer[i].flag = 0;
+            squarecontainer[i].square.draw();
+
+        }
+    }
+
+    changequestion(0);
+
+    function changequestion(j) {
+        var we;
+        qnumber = j;
+        we = "" + questions[j];
+        reset();
+        document.getElementById("question").innerHTML = null;
+        document.getElementById("question").innerHTML = we;
+        for (j = 0; j < translateQ.length; j++) {
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (translateQ[j].q == qnumber) {
+                if (translateQ[j].x == squarecontainer[i].cols && translateQ[j].y == squarecontainer[i].rows) {
+                    squarecontainer[i].square.mycolor = "blue";
+                }
+                squarecontainer[i].square.draw();
+            }
+        }
+    }
+}
+</script>
+<script src="js/mouseevent.ob.js"></script>
+</body>
+</html>

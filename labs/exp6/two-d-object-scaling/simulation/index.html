@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!--Webstorm licence - Parth Parikh-->
+    <title>Scaling</title>
+    <style>
+        /* table,td {
+          border: solid;
+        } */
+        .tableOuter {
+            table-layout: auto;
+            width: 100%;
+            border: solid;
+            border-color: black;
+            border-width: medium;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+
+        .matrix {
+            position: relative;
+        }
+
+        .matrix:before, .matrix:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            border: 1px solid #000;
+            width: 6px;
+            height: 100%;
+        }
+
+        .matrix:before {
+            left: -6px;
+            border-right: 0;
+        }
+
+        .matrix:after {
+            right: -6px;
+            border-left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script src="js/squareevent.js"></script>
+<h1>TRANSFORMATIONS - Scaling</h1>
+<hr/>
+<p id="question"></p>
+<input type="button" value="Q1" id="1" onclick="changequestion(0)"/>
+<input type="button" value="Q2" id="2" onclick="changequestion(1)"/>
+<input type="button" value="Q3" id="3" onclick="changequestion(2)"/>
+<hr>
+<input type="button" value="START SIMUALTOR" onclick="start();"/>
+<input type="button" value="Clear Canvas" onclick="clearCanvas();"/>
+<br/>
+<hr/>
+<br/>
+<div class="row">
+    <div class="column">
+        <canvas id="mycanvas" width="800" height="600" style="border:solid;border-color:black;"></canvas>
+    </div>
+    <div class="column">
+        <table cellspacing="10" class="tableOuter">
+            <tr name="step1" style="opacity: 0">
+                <td>
+                    1. Enter Scaling matrix :
+                </td>
+                <td>
+                    <table class="matrix">
+                        <tr>
+                            <td><input type="text" id="m0" maxlength="3" size="3"></td>
+                            <td><input type="text" id="m1" maxlength="3" size="3"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="m2" maxlength="3" size="3"></td>
+                            <td><input type="text" id="m3" maxlength="3" size="3"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr name="step1" style="opacity: 0">
+                <td colspan="2">
+                    <input type="button" onclick="checkScaleMatrix();" value="CHECK MATRIX"
+                           style="width:100%; height:30px;">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr name="step2" style="opacity: 0">
+                <td colspan="2">
+                    2. Enter the scaled co-ordinates for the given points :
+                </td>
+            </tr>
+            <tr name="step2" style="opacity: 0">
+                <td colspan="2">
+                    <table id="tablePoints" cellspacing="10" cellpadding="3">
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr name="step2" style="opacity: 0">
+                <td colspan="2">
+                    <input type="button" onclick="checkScaledCoord();" value="CHECK SCALED CO-ORDINATES"
+                           style="width:100%; height:30px;">
+                </td>
+            </tr>
+            <tr name="step3" style="opacity: 0">
+                <td colspan="2">
+                    3. Plot the scaled points on the canvas
+                </td>
+            </tr>
+            <tr name="step4" style="opacity: 0">
+                <td colspan="2">
+                    4. Click the button below to join the points
+                </td>
+            </tr>
+            <tr name="step4" style="opacity: 0">
+                <td colspan="2">
+                    <input type="button" onclick="connectPoints();" value="JOIN POINTS"
+                           style="width:100%; height:30px;">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    var qnumber;
+    var questions = [];
+    questions.push("Scale the given line by Sx=2 and Sy=2 ");
+    questions.push("Scale the given square by Sx=0.5 and Sy=0.5 ");
+    questions.push("Scale the given triangle by Sx=3 and Sy=2");
+    var canvas = document.getElementById("mycanvas");
+    var context = canvas.getContext("2d");
+    var i = 0;
+    var j = 0;
+    var r = -1;
+    var c = -1;
+    var squarecontainer = [];
+    var scaleQ = [];
+    var scaleA = [];
+    var translateFactor = [];
+    var points = [];
+    var scaleMatrix = [];
+    var scaledCoord = [];
+    var pixelCount = [];
+    var pointsHint = [];
+
+    var step1 = document.getElementsByName("step1");
+    var step2 = document.getElementsByName("step2");
+    var step3 = document.getElementsByName("step3");
+    var step4 = document.getElementsByName("step4");
+
+    scaleMatrix.push({m0: 2, m1: 0, m2: 0, m3: 2, q: 0});
+    scaleMatrix.push({m0: 0.5, m1: 0, m2: 0, m3: 0.5, q: 1});
+    scaleMatrix.push({m0: 3, m1: 0, m2: 0, m3: 2, q: 2});
+
+    scaledCoord.push({x: 4, y: 6, q: 0});
+    scaledCoord.push({x: 24, y: 16, q: 0});
+    scaledCoord.push({x: 7, y: 5, q: 1});
+    scaledCoord.push({x: 13, y: 5, q: 1});
+    scaledCoord.push({x: 7, y: 11, q: 1});
+    scaledCoord.push({x: 13, y: 11, q: 1});
+    scaledCoord.push({x: 9, y: 4, q: 2});
+    scaledCoord.push({x: 0, y: 20, q: 2});
+    scaledCoord.push({x: 27, y: 20, q: 2});
+
+    pixelCount.push({q: 0, c: 2});
+    pixelCount.push({q: 1, c: 4});
+    pixelCount.push({q: 2, c: 3});
+
+    points.push({x: 2, y: 3, q: 0});
+    points.push({x: 12, y: 8, q: 0});
+
+    points.push({x: 14, y: 10, q: 1});
+    points.push({x: 14, y: 22, q: 1});
+    points.push({x: 26, y: 10, q: 1});
+    points.push({x: 26, y: 22, q: 1});
+
+    points.push({x: 3, y: 2, q: 2});
+    points.push({x: 0, y: 10, q: 2});
+    points.push({x: 9, y: 10, q: 2});
+
+    scaleQ.push({x: 2, y: 3, q: 0});
+    scaleQ.push({x: 3, y: 4, q: 0});
+    scaleQ.push({x: 4, y: 4, q: 0});
+    scaleQ.push({x: 5, y: 5, q: 0});
+    scaleQ.push({x: 6, y: 5, q: 0});
+    scaleQ.push({x: 7, y: 6, q: 0});
+    scaleQ.push({x: 8, y: 6, q: 0});
+    scaleQ.push({x: 9, y: 7, q: 0});
+    scaleQ.push({x: 10, y: 7, q: 0});
+    scaleQ.push({x: 11, y: 8, q: 0});
+    scaleQ.push({x: 12, y: 8, q: 0});
+
+    scaleQ.push({x: 14, y: 10, q: 1});
+    scaleQ.push({x: 14, y: 11, q: 1});
+    scaleQ.push({x: 14, y: 12, q: 1});
+    scaleQ.push({x: 14, y: 13, q: 1});
+    scaleQ.push({x: 14, y: 14, q: 1});
+    scaleQ.push({x: 14, y: 15, q: 1});
+    scaleQ.push({x: 14, y: 16, q: 1});
+    scaleQ.push({x: 14, y: 17, q: 1});
+    scaleQ.push({x: 14, y: 18, q: 1});
+    scaleQ.push({x: 14, y: 19, q: 1});
+    scaleQ.push({x: 14, y: 20, q: 1});
+    scaleQ.push({x: 14, y: 21, q: 1});
+    scaleQ.push({x: 14, y: 22, q: 1});
+    scaleQ.push({x: 15, y: 22, q: 1});
+    scaleQ.push({x: 16, y: 22, q: 1});
+    scaleQ.push({x: 17, y: 22, q: 1});
+    scaleQ.push({x: 18, y: 22, q: 1});
+    scaleQ.push({x: 19, y: 22, q: 1});
+    scaleQ.push({x: 20, y: 22, q: 1});
+    scaleQ.push({x: 21, y: 22, q: 1});
+    scaleQ.push({x: 22, y: 22, q: 1});
+    scaleQ.push({x: 23, y: 22, q: 1});
+    scaleQ.push({x: 24, y: 22, q: 1});
+    scaleQ.push({x: 25, y: 22, q: 1});
+    scaleQ.push({x: 26, y: 22, q: 1});
+    scaleQ.push({x: 26, y: 21, q: 1});
+    scaleQ.push({x: 26, y: 20, q: 1});
+    scaleQ.push({x: 26, y: 19, q: 1});
+    scaleQ.push({x: 26, y: 18, q: 1});
+    scaleQ.push({x: 26, y: 17, q: 1});
+    scaleQ.push({x: 26, y: 16, q: 1});
+    scaleQ.push({x: 26, y: 15, q: 1});
+    scaleQ.push({x: 26, y: 14, q: 1});
+    scaleQ.push({x: 26, y: 13, q: 1});
+    scaleQ.push({x: 26, y: 12, q: 1});
+    scaleQ.push({x: 26, y: 11, q: 1});
+    scaleQ.push({x: 26, y: 10, q: 1});
+    scaleQ.push({x: 25, y: 10, q: 1});
+    scaleQ.push({x: 24, y: 10, q: 1});
+    scaleQ.push({x: 23, y: 10, q: 1});
+    scaleQ.push({x: 22, y: 10, q: 1});
+    scaleQ.push({x: 21, y: 10, q: 1});
+    scaleQ.push({x: 20, y: 10, q: 1});
+    scaleQ.push({x: 19, y: 10, q: 1});
+    scaleQ.push({x: 18, y: 10, q: 1});
+    scaleQ.push({x: 17, y: 10, q: 1});
+    scaleQ.push({x: 16, y: 10, q: 1});
+    scaleQ.push({x: 15, y: 10, q: 1});
+
+    scaleQ.push({x: 3, y: 2, q: 2});
+    scaleQ.push({x: 3, y: 3, q: 2});
+    scaleQ.push({x: 2, y: 4, q: 2});
+    scaleQ.push({x: 2, y: 5, q: 2});
+    scaleQ.push({x: 1, y: 6, q: 2});
+    scaleQ.push({x: 1, y: 7, q: 2});
+    scaleQ.push({x: 1, y: 8, q: 2});
+    scaleQ.push({x: 0, y: 9, q: 2});
+    scaleQ.push({x: 0, y: 10, q: 2});
+    scaleQ.push({x: 1, y: 10, q: 2});
+    scaleQ.push({x: 2, y: 10, q: 2});
+    scaleQ.push({x: 3, y: 10, q: 2});
+    scaleQ.push({x: 4, y: 10, q: 2});
+    scaleQ.push({x: 5, y: 10, q: 2});
+    scaleQ.push({x: 6, y: 10, q: 2});
+    scaleQ.push({x: 7, y: 10, q: 2});
+    scaleQ.push({x: 8, y: 10, q: 2});
+    scaleQ.push({x: 9, y: 10, q: 2});
+    scaleQ.push({x: 8, y: 9, q: 2});
+    scaleQ.push({x: 8, y: 8, q: 2});
+    scaleQ.push({x: 7, y: 7, q: 2});
+    scaleQ.push({x: 6, y: 6, q: 2});
+    scaleQ.push({x: 5, y: 5, q: 2});
+    scaleQ.push({x: 5, y: 4, q: 2});
+    scaleQ.push({x: 4, y: 3, q: 2});
+    scaleQ.push({x: 3, y: 2, q: 2});
+
+    scaleA.push({x: 4, y: 6, q: 0});
+    scaleA.push({x: 5, y: 7, q: 0});
+    scaleA.push({x: 6, y: 7, q: 0});
+    scaleA.push({x: 7, y: 8, q: 0});
+    scaleA.push({x: 8, y: 8, q: 0});
+    scaleA.push({x: 9, y: 9, q: 0});
+    scaleA.push({x: 10, y: 9, q: 0});
+    scaleA.push({x: 11, y: 10, q: 0});
+    scaleA.push({x: 12, y: 10, q: 0});
+    scaleA.push({x: 13, y: 11, q: 0});
+    scaleA.push({x: 14, y: 11, q: 0});
+    scaleA.push({x: 15, y: 12, q: 0});
+    scaleA.push({x: 16, y: 12, q: 0});
+    scaleA.push({x: 17, y: 13, q: 0});
+    scaleA.push({x: 18, y: 13, q: 0});
+    scaleA.push({x: 19, y: 14, q: 0});
+    scaleA.push({x: 20, y: 14, q: 0});
+    scaleA.push({x: 21, y: 15, q: 0});
+    scaleA.push({x: 22, y: 15, q: 0});
+    scaleA.push({x: 23, y: 16, q: 0});
+    scaleA.push({x: 24, y: 16, q: 0});
+
+    scaleA.push({x: 7, y: 5, q: 1});
+    scaleA.push({x: 7, y: 6, q: 1});
+    scaleA.push({x: 7, y: 7, q: 1});
+    scaleA.push({x: 7, y: 8, q: 1});
+    scaleA.push({x: 7, y: 9, q: 1});
+    scaleA.push({x: 7, y: 10, q: 1});
+    scaleA.push({x: 7, y: 11, q: 1});
+    scaleA.push({x: 8, y: 11, q: 1});
+    scaleA.push({x: 9, y: 11, q: 1});
+    scaleA.push({x: 10, y: 11, q: 1});
+    scaleA.push({x: 11, y: 11, q: 1});
+    scaleA.push({x: 12, y: 11, q: 1});
+    scaleA.push({x: 13, y: 11, q: 1});
+    scaleA.push({x: 13, y: 10, q: 1});
+    scaleA.push({x: 13, y: 9, q: 1});
+    scaleA.push({x: 13, y: 8, q: 1});
+    scaleA.push({x: 13, y: 7, q: 1});
+    scaleA.push({x: 13, y: 6, q: 1});
+    scaleA.push({x: 13, y: 5, q: 1});
+    scaleA.push({x: 12, y: 5, q: 1});
+    scaleA.push({x: 11, y: 5, q: 1});
+    scaleA.push({x: 10, y: 5, q: 1});
+    scaleA.push({x: 9, y: 5, q: 1});
+    scaleA.push({x: 8, y: 5, q: 1});
+
+    scaleA.push({x: 9, y: 4, q: 2});
+    scaleA.push({x: 8, y: 5, q: 2});
+    scaleA.push({x: 8, y: 6, q: 2});
+    scaleA.push({x: 7, y: 7, q: 2});
+    scaleA.push({x: 7, y: 8, q: 2});
+    scaleA.push({x: 6, y: 9, q: 2});
+    scaleA.push({x: 6, y: 10, q: 2});
+    scaleA.push({x: 5, y: 11, q: 2});
+    scaleA.push({x: 5, y: 12, q: 2});
+    scaleA.push({x: 4, y: 13, q: 2});
+    scaleA.push({x: 3, y: 14, q: 2});
+    scaleA.push({x: 3, y: 15, q: 2});
+    scaleA.push({x: 2, y: 16, q: 2});
+    scaleA.push({x: 2, y: 17, q: 2});
+    scaleA.push({x: 1, y: 18, q: 2});
+    scaleA.push({x: 0, y: 19, q: 2});
+    scaleA.push({x: 0, y: 20, q: 2});
+    scaleA.push({x: 1, y: 20, q: 2});
+    scaleA.push({x: 2, y: 20, q: 2});
+    scaleA.push({x: 3, y: 20, q: 2});
+    scaleA.push({x: 4, y: 20, q: 2});
+    scaleA.push({x: 5, y: 20, q: 2});
+    scaleA.push({x: 6, y: 20, q: 2});
+    scaleA.push({x: 7, y: 20, q: 2});
+    scaleA.push({x: 8, y: 20, q: 2});
+    scaleA.push({x: 9, y: 20, q: 2});
+    scaleA.push({x: 10, y: 20, q: 2});
+    scaleA.push({x: 11, y: 20, q: 2});
+    scaleA.push({x: 12, y: 20, q: 2});
+    scaleA.push({x: 13, y: 20, q: 2});
+    scaleA.push({x: 14, y: 20, q: 2});
+    scaleA.push({x: 15, y: 20, q: 2});
+    scaleA.push({x: 16, y: 20, q: 2});
+    scaleA.push({x: 17, y: 20, q: 2});
+    scaleA.push({x: 18, y: 20, q: 2});
+    scaleA.push({x: 19, y: 20, q: 2});
+    scaleA.push({x: 20, y: 20, q: 2});
+    scaleA.push({x: 21, y: 20, q: 2});
+    scaleA.push({x: 22, y: 20, q: 2});
+    scaleA.push({x: 23, y: 20, q: 2});
+    scaleA.push({x: 24, y: 20, q: 2});
+    scaleA.push({x: 25, y: 20, q: 2});
+    scaleA.push({x: 26, y: 20, q: 2});
+    scaleA.push({x: 27, y: 20, q: 2});
+    scaleA.push({x: 26, y: 19, q: 2});
+    scaleA.push({x: 25, y: 18, q: 2});
+    scaleA.push({x: 24, y: 17, q: 2});
+    scaleA.push({x: 23, y: 16, q: 2});
+    scaleA.push({x: 22, y: 16, q: 2});
+    scaleA.push({x: 21, y: 15, q: 2});
+    scaleA.push({x: 20, y: 14, q: 2});
+    scaleA.push({x: 19, y: 13, q: 2});
+    scaleA.push({x: 18, y: 12, q: 2});
+    scaleA.push({x: 17, y: 11, q: 2});
+    scaleA.push({x: 16, y: 10, q: 2});
+    scaleA.push({x: 15, y: 9, q: 2});
+    scaleA.push({x: 14, y: 8, q: 2});
+    scaleA.push({x: 13, y: 8, q: 2});
+    scaleA.push({x: 12, y: 7, q: 2});
+    scaleA.push({x: 11, y: 6, q: 2});
+    scaleA.push({x: 10, y: 5, q: 2});
+
+
+    var clickFlag = true;
+    var startSim = false;
+
+
+    for (j = 0; j < 600; j = j + 25) {
+        r++;
+        c = -1;
+        for (i = 0; i < 800; i = i + 25) {
+            c++;
+            var a = new mysquare(canvas, i, j, 25, 25);
+            a.draw();
+            squarecontainer.push({square: a, x1: i, y1: j, rows: r, cols: c, flag: 0});
+        }
+    }
+
+    function mouseevt(x, y) {
+        if (!clickFlag) {
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (squarecontainer[i].square.mycolor == 'red') {
+                    squarecontainer[i].square.mycolor = 'grey';
+                    squarecontainer[i].flag = 0;
+                    squarecontainer[i].square.draw();
+                }
+            }
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (x >= squarecontainer[i].x1 && x <= (squarecontainer[i].x1 + 25) && y >= squarecontainer[i].y1 && y <= (squarecontainer[i].y1 + 25)) {
+                    if (squarecontainer[i].square.mycolor == 'green') {
+                        return;
+                    }
+                    else {
+                        squarecontainer[i].square.mycolor = "yellow";
+                        squarecontainer[i].square.draw();
+                        squarecontainer[i].flag = 1;
+                        break;
+                    }
+                }
+            }
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            for (i = 0; i < squarecontainer.length; i++) {
+                squarecontainer[i].square.draw();
+            }
+            checkPixels();
+        }
+        else {
+            alert("Please follow the instructions to complete the simulation");
+        }
+        if (!startSim) {
+            alert("Click on the 'START SIMULATOR' button to start simulation");
+        }
+    }
+
+    countPixelFlag = 0;
+
+    function checkPixels() {
+        for (j = 0; j < scaledCoord.length; j++) {
+            if (scaledCoord[j].q == qnumber) {
+                for (i = 0; i < squarecontainer.length; i++) {
+                    if (squarecontainer[i].square.mycolor === "yellow" || squarecontainer[i].square.mycolor === "red") {
+                        if (squarecontainer[i].cols == scaledCoord[j].x && squarecontainer[i].rows == scaledCoord[j].y) {
+                            squarecontainer[i].square.mycolor = "green";
+                            countPixelFlag++;
+                            if (countPixelFlag == pixelCount[qnumber].c) {
+                                squarecontainer[i].square.draw();
+                                for (i = 0; i < step3.length; i++) {
+                                    step3[i].style.opacity = "0.2";
+                                }
+                                for (i = 0; i < step4.length; i++) {
+                                    step4[i].style.opacity = "1";
+                                }
+                                clickFlag = true;
+                            }
+                            break;
+                        }
+                        else {
+                            squarecontainer[i].square.mycolor = "red";
+                            squarecontainer[i].square.draw();
+                            break;
+                        }
+                    }
+                    squarecontainer[i].square.draw();
+                }
+            }
+        }
+    }
+
+    function clearCanvas() {
+        location.reload();
+    }
+
+    function reset() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        for (i = 0; i < squarecontainer.length; i++) {
+            squarecontainer[i].square.mycolor = 'grey';
+            squarecontainer[i].square.textColor = "white";
+            squarecontainer[i].flag = 0;
+            squarecontainer[i].square.draw();
+        }
+
+        document.getElementById("m0").value = "";
+        document.getElementById("m1").value = "";
+        document.getElementById("m2").value = "";
+        document.getElementById("m3").value = "";
+
+        var table = document.getElementById("tablePoints");
+        while (table.rows.length > 1) {
+            table.deleteRow(1);
+        }
+
+        startSim = false;
+        for (i = 0; i < step1.length; i++) {
+            step1[i].style.opacity = "0";
+        }
+        for (i = 0; i < step2.length; i++) {
+            step2[i].style.opacity = "0";
+        }
+        for (i = 0; i < step3.length; i++) {
+            step3[i].style.opacity = "0";
+        }
+        for (i = 0; i < step4.length; i++) {
+            step4[i].style.opacity = "0";
+        }
+        clickFlag = true;
+    }
+
+    function checkScaleMatrix() {
+        var mat = [];
+        for (i = 0; i < 4; i++) {
+            mat.push(document.getElementById("m" + i).value);
+        }
+        if (mat[0] == scaleMatrix[qnumber].m0 && mat[1] == scaleMatrix[qnumber].m1 && mat[2] == scaleMatrix[qnumber].m2 && mat[3] == scaleMatrix[qnumber].m3) {
+            alert("Scaling matrix is correct");
+            for (i = 0; i < step2.length; i++) {
+                step2[i].style.opacity = "1";
+            }
+            for (i = 0; i < step1.length; i++) {
+                step1[i].style.opacity = "0.2";
+            }
+        }
+        else {
+            alert("Scaling matrix is incorrect");
+        }
+    }
+
+    function checkScaledCoord() {
+        var count = 0;
+        for (i = 0; i < scaledCoord.length; i++) {
+            if (scaledCoord[i].q == qnumber) {
+                var scaledPointsX = document.getElementsByName("xScaled" + qnumber);
+                var scaledPointsY = document.getElementsByName("yScaled" + qnumber);
+                for (j = 0; j < scaledPointsX.length; j++) {
+                    if (scaledPointsX[j].value != scaledCoord[i].x || scaledPointsY[j].value != scaledCoord[i].y) {
+                        // alert("INVALID A:" + scaledPointsX[j].value +" D:"+ scaledCoord[i].x + "A:" +scaledPointsY[j].value +" D:"+ scaledCoord[i].y);
+                    }
+                    else {
+                        count++;
+                    }
+                }
+            }
+        }
+        if (count == scaledPointsX.length) {
+            alert("Matrices correct");
+            for (i = 0; i < step2.length; i++) {
+                step2[i].style.opacity = "0.2";
+            }
+            for (i = 0; i < step3.length; i++) {
+                step3[i].style.opacity = "1";
+            }
+            clickFlag = false;
+        }
+        else
+        {
+            alert("Matrices are incorrect");
+        }
+    }
+
+    changequestion(0);
+
+    function changequestion(j) {
+        var we;
+        qnumber = j;
+        we = "" + questions[j];
+        reset();
+        document.getElementById("question").innerHTML = null;
+        document.getElementById("question").innerHTML = we;
+        for (j = 0; j < scaleQ.length; j++) {
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (scaleQ[j].q == qnumber) {
+                    if (scaleQ[j].x == squarecontainer[i].cols && scaleQ[j].y == squarecontainer[i].rows) {
+                        squarecontainer[i].square.mycolor = "blue";
+                    }
+                    squarecontainer[i].square.draw();
+                }
+            }
+        }
+
+        var table = document.getElementById("tablePoints");
+        while (table.rows.length > 1) {
+            table.deleteRow(1);
+        }
+
+        var id = 1;
+        for (i = 0; i < points.length; i++) {
+            if (points[i].q == qnumber) {
+                var row = table.insertRow();
+                var cellLeft = row.insertCell();
+                var cellRight = row.insertCell();
+                var cellEqual = row.insertCell();
+                var cellQuestion = row.insertCell();
+
+                var tb1 = document.createElement("table");
+                tb1.setAttribute("class", "matrix");
+                tb1.align = "right";
+                var tr1 = document.createElement("tr");
+                var td1 = document.createElement("td");
+                td1.innerHTML = points[i].x;
+                tb1.appendChild(tr1);
+                tr1.appendChild(td1);
+                var tr2 = document.createElement("tr");
+                var td2 = document.createElement("td");
+                td2.innerHTML = points[i].y;
+                tb1.appendChild(tr2);
+                tr2.appendChild(td2);
+                cellLeft.appendChild(tb1);
+
+                var tb2 = document.createElement("table");
+                tb2.setAttribute("class", "matrix");
+                tr1 = document.createElement("tr");
+                td1 = document.createElement("td");
+                td1.innerHTML = scaleMatrix[qnumber].m0;
+                td2 = document.createElement("td");
+                td2.innerHTML = scaleMatrix[qnumber].m1;
+                tr1.appendChild(td1);
+                tr1.appendChild(td2);
+                tb2.appendChild(tr1);
+                tr2 = document.createElement("tr");
+                td1 = document.createElement("td");
+                td1.innerHTML = scaleMatrix[qnumber].m2;
+                td2 = document.createElement("td");
+                td2.innerHTML = scaleMatrix[qnumber].m3;
+                tr2.appendChild(td1);
+                tr2.appendChild(td2);
+                tb2.appendChild(tr2);
+                cellRight.appendChild(tb2);
+
+                cellEqual.innerHTML = " = ";
+
+                tb1 = document.createElement("table");
+                tb1.setAttribute("class", "matrix");
+                tb1.align = "left";
+                var tr1 = document.createElement("tr");
+                var td1 = document.createElement("td");
+                var xScaled = document.createElement("input");
+                xScaled.type = "text";
+                xScaled.maxlength = "3";
+                xScaled.size = "3";
+                xScaled.id = "xScaled" + id;
+                xScaled.name = "xScaled" + qnumber;
+                td1.appendChild(xScaled);
+                tb1.appendChild(tr1);
+                tr1.appendChild(td1);
+                var tr2 = document.createElement("tr");
+                var td2 = document.createElement("td");
+                var yScaled = document.createElement("input");
+                yScaled.type = "text";
+                yScaled.maxlength = "3";
+                yScaled.size = "3";
+                yScaled.id = "yScaled" + id;
+                yScaled.name = "yScaled" + qnumber;
+                td2.appendChild(yScaled);
+                tb1.appendChild(tr2);
+                tr2.appendChild(td2);
+                cellQuestion.appendChild(tb1);
+                id++;
+            }
+        }
+    }
+
+    function start() {
+        startSim = true;
+        for (i = 0; i < step1.length; i++) {
+            step1[i].style.opacity = "1";
+        }
+        for (i = 0; i < step2.length; i++) {
+            step2[i].style.opacity = "0";
+        }
+        for (i = 0; i < step3.length; i++) {
+            step3[i].style.opacity = "0";
+        }
+        for (i = 0; i < step4.length; i++) {
+            step4[i].style.opacity = "0";
+        }
+        clickFlag = true;
+    }
+
+    function connectPoints() {
+        for (j = 0; j < scaleA.length; j++) {
+            for (i = 0; i < squarecontainer.length; i++) {
+                if (scaleA[j].x == squarecontainer[i].cols && scaleA[j].y == squarecontainer[i].rows && scaleA[j].q == qnumber) {
+                    squarecontainer[i].square.mycolor = "green";
+                }
+                else {
+                    squarecontainer[i].square.textColor = "#95a5a6";
+                }
+                squarecontainer[i].square.draw();
+            }
+        }
+        for (i = 0; i < step4.length; i++) {
+            step4[i].style.opacity = "0.2";
+        }
+        alert("You have successfully scaled the object");
+    }
+</script>
+<script src="js/mouseevent.ob.js"></script>
+</body>
+</html>
