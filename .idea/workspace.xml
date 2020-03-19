@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b8bbb1d-4b83-46e5-85c8-a5e144090f3e" name="Default Changelist" comment="Bug fix">
-      <change beforePath="$PROJECT_DIR$/1. DDA/Algorithm.html" beforeDir="false" afterPath="$PROJECT_DIR$/1. DDA/Algorithm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. DDA/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Breshenham/Algorithm.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. Breshenham/Algorithm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Breshenham/Theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/2. Breshenham/Theory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4. Circle/Algorithm.html" beforeDir="false" afterPath="$PROJECT_DIR$/4. Circle/Algorithm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4. Circle/Theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/4. Circle/Theory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5. Translation/Algorithm.html" beforeDir="false" afterPath="$PROJECT_DIR$/5. Translation/Algorithm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5. Translation/Posttest.html" beforeDir="false" afterPath="$PROJECT_DIR$/5. Translation/Posttest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5. Translation/Pretest.html" beforeDir="false" afterPath="$PROJECT_DIR$/5. Translation/Pretest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5. Translation/Theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/5. Translation/Theory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp1/dda-algorithm-pvg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp1/posttest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp1/posttest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp1/pretest.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp1/pretest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp1/procedure.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp1/procedure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp1/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp1/references.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp1/simulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp1/simulation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/exp1/theory.html" beforeDir="false" afterPath="$PROJECT_DIR$/labs/exp1/theory.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,110 +21,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1307627314">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.25" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="cpp" value="1" />
-          <entry key="html" value="77" />
-          <entry key="js" value="2" />
-          <entry key="php" value="1" />
-          <entry key="png" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="C++" value="1" />
-          <entry key="HTML" value="77" />
-          <entry key="Image" value="1" />
-          <entry key="JavaScript" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="7727" />
-          <entry key="php" value="3" />
-          <entry key="txt" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="7727" />
-          <entry key="PLAIN_TEXT" value="10" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1. DDA/Algorithm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-              <folding>
-                <element signature="e#312#316#0" expanded="true" />
-                <element signature="e#386#392#0" expanded="true" />
-                <element signature="e#392#398#0" expanded="true" />
-                <element signature="e#398#404#0" expanded="true" />
-                <element signature="e#404#410#0" expanded="true" />
-                <element signature="e#410#416#0" expanded="true" />
-                <element signature="e#416#422#0" expanded="true" />
-                <element signature="e#422#428#0" expanded="true" />
-                <element signature="e#428#434#0" expanded="true" />
-                <element signature="e#434#440#0" expanded="true" />
-                <element signature="e#517#523#0" expanded="true" />
-                <element signature="e#523#529#0" expanded="true" />
-                <element signature="e#529#535#0" expanded="true" />
-                <element signature="e#535#541#0" expanded="true" />
-                <element signature="e#541#547#0" expanded="true" />
-                <element signature="e#547#553#0" expanded="true" />
-                <element signature="e#553#559#0" expanded="true" />
-                <element signature="e#559#565#0" expanded="true" />
-                <element signature="e#565#571#0" expanded="true" />
-                <element signature="e#992#996#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1. DDA/Posttest.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1. DDA/Pretest.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="11" lean-forward="true" selection-end-line="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/1. DDA/Theory.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -191,26 +88,34 @@
         <option value="$PROJECT_DIR$/2. Breshenham/Algorithm.html" />
         <option value="$PROJECT_DIR$/2. Breshenham/Theory.html" />
         <option value="$PROJECT_DIR$/1. DDA/Algorithm.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/dda-algorithm/Algorithm.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/dda-algorithm/Posttest.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/dda-algorithm/Pretest.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/dda-algorithm/Theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/dda-algorithm/Aim.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/posttest.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/pretest.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/procedure.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/references.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/simulation.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/theory.html" />
+        <option value="$PROJECT_DIR$/labs/exp1/index.html" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1" />
-    <option name="y" value="39" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="725" />
+    <option name="height" value="730" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,20 +123,15 @@
               <item name="cg-vlab" type="b2602c69:ProjectViewProjectNode" />
               <item name="cg-vlab" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="cg-vlab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cg-vlab" type="462c0819:PsiDirectoryNode" />
-              <item name="1. DDA" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -255,7 +155,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="simulator.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cg-vlab/8. Even-Odd/simulator.html">
+    <configuration name="simulator.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cg-vlab/8. Even-Odd/simulator.html">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -276,6 +176,7 @@
       <updated>1555516274604</updated>
       <workItem from="1555516284628" duration="9503000" />
       <workItem from="1555565142568" duration="27619000" />
+      <workItem from="1584642001712" duration="1537000" />
     </task>
     <task id="LOCAL-00001" summary="Bug fix">
       <created>1555526018983</created>
@@ -288,17 +189,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37122000" />
+    <option name="totallyTimeSpent" value="38659000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="725" extended-state="6" />
-    <editor active="true" />
+    <frame x="1" y="23" width="1280" height="730" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -317,33 +217,14 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bug fix" />
     <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../indexnew3.html" />
-    <entry file="file://$USER_HOME$/Downloads/template/labs/exp1/simulation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="89" column="48" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rotate.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6. Scaling/squareevent.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../rotate.cpp" />
+    <entry file="file://$PROJECT_DIR$/6. Scaling/squareevent.js" />
     <entry file="file://$USER_HOME$/Training/HTML:Javascript Training/Vlabs Training/7.looping/HtmlPage6.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -351,635 +232,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1. DDA/Aim.html">
+    <entry file="file://$PROJECT_DIR$/1. DDA/Aim.html" />
+    <entry file="file://$PROJECT_DIR$/1. DDA/test.html" />
+    <entry file="file://$PROJECT_DIR$/1. DDA/simulator.html" />
+    <entry file="file://$PROJECT_DIR$/3.  DDA vs Bresenham/simulator.html" />
+    <entry file="file://$PROJECT_DIR$/4. Circle/simulator.html" />
+    <entry file="file://$PROJECT_DIR$/5. Translation/simulator.html" />
+    <entry file="file://$PROJECT_DIR$/6. Scaling/simulator.html" />
+    <entry file="file://$PROJECT_DIR$/7. Rotation/simulator.html" />
+    <entry file="file://$PROJECT_DIR$/8. Even-Odd/simulator.html" />
+    <entry file="file://$PROJECT_DIR$/5. Translation/squareevent.js" />
+    <entry file="file://$PROJECT_DIR$/2. Breshenham/Aim.html" />
+    <entry file="file://$PROJECT_DIR$/4. Circle/Aim.html" />
+    <entry file="file://$PROJECT_DIR$/6. Scaling/Theory.html" />
+    <entry file="file://$PROJECT_DIR$/6. Scaling/Aim.html" />
+    <entry file="file://$PROJECT_DIR$/6. Scaling/Algorithm.html" />
+    <entry file="file://$PROJECT_DIR$/6. Scaling/Pretest.html" />
+    <entry file="file://$PROJECT_DIR$/6. Scaling/Posttest.html" />
+    <entry file="file://$PROJECT_DIR$/5. Translation/Aim.html" />
+    <entry file="file://$PROJECT_DIR$/5. Translation/Theory.html" />
+    <entry file="file://$PROJECT_DIR$/5. Translation/Posttest.html" />
+    <entry file="file://$PROJECT_DIR$/5. Translation/Pretest.html" />
+    <entry file="file://$PROJECT_DIR$/5. Translation/Algorithm.html" />
+    <entry file="file://$PROJECT_DIR$/4. Circle/Theory.html" />
+    <entry file="file://$PROJECT_DIR$/4. Circle/Pretest.html" />
+    <entry file="file://$PROJECT_DIR$/4. Circle/Posttest.html" />
+    <entry file="file://$PROJECT_DIR$/4. Circle/Algorithm.html" />
+    <entry file="file://$PROJECT_DIR$/2. Breshenham/Algorithm.html" />
+    <entry file="file://$PROJECT_DIR$/2. Breshenham/Posttest.html" />
+    <entry file="file://$PROJECT_DIR$/2. Breshenham/Pretest.html" />
+    <entry file="file://$PROJECT_DIR$/2. Breshenham/simulator.html" />
+    <entry file="file://$PROJECT_DIR$/2. Breshenham/theoryImage1.png" />
+    <entry file="file://$PROJECT_DIR$/2. Breshenham/Theory.html" />
+    <entry file="file://$PROJECT_DIR$/1. DDA/Algorithm.html" />
+    <entry file="file://$PROJECT_DIR$/1. DDA/Posttest.html" />
+    <entry file="file://$PROJECT_DIR$/1. DDA/Pretest.html" />
+    <entry file="file://$PROJECT_DIR$/1. DDA/Theory.html" />
+    <entry file="file://$PROJECT_DIR$/labs/exp1/dda-algorithm/Algorithm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="-609">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1. DDA/test.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp1/dda-algorithm/Posttest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1. DDA/simulator.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp1/dda-algorithm/Pretest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/3.  DDA vs Bresenham/simulator.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp1/dda-algorithm/Theory.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        <state relative-caret-position="15">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4. Circle/simulator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5. Translation/simulator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6. Scaling/simulator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#table#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#table#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#table#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#tr#1;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#4;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#tr#5;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#tr#5;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#tr#6;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#tr#6;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#tr#7;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#tr#7;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#10;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7. Rotation/simulator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-          <folding>
-            <element signature="n#tr#1;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#4;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#5;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#6;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#7;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#td#0;n#tr#8;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#td#0;n#tr#9;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#10;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8. Even-Odd/simulator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#input#1;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#3;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#td#0;n#tr#3;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#4;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#td#0;n#tr#4;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#5;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#td#0;n#tr#5;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#6;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#td#0;n#tr#6;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#7;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#td#0;n#tr#7;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5. Translation/squareevent.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2. Breshenham/Aim.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4. Circle/Aim.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6. Scaling/Theory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-          <folding>
-            <element signature="e#431#438#0" expanded="true" />
-            <element signature="e#440#447#0" expanded="true" />
-            <element signature="e#479#486#0" expanded="true" />
-            <element signature="e#488#495#0" expanded="true" />
-            <element signature="e#759#766#0" expanded="true" />
-            <element signature="e#768#775#0" expanded="true" />
-            <element signature="e#778#785#0" expanded="true" />
-            <element signature="e#804#811#0" expanded="true" />
-            <element signature="e#835#842#0" expanded="true" />
-            <element signature="e#1291#1298#0" expanded="true" />
-            <element signature="e#1300#1307#0" expanded="true" />
-            <element signature="e#1309#1316#0" expanded="true" />
-            <element signature="e#1343#1350#0" expanded="true" />
-            <element signature="e#1382#1389#0" expanded="true" />
-            <element signature="e#1573#1580#0" expanded="true" />
-            <element signature="e#1581#1588#0" expanded="true" />
-            <element signature="e#1750#1757#0" expanded="true" />
-            <element signature="e#1758#1765#0" expanded="true" />
-            <element signature="e#2179#2186#0" expanded="true" />
-            <element signature="e#2187#2194#0" expanded="true" />
-            <element signature="e#2621#2628#0" expanded="true" />
-            <element signature="e#2630#2637#0" expanded="true" />
-            <element signature="e#2640#2647#0" expanded="true" />
-            <element signature="e#2684#2691#0" expanded="true" />
-            <element signature="e#2693#2700#0" expanded="true" />
-            <element signature="e#2705#2712#0" expanded="true" />
-            <element signature="e#2714#2721#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6. Scaling/Aim.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="74" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6. Scaling/Algorithm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="55" selection-end-line="33" />
-          <folding>
-            <element signature="e#559#566#0" expanded="true" />
-            <element signature="e#578#585#0" expanded="true" />
-            <element signature="e#703#710#0" expanded="true" />
-            <element signature="e#713#720#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6. Scaling/Pretest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="31" column="11" lean-forward="true" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6. Scaling/Posttest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#229#236#0" expanded="true" />
-            <element signature="e#881#888#0" expanded="true" />
-            <element signature="e#1542#1549#0" expanded="true" />
-            <element signature="e#2209#2216#0" expanded="true" />
-            <element signature="e#2843#2850#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5. Translation/Aim.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5. Translation/Theory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="e#532#539#0" expanded="true" />
-            <element signature="e#541#548#0" expanded="true" />
-            <element signature="e#577#584#0" expanded="true" />
-            <element signature="e#586#593#0" expanded="true" />
-            <element signature="e#876#882#0" expanded="true" />
-            <element signature="e#885#891#0" expanded="true" />
-            <element signature="e#902#908#0" expanded="true" />
-            <element signature="e#928#934#0" expanded="true" />
-            <element signature="e#1376#1383#0" expanded="true" />
-            <element signature="e#1385#1392#0" expanded="true" />
-            <element signature="e#1395#1402#0" expanded="true" />
-            <element signature="e#1443#1450#0" expanded="true" />
-            <element signature="e#1452#1459#0" expanded="true" />
-            <element signature="e#1472#1479#0" expanded="true" />
-            <element signature="e#1481#1488#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5. Translation/Posttest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#234#241#0" expanded="true" />
-            <element signature="e#859#866#0" expanded="true" />
-            <element signature="e#1493#1500#0" expanded="true" />
-            <element signature="e#2136#2143#0" expanded="true" />
-            <element signature="e#2753#2760#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5. Translation/Pretest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="24" column="15" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-          <folding>
-            <element signature="e#1692#1699#0" expanded="true" />
-            <element signature="e#1702#1709#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5. Translation/Algorithm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-          <folding>
-            <element signature="e#628#635#0" expanded="true" />
-            <element signature="e#647#654#0" expanded="true" />
-            <element signature="e#776#783#0" expanded="true" />
-            <element signature="e#786#793#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4. Circle/Theory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding>
-            <element signature="e#390#397#0" expanded="true" />
-            <element signature="e#409#416#0" expanded="true" />
-            <element signature="e#1185#1192#0" expanded="true" />
-            <element signature="e#1276#1283#0" expanded="true" />
-            <element signature="e#1703#1707#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4. Circle/Pretest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" column="125" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4. Circle/Posttest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="28" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4. Circle/Algorithm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="115" lean-forward="true" selection-end-line="57" />
-          <folding>
-            <element signature="e#340#347#0" expanded="true" />
-            <element signature="e#385#389#0" expanded="true" />
-            <element signature="e#437#443#0" expanded="true" />
-            <element signature="e#443#449#0" expanded="true" />
-            <element signature="e#449#455#0" expanded="true" />
-            <element signature="e#455#461#0" expanded="true" />
-            <element signature="e#461#467#0" expanded="true" />
-            <element signature="e#467#473#0" expanded="true" />
-            <element signature="e#473#479#0" expanded="true" />
-            <element signature="e#479#485#0" expanded="true" />
-            <element signature="e#485#491#0" expanded="true" />
-            <element signature="e#550#556#0" expanded="true" />
-            <element signature="e#556#562#0" expanded="true" />
-            <element signature="e#562#568#0" expanded="true" />
-            <element signature="e#568#574#0" expanded="true" />
-            <element signature="e#574#580#0" expanded="true" />
-            <element signature="e#580#586#0" expanded="true" />
-            <element signature="e#586#592#0" expanded="true" />
-            <element signature="e#592#598#0" expanded="true" />
-            <element signature="e#598#604#0" expanded="true" />
-            <element signature="e#608#612#0" expanded="true" />
-            <element signature="e#636#642#0" expanded="true" />
-            <element signature="e#642#648#0" expanded="true" />
-            <element signature="e#648#654#0" expanded="true" />
-            <element signature="e#654#660#0" expanded="true" />
-            <element signature="e#660#666#0" expanded="true" />
-            <element signature="e#666#672#0" expanded="true" />
-            <element signature="e#672#678#0" expanded="true" />
-            <element signature="e#678#684#0" expanded="true" />
-            <element signature="e#684#690#0" expanded="true" />
-            <element signature="e#716#722#0" expanded="true" />
-            <element signature="e#722#728#0" expanded="true" />
-            <element signature="e#728#734#0" expanded="true" />
-            <element signature="e#734#740#0" expanded="true" />
-            <element signature="e#740#746#0" expanded="true" />
-            <element signature="e#746#752#0" expanded="true" />
-            <element signature="e#752#758#0" expanded="true" />
-            <element signature="e#758#764#0" expanded="true" />
-            <element signature="e#764#770#0" expanded="true" />
-            <element signature="e#770#776#0" expanded="true" />
-            <element signature="e#776#782#0" expanded="true" />
-            <element signature="e#782#788#0" expanded="true" />
-            <element signature="e#788#794#0" expanded="true" />
-            <element signature="e#794#800#0" expanded="true" />
-            <element signature="e#800#806#0" expanded="true" />
-            <element signature="e#806#812#0" expanded="true" />
-            <element signature="e#812#818#0" expanded="true" />
-            <element signature="e#818#824#0" expanded="true" />
-            <element signature="e#850#856#0" expanded="true" />
-            <element signature="e#856#862#0" expanded="true" />
-            <element signature="e#862#868#0" expanded="true" />
-            <element signature="e#868#874#0" expanded="true" />
-            <element signature="e#874#880#0" expanded="true" />
-            <element signature="e#880#886#0" expanded="true" />
-            <element signature="e#886#892#0" expanded="true" />
-            <element signature="e#892#898#0" expanded="true" />
-            <element signature="e#898#904#0" expanded="true" />
-            <element signature="e#904#910#0" expanded="true" />
-            <element signature="e#910#916#0" expanded="true" />
-            <element signature="e#916#922#0" expanded="true" />
-            <element signature="e#922#928#0" expanded="true" />
-            <element signature="e#928#934#0" expanded="true" />
-            <element signature="e#934#940#0" expanded="true" />
-            <element signature="e#940#946#0" expanded="true" />
-            <element signature="e#946#952#0" expanded="true" />
-            <element signature="e#952#958#0" expanded="true" />
-            <element signature="e#988#994#0" expanded="true" />
-            <element signature="e#994#1000#0" expanded="true" />
-            <element signature="e#1000#1006#0" expanded="true" />
-            <element signature="e#1006#1012#0" expanded="true" />
-            <element signature="e#1012#1018#0" expanded="true" />
-            <element signature="e#1018#1024#0" expanded="true" />
-            <element signature="e#1024#1030#0" expanded="true" />
-            <element signature="e#1030#1036#0" expanded="true" />
-            <element signature="e#1036#1042#0" expanded="true" />
-            <element signature="e#1042#1048#0" expanded="true" />
-            <element signature="e#1048#1054#0" expanded="true" />
-            <element signature="e#1054#1060#0" expanded="true" />
-            <element signature="e#1060#1066#0" expanded="true" />
-            <element signature="e#1066#1072#0" expanded="true" />
-            <element signature="e#1072#1078#0" expanded="true" />
-            <element signature="e#1078#1084#0" expanded="true" />
-            <element signature="e#1084#1090#0" expanded="true" />
-            <element signature="e#1135#1141#0" expanded="true" />
-            <element signature="e#1141#1147#0" expanded="true" />
-            <element signature="e#1147#1153#0" expanded="true" />
-            <element signature="e#1153#1159#0" expanded="true" />
-            <element signature="e#1159#1165#0" expanded="true" />
-            <element signature="e#1165#1171#0" expanded="true" />
-            <element signature="e#1171#1177#0" expanded="true" />
-            <element signature="e#1177#1183#0" expanded="true" />
-            <element signature="e#1183#1189#0" expanded="true" />
-            <element signature="e#1216#1222#0" expanded="true" />
-            <element signature="e#1222#1228#0" expanded="true" />
-            <element signature="e#1228#1234#0" expanded="true" />
-            <element signature="e#1234#1240#0" expanded="true" />
-            <element signature="e#1240#1246#0" expanded="true" />
-            <element signature="e#1246#1252#0" expanded="true" />
-            <element signature="e#1252#1258#0" expanded="true" />
-            <element signature="e#1258#1264#0" expanded="true" />
-            <element signature="e#1264#1270#0" expanded="true" />
-            <element signature="e#1270#1276#0" expanded="true" />
-            <element signature="e#1276#1282#0" expanded="true" />
-            <element signature="e#1282#1288#0" expanded="true" />
-            <element signature="e#1288#1294#0" expanded="true" />
-            <element signature="e#1294#1300#0" expanded="true" />
-            <element signature="e#1300#1306#0" expanded="true" />
-            <element signature="e#1306#1312#0" expanded="true" />
-            <element signature="e#1312#1318#0" expanded="true" />
-            <element signature="e#1318#1324#0" expanded="true" />
-            <element signature="e#1352#1358#0" expanded="true" />
-            <element signature="e#1358#1364#0" expanded="true" />
-            <element signature="e#1364#1370#0" expanded="true" />
-            <element signature="e#1370#1376#0" expanded="true" />
-            <element signature="e#1376#1382#0" expanded="true" />
-            <element signature="e#1382#1388#0" expanded="true" />
-            <element signature="e#1388#1394#0" expanded="true" />
-            <element signature="e#1394#1400#0" expanded="true" />
-            <element signature="e#1400#1406#0" expanded="true" />
-            <element signature="e#1406#1412#0" expanded="true" />
-            <element signature="e#1412#1418#0" expanded="true" />
-            <element signature="e#1418#1424#0" expanded="true" />
-            <element signature="e#1424#1430#0" expanded="true" />
-            <element signature="e#1430#1436#0" expanded="true" />
-            <element signature="e#1436#1442#0" expanded="true" />
-            <element signature="e#1442#1448#0" expanded="true" />
-            <element signature="e#1448#1454#0" expanded="true" />
-            <element signature="e#1454#1460#0" expanded="true" />
-            <element signature="e#1467#1474#0" expanded="true" />
-            <element signature="e#1500#1506#0" expanded="true" />
-            <element signature="e#1506#1512#0" expanded="true" />
-            <element signature="e#1512#1518#0" expanded="true" />
-            <element signature="e#1518#1524#0" expanded="true" />
-            <element signature="e#1524#1530#0" expanded="true" />
-            <element signature="e#1530#1536#0" expanded="true" />
-            <element signature="e#1536#1542#0" expanded="true" />
-            <element signature="e#1542#1548#0" expanded="true" />
-            <element signature="e#1548#1554#0" expanded="true" />
-            <element signature="e#1554#1560#0" expanded="true" />
-            <element signature="e#1560#1566#0" expanded="true" />
-            <element signature="e#1566#1572#0" expanded="true" />
-            <element signature="e#1572#1578#0" expanded="true" />
-            <element signature="e#1578#1584#0" expanded="true" />
-            <element signature="e#1584#1590#0" expanded="true" />
-            <element signature="e#1590#1596#0" expanded="true" />
-            <element signature="e#1596#1602#0" expanded="true" />
-            <element signature="e#1602#1608#0" expanded="true" />
-            <element signature="e#1621#1628#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2. Breshenham/Algorithm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="10" selection-end-line="102" />
-          <folding>
-            <element signature="e#140#144#0" expanded="true" />
-            <element signature="e#153#157#0" expanded="true" />
-            <element signature="e#546#550#0" expanded="true" />
-            <element signature="e#612#618#0" expanded="true" />
-            <element signature="e#618#624#0" expanded="true" />
-            <element signature="e#624#630#0" expanded="true" />
-            <element signature="e#630#636#0" expanded="true" />
-            <element signature="e#636#642#0" expanded="true" />
-            <element signature="e#642#648#0" expanded="true" />
-            <element signature="e#648#654#0" expanded="true" />
-            <element signature="e#654#660#0" expanded="true" />
-            <element signature="e#660#666#0" expanded="true" />
-            <element signature="e#733#739#0" expanded="true" />
-            <element signature="e#739#745#0" expanded="true" />
-            <element signature="e#745#751#0" expanded="true" />
-            <element signature="e#751#757#0" expanded="true" />
-            <element signature="e#757#763#0" expanded="true" />
-            <element signature="e#763#769#0" expanded="true" />
-            <element signature="e#769#775#0" expanded="true" />
-            <element signature="e#775#781#0" expanded="true" />
-            <element signature="e#781#787#0" expanded="true" />
-            <element signature="e#1004#1011#0" expanded="true" />
-            <element signature="e#1149#1153#0" expanded="true" />
-            <element signature="e#1214#1220#0" expanded="true" />
-            <element signature="e#1220#1226#0" expanded="true" />
-            <element signature="e#1226#1232#0" expanded="true" />
-            <element signature="e#1232#1238#0" expanded="true" />
-            <element signature="e#1238#1244#0" expanded="true" />
-            <element signature="e#1244#1250#0" expanded="true" />
-            <element signature="e#1250#1256#0" expanded="true" />
-            <element signature="e#1256#1262#0" expanded="true" />
-            <element signature="e#1262#1268#0" expanded="true" />
-            <element signature="e#1333#1339#0" expanded="true" />
-            <element signature="e#1339#1345#0" expanded="true" />
-            <element signature="e#1345#1351#0" expanded="true" />
-            <element signature="e#1351#1357#0" expanded="true" />
-            <element signature="e#1357#1363#0" expanded="true" />
-            <element signature="e#1363#1369#0" expanded="true" />
-            <element signature="e#1369#1375#0" expanded="true" />
-            <element signature="e#1375#1381#0" expanded="true" />
-            <element signature="e#1381#1387#0" expanded="true" />
-            <element signature="e#1559#1563#0" expanded="true" />
-            <element signature="e#1617#1623#0" expanded="true" />
-            <element signature="e#1623#1629#0" expanded="true" />
-            <element signature="e#1629#1635#0" expanded="true" />
-            <element signature="e#1635#1641#0" expanded="true" />
-            <element signature="e#1641#1647#0" expanded="true" />
-            <element signature="e#1647#1653#0" expanded="true" />
-            <element signature="e#1653#1659#0" expanded="true" />
-            <element signature="e#1659#1665#0" expanded="true" />
-            <element signature="e#1665#1671#0" expanded="true" />
-            <element signature="e#1709#1715#0" expanded="true" />
-            <element signature="e#1715#1721#0" expanded="true" />
-            <element signature="e#1721#1727#0" expanded="true" />
-            <element signature="e#1727#1733#0" expanded="true" />
-            <element signature="e#1733#1739#0" expanded="true" />
-            <element signature="e#1739#1745#0" expanded="true" />
-            <element signature="e#1745#1751#0" expanded="true" />
-            <element signature="e#1751#1757#0" expanded="true" />
-            <element signature="e#1757#1763#0" expanded="true" />
-            <element signature="e#1767#1771#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2. Breshenham/Posttest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2. Breshenham/Pretest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="24" column="4" lean-forward="true" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2. Breshenham/simulator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2. Breshenham/theoryImage1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2. Breshenham/Theory.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp1/dda-algorithm/Aim.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="23" lean-forward="true" selection-end-line="35" />
+          <caret line="2" column="71" selection-start-line="2" selection-start-column="71" selection-end-line="2" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp1/posttest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="136" column="21" lean-forward="true" selection-start-line="129" selection-start-column="15" selection-end-line="136" selection-end-column="21" />
           <folding>
-            <element signature="e#92#99#0" expanded="true" />
-            <element signature="e#444#451#0" expanded="true" />
-            <element signature="e#452#459#0" expanded="true" />
-            <element signature="e#787#793#0" expanded="true" />
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1. DDA/Algorithm.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp1/pretest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="165">
+          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
           <folding>
-            <element signature="e#312#316#0" expanded="true" />
-            <element signature="e#386#392#0" expanded="true" />
-            <element signature="e#392#398#0" expanded="true" />
-            <element signature="e#398#404#0" expanded="true" />
-            <element signature="e#404#410#0" expanded="true" />
-            <element signature="e#410#416#0" expanded="true" />
-            <element signature="e#416#422#0" expanded="true" />
-            <element signature="e#422#428#0" expanded="true" />
-            <element signature="e#428#434#0" expanded="true" />
-            <element signature="e#434#440#0" expanded="true" />
-            <element signature="e#517#523#0" expanded="true" />
-            <element signature="e#523#529#0" expanded="true" />
-            <element signature="e#529#535#0" expanded="true" />
-            <element signature="e#535#541#0" expanded="true" />
-            <element signature="e#541#547#0" expanded="true" />
-            <element signature="e#547#553#0" expanded="true" />
-            <element signature="e#553#559#0" expanded="true" />
-            <element signature="e#559#565#0" expanded="true" />
-            <element signature="e#565#571#0" expanded="true" />
-            <element signature="e#992#996#0" expanded="true" />
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1. DDA/Posttest.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp1/procedure.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="89" />
+        <state relative-caret-position="150">
+          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1. DDA/Pretest.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp1/references.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="11" lean-forward="true" selection-end-line="77" />
+        <state relative-caret-position="225">
+          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1. DDA/Theory.html">
+    <entry file="file://$PROJECT_DIR$/labs/exp1/simulation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="225">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp1/theory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="127" column="21" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/exp1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="120" column="45" lean-forward="true" selection-start-line="120" selection-start-column="45" selection-end-line="120" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
