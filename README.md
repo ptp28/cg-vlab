@@ -14,21 +14,30 @@ The vitual lab is also available on [Github Pages](https://ptp28.github.io/cg-vl
 
 # List of Experiments
 
-- Digital Differential Analyser (DDA) Line Drawing Algorithm
-- Bresenham Line Drawing Algorithm
-- Comparison of DDA and Bresenham Line Drawing Algorithms
-- Bresenham Circle Drawing Algorithm
-- Transformation : Translation of 2-D Object
-- Transformation : Scaling of 2-D Object
-- Transformation : Rotation of 2-D Object
-- Even-Odd Method (to check if point is inside Polygon or not)
+1. Digital Differential Analyser (DDA) Line Drawing Algorithm
+2. Bresenham Line Drawing Algorithm
+3. Comparison of DDA and Bresenham Line Drawing Algorithms
+4. Bresenham Circle Drawing Algorithm
+5. Transformation : Translation of 2-D Object
+6. Transformation : Scaling of 2-D Object
+7. Transformation : Rotation of 2-D Object
+8. Even-Odd Method (to check if point is inside Polygon or not)
 
 ### Each experiment has the following - 
 
-- Aim
-- Theory
-- Pre-Test
-- Simulation
-- Post-Test
-
-All simulations are engaging and are designed to test the user's knowledge of that particular experiment.
+* Aim
+    - Aim of the experiment.
+* Theory
+    - Theory explaining the experiment.
+* Pre-Test
+    - A list of questions that the user must answer correctly before proceding with the experiment.
+* Procedure
+    - The working explaination / algorithm of the experiment.
+* Simulation
+    - An interactive canvas where the user will be asked to perform the experiment.
+    - All simulations are engaging and are designed to test the user's knowledge of that particular experiment.
+* Post-Test
+    - A list of questions the user must answer correctly after performing the experiment.
+    
+    
+ 
