@@ -40,4 +40,23 @@ The vitual lab is also available on [Github Pages](https://ptp28.github.io/cg-vl
     - A list of questions the user must answer correctly after performing the experiment.
     
     
+# Screenshots
+
+- #### Theory
+<img src="Screenshots/1.png">
+
+- #### Pre-Test
+<img src="Screenshots/2.png">
+
+- #### DDA Algorithm Simulation
+<img src="Screenshots/3.png">
+
+- #### Bresenham Circle Drawing Algorithm Simulation
+<img src="Screenshots/4.png">
+
+- #### Transformation - Rotation Simulation
+<img src="Screenshots/5.png">
+
+- #### Even-Odd Method Simulation
+<img src="Screenshots/6.png">
  
